@@ -4,9 +4,5 @@ class User {
   final String veggieType;
   final String userType;
 
-  const User(
-      {required this.gender,
-      required this.age,
-      required this.veggieType,
-      required this.userType});
+  const User({this.gender, this.age, this.veggieType, this.userType});
 }
