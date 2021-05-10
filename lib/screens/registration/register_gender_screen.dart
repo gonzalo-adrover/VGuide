@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vguide/components/rounded_button.dart';
 import 'package:vguide/components/text_input.dart';
-import 'package:vguide/screens/register_age_screen.dart';
+import 'package:vguide/screens/registration/register_age_screen.dart';
 
 class RegisterGenderScreen extends StatefulWidget {
 

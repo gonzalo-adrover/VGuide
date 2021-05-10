@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:vguide/components/rounded_button.dart';
 import 'package:vguide/components/text_input.dart';
-import 'package:vguide/screens/register_gender_screen.dart';
+import 'package:vguide/screens/registration/register_weight_screen.dart';
 
-class RegisterDietScreen extends StatefulWidget {
+class RegisterAgeScreen extends StatefulWidget {
 
-  static const String id = 'register_diet_screen';
+  static const String id = 'register_age_screen';
 
   @override
-  _RegisterDietScreenState createState() => _RegisterDietScreenState();
+  _RegisterAgeScreenState createState() => _RegisterAgeScreenState();
 }
 
-class _RegisterDietScreenState extends State<RegisterDietScreen> {
+class _RegisterAgeScreenState extends State<RegisterAgeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,7 @@ class _RegisterDietScreenState extends State<RegisterDietScreen> {
               title: "Next",
               color: Colors.blueAccent,
               onPressed: () {
-                Navigator.pushNamed(context, RegisterGenderScreen.id);
+                Navigator.pushNamed(context, RegisterWeightScreen.id);
               },
             ),
           ],
