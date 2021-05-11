@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vguide/ui/nutrients/nutrient_list_item.dart';
-import 'domain/model/nutrient.dart';
+import 'package:vguide/screens/nutrients/nutrient_list_item.dart';
+import '../../domain/model/nutrient.dart';
 
 class Nutrients extends StatelessWidget {
   final List<Nutrient> nutrientsList;

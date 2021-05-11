@@ -1,26 +1,25 @@
+import 'package:vguide/domain/model/food.dart';
+
 class Nutrient {
   final String name;
   final String shortDesc;
   final String longDesc;
-  final String foodList; //This will be changed soon
+  final List<Food> foodList;
   final String facilitators;
+  final String inhibitors;
 
   const Nutrient(
       {this.name,
       this.shortDesc,
       this.longDesc,
       this.foodList,
-      this.facilitators});
+      this.facilitators,
+      this.inhibitors});
 }
 
 class NutrientListItem {
   final String name;
   final String shortDesc;
 
-  const NutrientListItem(
-    {
-      this.name,
-      this.shortDesc
-    }
-  );
+  const NutrientListItem({this.name, this.shortDesc});
 }
