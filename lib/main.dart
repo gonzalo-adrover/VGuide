@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:vguide/screens/registration/register_age_screen.dart';
-import 'package:vguide/screens/registration/register_diet_screen.dart';
-import 'package:vguide/screens/registration/register_gender_screen.dart';
-import 'package:vguide/screens/registration/register_weight_screen.dart';
+import 'package:vguide/screens/deprecated/register_age_screen.dart';
+import 'package:vguide/screens/deprecated/register_diet_screen.dart';
+import 'package:vguide/screens/deprecated/register_gender_screen.dart';
+import 'package:vguide/screens/deprecated/register_weight_screen.dart';
 import 'screens/welcome_screen.dart';
 
 void main() {

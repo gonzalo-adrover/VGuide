@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vguide/components/rounded_button.dart';
 import 'package:vguide/components/text_input.dart';
-import 'package:vguide/screens/registration/register_gender_screen.dart';
+import 'package:vguide/screens/deprecated/register_gender_screen.dart';
 
 class RegisterDietScreen extends StatefulWidget {
 
