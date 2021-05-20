@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vguide/screens/deprecated/register_age_screen.dart';
-import 'package:vguide/screens/deprecated/register_diet_screen.dart';
-import 'package:vguide/screens/deprecated/register_gender_screen.dart';
-import 'package:vguide/screens/deprecated/register_weight_screen.dart';
+import 'package:vguide/screens/vguide_pages.dart';
 import 'screens/welcome_screen.dart';
 
 void main() {
@@ -21,10 +18,7 @@ class VGuide extends StatelessWidget {
       initialRoute: WelcomeScreen.id,
       routes: {
         WelcomeScreen.id : (context) => WelcomeScreen(),
-        RegisterDietScreen.id : (context) => RegisterDietScreen(),
-        RegisterAgeScreen.id : (context) => RegisterAgeScreen(),
-        RegisterGenderScreen.id : (context) => RegisterGenderScreen(),
-        RegisterWeightScreen.id : (context) => RegisterWeightScreen(),
+        VGuidePages.id : (context) => VGuidePages()
       },
     );
   }

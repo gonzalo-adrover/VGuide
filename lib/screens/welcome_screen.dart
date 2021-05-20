@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:vguide/components/rounded_button.dart';
-import 'package:vguide/screens/deprecated/register_diet_screen.dart';
+import 'package:vguide/screens/vguide_pages.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
@@ -15,7 +16,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreenAccent,
+      backgroundColor: Colors.lightGreen.shade600,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -29,11 +30,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   children: <Widget>[
                     Text(
                       'V',
-                      style: TextStyle(
-                        fontSize: 45.0,
-                        color: Colors.black87,
-                        fontWeight: FontWeight.w900,
-                      ),
+                      style: GoogleFonts.balsamiqSans(
+                          color: Colors.black87,
+                          fontSize: 45.0,
+                          fontWeight: FontWeight.w900),
                     ),
                     TypewriterAnimatedTextKit(
                       text: [
@@ -42,11 +42,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         "egetarian",
                       ],
                       speed: const Duration(milliseconds: 250),
-                      textStyle: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 45.0,
-                        fontWeight: FontWeight.w900,
-                      ),
+                      textStyle: GoogleFonts.balsamiqSans(
+                          color: Colors.black87,
+                          fontSize: 45.0,
+                          fontWeight: FontWeight.w900),
                     ),
                   ],
                 ),
@@ -69,7 +68,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               title: "Start",
               color: Colors.lightBlueAccent,
               onPressed: () {
-                Navigator.pushNamed(context, RegisterDietScreen.id);
+                Navigator.pushNamed(context, VGuidePages.id);
               },
             ),
           ],

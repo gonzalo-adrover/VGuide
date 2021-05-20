@@ -1,4 +1,7 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /* Returns a Nutrient 
  * to be shown on the List of Nutrients
@@ -12,11 +15,44 @@ class NutrientListItemW extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      
       child: Row(
         children: [
-          Text(title),
-          Text(shortDesc)
-          ],
+          ListHeaderText(title),
+          ListContentText(shortDesc)],
+      ),
+    );
+  }
+}
+
+class ListHeaderText extends StatelessWidget {
+  String text;
+
+  ListHeaderText(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.shadowsIntoLight(
+        fontSize: 20.0,
+        fontWeight: FontWeight.w700
+        ),
+    );
+  }
+}
+
+class ListContentText extends StatelessWidget {
+  String text;
+
+  ListContentText(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.asap(
+        fontSize: 14.0
       ),
     );
   }
