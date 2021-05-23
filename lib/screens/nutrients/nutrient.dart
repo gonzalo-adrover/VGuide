@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class NutrientsScreen extends StatelessWidget {
-  static Color pageColor = Colors.indigo.shade300;
+class Nutrient extends StatelessWidget {
+  static Color pageColor = Colors.purple.shade300;
+  static const String id = 'nutrient';
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class NutrientsScreen extends StatelessWidget {
       color: pageColor,
       child: Center(
         child: Text(
-          "Nutrients",
+          "Nutrient",
           style: GoogleFonts.balsamiqSans(
               color: Colors.black87,
               fontSize: 45.0,
