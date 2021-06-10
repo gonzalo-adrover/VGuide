@@ -1,7 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:vguide/screens/nutrients/nutrients_screen.dart';
+import 'package:vguide/screens/nutrients/nutrients_list_screen.dart';
 import 'package:vguide/screens/nutritionists/nutritionists_screen.dart';
 import 'package:vguide/screens/recipes/recipes_screen.dart';
 import 'package:vguide/screens/settings/settings_screen.dart';
