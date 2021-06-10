@@ -20,7 +20,7 @@ class Nutrient {
 class NutrientListItem {
   final String name;
   final String shortDesc;
-  final int id;
+  final String longDesc;
 
-  const NutrientListItem({this.id, this.name, this.shortDesc});
+  const NutrientListItem({this.name, this.shortDesc, this.longDesc});
 }

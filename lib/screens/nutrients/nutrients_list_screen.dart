@@ -1,13 +1,15 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:vguide/components/utils.dart';
 import 'package:vguide/components/widgets.dart';
 import 'package:vguide/data/source/local/nutrients_data.dart';
-import 'package:vguide/screens/nutrients/nutrient.dart';
+import 'package:vguide/domain/model/nutrient.dart';
+import 'package:vguide/screens/nutrients/nutrient_screen.dart';
 
 class NutrientsScreen extends StatefulWidget {
   static Color pageColor = Colors.indigo.shade300;
   static const title = 'Nutrients';
-  static NutrientsData list;
 
   const NutrientsScreen({Key key, this.androidDrawer}) : super(key: key);
   final Widget androidDrawer;
@@ -17,6 +19,7 @@ class NutrientsScreen extends StatefulWidget {
 }
 
 class _NutrientsTabState extends State<NutrientsScreen> {
+  List<NutrientListItem> nutrientsList;
   static const _itemsLength = 10;
 
   final _androidRefreshKey = GlobalKey<RefreshIndicatorState>();
@@ -26,6 +29,9 @@ class _NutrientsTabState extends State<NutrientsScreen> {
 
   @override
   void initState() {
+    NutrientsData nutData = new NutrientsData();
+    nutrientsList = nutData.getNutrients();
+    log(nutrientsList[0].longDesc);
     _setData();
     super.initState();
   }
@@ -54,17 +60,15 @@ class _NutrientsTabState extends State<NutrientsScreen> {
       child: Hero(
         tag: index,
         child: HeroAnimatingNutrientCard(
-          // nutrient: nutrientsNames[index], To be used when having a loaded list of Nutrients
-          nutrient: 'Nutrient ' + index.toString(),
+          nutrient: nutrientsList[index].name, //genera error al cargar la lista si se scrollea hasta abajo - ver como pasarle este parametro sin que se rompa
           color: color,
           heroAnimation: AlwaysStoppedAnimation(0),
-          // onPressed: () {
-          //   Navigator.pushNamed(context, Nutrient.id);
-          // },
           onPressed: () => Navigator.of(context).push<void>(
             MaterialPageRoute(
-              builder: (context) => Nutrient(
-                id: index,
+              builder: (context) => NutrientScreen(
+                name: nutrientsList[index].name,
+                shortDesc: nutrientsList[index].shortDesc,
+                longDesc: nutrientsList[index].longDesc,
                 pageColor: color,
               ),
             ),
