@@ -24,3 +24,20 @@ class NutrientListItem {
 
   const NutrientListItem({this.id, this.name, this.shortDesc});
 }
+
+class NutrientDetails {
+  final int id;
+  final String name;
+  final String longDesc;
+  final List<String> foods;
+  final String goodFoods;
+  final String badFoods;
+
+  const NutrientDetails(
+      {this.id,
+      this.name,
+      this.longDesc,
+      this.foods,
+      this.goodFoods,
+      this.badFoods});
+}

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vguide/data/source/local/nutrients_data.dart';
+import 'package:vguide/data/nutrients_data.dart';
 import 'package:vguide/domain/model/nutrient.dart';
 
 class Nutrient extends StatelessWidget {
