@@ -6,6 +6,8 @@ import 'package:vguide/components/widgets.dart';
 import 'package:vguide/data/source/local/nutrients_data.dart';
 import 'package:vguide/domain/model/nutrient.dart';
 import 'package:vguide/screens/nutrients/nutrient_screen.dart';
+import 'package:vguide/data/nutrients_data.dart';
+import 'package:vguide/screens/nutrients/nutrient.dart';
 
 class NutrientsScreen extends StatefulWidget {
   static Color pageColor = Colors.indigo.shade300;
