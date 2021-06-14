@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vguide/components/rounded_button.dart';
+import 'package:vguide/components/text_styles.dart';
 import 'package:vguide/screens/vguide_pages.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -50,19 +51,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ],
                 ),
                 SizedBox(
-                  height: 16.0,
+                  height: 25.0,
                 ),
                 Text(
                   'Plant based diets made easy',
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    fontSize: 16.0,
-                  ),
+                  style: VGuideTextStyles.subheader
                 ),
               ],
             ),
             SizedBox(
               height: 48.0,
+            ),
+            Image(image: AssetImage("assets/img/splash_healthy_junk.gif")),
+            SizedBox(
+              height: 38.0,
             ),
             RoundedButton(
               title: "Start",

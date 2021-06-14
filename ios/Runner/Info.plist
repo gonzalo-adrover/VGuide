@@ -41,5 +41,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>La aplicacion precisa permisos de localizacion para mostrar las tiendas vegetarianas/veganas.</string>
 </dict>
 </plist>

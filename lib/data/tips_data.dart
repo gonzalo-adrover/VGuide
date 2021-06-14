@@ -3,7 +3,7 @@ import 'package:vguide/domain/model/tip.dart';
 class TipsData {
   static const List<Tip> tipsList = [
     Tip(
-      name: "REMOJAR LEGUMBRES DURANTE 8 HORAS MÍNIMO ANTES DE COCINARLOS",
+      name: "Remojar legumbres durante 8 horas mínimo antes de cocinarlos.",
       description: """
         No olvides remojar tus legumbres antes de cocinarlas. 
         Este es un paso fundamental en el proceso de cocción de 
@@ -55,7 +55,7 @@ class TipsData {
         horas luego de comer un alimento alto en calcio para que esto 
         no suceda.
       """,
-      picURL: "http://www.universalmedios.com.ar/wp-content/uploads/2019/03/calcio.jpg"
+      picURL: "https://static4.abc.es/media/bienestar/2020/11/25/alimentos-calcio-kvlG--620x349@abc.jpg"
     ),
     Tip(
       name: "CUANDO CONSUMAS PANIFICADOS INTENTA QUE CONTENGAN LEVADURA",
