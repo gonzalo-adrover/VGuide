@@ -3,11 +3,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:vguide/components/utils.dart';
 import 'package:vguide/components/widgets.dart';
-import 'package:vguide/data/source/local/nutrients_data.dart';
 import 'package:vguide/domain/model/nutrient.dart';
 import 'package:vguide/screens/nutrients/nutrient_screen.dart';
 import 'package:vguide/data/nutrients_data.dart';
-import 'package:vguide/screens/nutrients/nutrient.dart';
 
 class NutrientsScreen extends StatefulWidget {
   static Color pageColor = Colors.indigo.shade300;
@@ -21,7 +19,7 @@ class NutrientsScreen extends StatefulWidget {
 }
 
 class _NutrientsTabState extends State<NutrientsScreen> {
-  List<NutrientListItem> nutrientsList;
+  List<NutrientDetails> nutrientsList;
   static const _itemsLength = 10;
 
   final _androidRefreshKey = GlobalKey<RefreshIndicatorState>();
@@ -69,7 +67,7 @@ class _NutrientsTabState extends State<NutrientsScreen> {
             MaterialPageRoute(
               builder: (context) => NutrientScreen(
                 name: nutrientsList[index].name,
-                shortDesc: nutrientsList[index].shortDesc,
+                // shortDesc: nutrientsList[index].shortDesc,
                 longDesc: nutrientsList[index].longDesc,
                 pageColor: color,
               ),
