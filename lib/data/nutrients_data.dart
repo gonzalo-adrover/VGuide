@@ -5,8 +5,8 @@ class NutrientsData {
     return nutrientDetails;
   }
 
-  final List<NutrientDetails> nutrientDetails = [
-    NutrientDetails(
+  final List<Nutrient> nutrientDetails = [
+    Nutrient(
         id: 0,
         name: "Proteinas",
         longDesc: """
@@ -24,7 +24,7 @@ class NutrientsData {
           "Semillas",
           "Lacteos, huevos"
         ],
-        goodFoods: """
+        facilitators: """
             La digestión de las proteínas es más fácil para el 
             cuerpo cuando los alimentos se cocinan.
             Los alimentos de origen vegetal deben combinarse 
@@ -33,8 +33,10 @@ class NutrientsData {
             pseudo cereales se logra obtener la proteína completa 
             para cubrir el requerimiento de este nutriente.
           """,
-        badFoods: ""),
-    NutrientDetails(id: 1, name: "Ácidos grasos omega 3", longDesc: """
+        inhibitors: "",
+        picURL: "https://www.lavanguardia.com/uploads/2019/12/16/5e997b3957634.jpeg"
+    ),
+    Nutrient(id: 1, name: "Ácidos grasos omega 3", longDesc: """
             Los ácidos grasos omega 3 son un tipo de grasa saludable 
             y necesaria para el cuerpo. 
             Estos son importantes para el desarrollo y mantenimiento del cerebro, 
@@ -52,17 +54,17 @@ class NutrientsData {
       "Aceite de soja",
       "Aceite de canola",
       "Semillas (Principalmente chia y lino y sus aceites"
-    ], goodFoods: """
+    ], facilitators: """
           Para obtener sus beneficios, los aceites altos en omega 3 deben consumirse 
           en crudo, en preparaciones frías o cuando el alimento ya se retiró del fuego. 
           En el caso de las semillas deben estar molidas o remojadas para facilitar su 
           absorción a nivel intestinal. 
-        """, badFoods: """
+        """, inhibitors: """
           Cocicnar estos aceites disminuye el impacto favorable que tienen para la salud. 
           Además comer las semillas enteras, sin moler hace que sea más dificil su 
           aprovechamiento.
         """),
-    NutrientDetails(id: 2, name: "Calcio", longDesc: """
+    Nutrient(id: 2, name: "Calcio", longDesc: """
             El calcio es un mineral necesario para el funcionamiento del cuerpo. 
             Sus funciones se pueden dividir en 3:
             1. Estructural: Es un compuesto esencial en la estructura de huesos y dientes.
@@ -79,14 +81,14 @@ class NutrientsData {
       "Hortalizas de hoja verde (Principalmente rucula, perejil, berro, albahaca, brocoli, coliflor)",
       "Tofu coagulado con sales de Calcio",
       "Bebidas vegetales enriquecidas con Calcio"
-    ], goodFoods: """
+    ], facilitators: """
               Si se consumen lácteos la absorción aumenta. 
               En el caso de las semillas, es preferible que se consuman molidas en forma de pasta o paté.
-            """, badFoods: """
+            """, inhibitors: """
               El café, los refrescos con cafeína inhiben la absorción de Calcio. 
               Algunos alimentos como la acelga o la espinaca pueden inhibir su absorción.
             """),
-    NutrientDetails(id: 3, name: "Hierro", longDesc: """
+    Nutrient(id: 3, name: "Hierro", longDesc: """
             El hierro es un mineral cuya función principal es transportar el oxígeno en la sangre.
             El hierro tiene menor absorción cuando es de origen vegetal (hierro no hemínico), 
             sin embargo, existen estrategias para mejorar su absorción. 
@@ -97,14 +99,14 @@ class NutrientsData {
       "Cereales integrales",
       "Leguminosas (Principalmente lengejas, garbanzos, porotos",
       "Verduras de hoja verde (Principalmente espinaca, acelga, berro, brocoli)"
-    ], goodFoods: """
+    ], facilitators: """
           Para aumentar la absorción del hierro de los vegetales se deben consumir con 
           cítricos como limón, naranja, pomelo y mandarinas, también el tomate.
           Los vegetales color naranja también aumentan su absorción.
-        """, badFoods: """
+        """, inhibitors: """
           Las bebidas con cafeína como café, té, mate, refrescos. 
         """),
-    NutrientDetails(id: 4, name: "Zinc", longDesc: """
+    Nutrient(id: 4, name: "Zinc", longDesc: """
               Este mineral es importante para el funcionamiento de todos los órganos, 
               tejidos, fluidos y secreciones del cuerpo.
               Es necesario para el funcionamiento de enzimas y proteínas, tiene funciones 
@@ -121,15 +123,15 @@ class NutrientsData {
       "Algas",
       "Leguminosas",
       "Frutos secos"
-    ], goodFoods: """
+    ], facilitators: """
           Los azúcares de la fruta y los lácteos, las proteínas favorecen la absorción de Zinc.
           Remojar siempre las leguminosas y pseudo cereales mejora la absorción, como también 
           hidratar y moler las semillas y frutos secos consumiéndolos en forma de pasta o paté.
-        """, badFoods: """
+        """, inhibitors: """
           Evitar suplementos de Calcio y Hierro dos horas antes y después de comer alimentos 
           que aportan Zinc.
         """),
-    NutrientDetails(
+    Nutrient(
         id: 5,
         name: "Yodo",
         longDesc: """
@@ -144,12 +146,12 @@ class NutrientsData {
           "Aceite de canola",
           "Semillas (Principalmente chia y lino y sus aceites)"
         ],
-        goodFoods: """
+        facilitators: """
           En el caso de no padecer hipertensión o enfermedades cardiovasculares consumir sal yodada.
           De lo contrato se debe consumir algas o alcelga para evitar deficiencias.
         """,
-        badFoods: ""),
-    NutrientDetails(
+        inhibitors: ""),
+    Nutrient(
         id: 6,
         name: "Vitamina D",
         longDesc: """
@@ -167,9 +169,9 @@ class NutrientsData {
           "Huevo (En pequeña cantidad)",
           "Leche (En pequeña cantidad)"
         ],
-        goodFoods: "",
-        badFoods: ""),
-    NutrientDetails(id: 7, name: "Vitamina B12", longDesc: """
+        facilitators: "",
+        inhibitors: ""),
+    Nutrient(id: 7, name: "Vitamina B12", longDesc: """
               Esta vitamina participa en la formación de glóbulos rojos, proteínas y 
               favorece el buen funcionamiento cerebral.
               Se encuentra únicamente en alimentos de origen animal, por lo tanto, 
@@ -184,7 +186,7 @@ class NutrientsData {
       "Yema de huevo",
       "Lacteos",
       "Alimentos fortificados"
-    ], goodFoods: """
+    ], facilitators: """
           Para informarte sobre la suplementación de Vitamina B12 adecuada para ti consulta a un Nutricionista.  
           HIPERVICULO A LA PESTAÑA DE CONTACTO DE NUTRICIONISTAS
         """)

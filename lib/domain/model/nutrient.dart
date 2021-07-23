@@ -1,20 +1,24 @@
 import 'package:vguide/domain/model/food.dart';
 
 class Nutrient {
+  final int id;
   final String name;
   final String shortDesc;
   final String longDesc;
-  final List<Food> foodList;
+  final List<String> foods;
   final String facilitators;
   final String inhibitors;
+  final String picURL;
 
   const Nutrient(
-      {this.name,
+      {this.id,
+      this.name,
       this.shortDesc,
       this.longDesc,
-      this.foodList,
+      this.foods,
       this.facilitators,
-      this.inhibitors});
+      this.inhibitors,
+      this.picURL});
 }
 
 class NutrientListItem {

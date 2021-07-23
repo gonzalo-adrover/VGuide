@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:vguide/components/image_card_custom_text.dart';
 import 'package:vguide/components/text_styles.dart';
 
@@ -17,6 +16,7 @@ class TipListItem extends StatelessWidget {
                 title,
                 style: VGuideTextStyles.header
               ),
+      cardWidth: 800,
     );
   }
 }
