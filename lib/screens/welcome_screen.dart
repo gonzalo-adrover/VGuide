@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vguide/components/rounded_button.dart';
 import 'package:vguide/components/text_styles.dart';
@@ -14,10 +13,11 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+  static const color = Color.fromRGBO(143,170,89, 1);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreen.shade600,
+      backgroundColor: color,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -30,20 +30,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'V',
-                      style: GoogleFonts.balsamiqSans(
-                          color: Colors.black87,
-                          fontSize: 45.0,
-                          fontWeight: FontWeight.w900),
-                    ),
-                    TypewriterAnimatedTextKit(
-                      text: [
-                        "Guide",
-                        "egan",
-                        "egetarian",
-                      ],
-                      speed: const Duration(milliseconds: 250),
-                      textStyle: GoogleFonts.balsamiqSans(
+                      'VGuide',
+                      style: GoogleFonts.raleway(
                           color: Colors.black87,
                           fontSize: 45.0,
                           fontWeight: FontWeight.w900),
@@ -54,7 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   height: 25.0,
                 ),
                 Text(
-                  'Plant based diets made easy',
+                  'La guía para vegetarianos',
                   style: VGuideTextStyles.subheader
                 ),
               ],
@@ -62,7 +50,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             SizedBox(
               height: 48.0,
             ),
-            Image(image: AssetImage("assets/img/splash_healthy_junk.gif")),
+            Image(image: AssetImage("assets/img/VGuideLogo.jpeg")),
             SizedBox(
               height: 38.0,
             ),
