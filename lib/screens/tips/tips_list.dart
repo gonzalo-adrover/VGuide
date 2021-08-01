@@ -20,7 +20,7 @@ class TipsScreen extends StatelessWidget {
       //       fontSize: 45.0,
       //       fontWeight: FontWeight.w900),
       //   ),
-        
+
       // ],),
     );
   }
@@ -28,10 +28,11 @@ class TipsScreen extends StatelessWidget {
 
 List<TipListItem> getTipList() {
   List<Tip> tipData = TipsData.tipsList;
-  List<TipListItem> tipListItem = tipData.map((tip) => TipListItem(
-        title: tip.name,
-        imageUrl: tip.picURL,
-      )).toList();
+  List<TipListItem> tipListItem = tipData
+      .map((tip) => TipListItem(
+            title: tip.name,
+          ))
+      .toList();
 
   return tipListItem;
 }

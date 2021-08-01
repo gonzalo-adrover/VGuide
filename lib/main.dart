@@ -10,6 +10,7 @@ class VGuide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         textTheme: TextTheme(
           bodyText2: TextStyle(color: Colors.black54),
@@ -17,8 +18,8 @@ class VGuide extends StatelessWidget {
       ),
       initialRoute: WelcomeScreen.id,
       routes: {
-        WelcomeScreen.id : (context) => WelcomeScreen(),
-        VGuidePages.id : (context) => VGuidePages()
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+        VGuidePages.id: (context) => VGuidePages()
       },
     );
   }

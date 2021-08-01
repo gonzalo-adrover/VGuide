@@ -18,17 +18,19 @@ class NutrientsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: pageColor,
-        child: ListView(children: getTipList()),
-    );}
+      color: pageColor,
+      child: ListView(children: getTipList()),
+    );
+  }
 }
 
 List<TipListItem> getTipList() {
   List<Nutrient> tipData = NutrientsData().getNutrients();
-  List<TipListItem> tipListItem = tipData.map((nutrient) => TipListItem(
-    title: nutrient.name,
-    imageUrl: nutrient.picURL,
-  )).toList();
+  List<TipListItem> tipListItem = tipData
+      .map((nutrient) => TipListItem(
+            title: nutrient.name,
+          ))
+      .toList();
 
   return tipListItem;
 }
