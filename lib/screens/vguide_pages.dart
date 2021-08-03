@@ -6,7 +6,7 @@ import 'package:vguide/screens/nutritionists/nutritionists_screen.dart';
 import 'package:vguide/screens/recipes/recipes_screen.dart';
 import 'package:vguide/screens/settings/settings_screen.dart';
 import 'package:vguide/screens/stores/stores_screen.dart';
-import 'package:vguide/screens/tips/tips_list.dart';
+import 'package:vguide/screens/tips/tips_list_screen.dart';
 
 class VGuidePages extends StatefulWidget {
   static const String id = 'vguide_pages';

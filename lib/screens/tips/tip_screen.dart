@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vguide/components/text_styles.dart';
 
-class NutrientScreen extends StatelessWidget {
+class TipScreen extends StatelessWidget {
   final Color pageColor;
   final String name;
   final String longDesc;
 
-  const NutrientScreen({this.pageColor, this.name, this.longDesc});
+  const TipScreen({this.pageColor, this.name, this.longDesc});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:vguide/data/tips_data.dart';
 import 'package:vguide/domain/model/tip.dart';
 import 'tip_list_item.dart';
@@ -12,16 +11,6 @@ class TipsScreen extends StatelessWidget {
     return Container(
       color: pageColor,
       child: ListView(children: getTipList()),
-      // child: Row(children: [
-      //   Text(
-      //     "Tips",
-      //     style: GoogleFonts.balsamiqSans(
-      //       color: Colors.black87,
-      //       fontSize: 45.0,
-      //       fontWeight: FontWeight.w900),
-      //   ),
-
-      // ],),
     );
   }
 }
@@ -31,6 +20,7 @@ List<TipListItem> getTipList() {
   List<TipListItem> tipListItem = tipData
       .map((tip) => TipListItem(
             title: tip.name,
+            imageUrl: tip.picURL,
           ))
       .toList();
 

@@ -127,18 +127,22 @@ class _PressableCardState extends State<PressableCard>
 /// a flat state or anything in between.
 ///
 /// When it's in a card state, it's pressable.
-class HeroAnimatingNutrientCard extends StatelessWidget {
-  HeroAnimatingNutrientCard({
-    this.nutrient,
+class HeroAnimatingCard extends StatelessWidget {
+  HeroAnimatingCard({
     this.color,
+    this.cardWidth,
     this.heroAnimation,
     this.onPressed,
+    this.imageUrl,
+    this.textWidget,
   });
 
-  final String nutrient;
+  final double cardWidth;
   final Color color;
   final Animation<double> heroAnimation;
   final VoidCallback onPressed;
+  final String imageUrl;
+  final Widget textWidget;
 
   @override
   Widget build(context) {
@@ -149,30 +153,21 @@ class HeroAnimatingNutrientCard extends StatelessWidget {
           onPressed: heroAnimation.value == 0 ? onPressed : null,
           color: color,
           flattenAnimation: heroAnimation,
-          child: SizedBox(
-            height: 240,
-            child: Stack(
-              alignment: Alignment.center,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Column(
               children: [
-                // The nutrient title banner slides off in the hero animation.
-                Positioned(
-                  bottom: -80 * heroAnimation.value,
-                  left: 0,
-                  right: 0,
-                  child: Container(
-                    height: 80,
-                    color: Colors.black12,
-                    alignment: Alignment.centerLeft,
-                    padding: EdgeInsets.symmetric(horizontal: 12),
-                    child: Text(
-                      nutrient,
-                      style: TextStyle(
-                        fontSize: 21,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  child: FadeInImage(
+                    placeholder: AssetImage('assets/img/loading.gif'),
+                    image: NetworkImage(imageUrl),
+                    fit: BoxFit.fitWidth,
+                    width: cardWidth,
+                    height: cardWidth * 0.32,
                   ),
                 ),
+                Container(padding: EdgeInsets.all(10), child: textWidget)
               ],
             ),
           ),
@@ -181,4 +176,3 @@ class HeroAnimatingNutrientCard extends StatelessWidget {
     );
   }
 }
-

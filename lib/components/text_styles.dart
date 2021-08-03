@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
@@ -13,4 +14,17 @@ class VGuideTextStyles {
 
   static TextStyle chip =
       GoogleFonts.balsamiqSans(fontSize: 15.0, fontWeight: FontWeight.w300);
+
+  static const servingInfoBorderColor = Color(0xffb0b0b0);
+
+  static TextStyle detailsPreferredCategoryText(CupertinoThemeData themeData) =>
+      themeData.textTheme.textStyle.copyWith(
+        fontWeight: FontWeight.bold,
+      );
+
+  static TextStyle detailsTitleText(CupertinoThemeData themeData) =>
+      themeData.textTheme.textStyle.copyWith(
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+      );
 }

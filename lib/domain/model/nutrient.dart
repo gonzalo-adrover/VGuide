@@ -1,5 +1,3 @@
-import 'package:vguide/domain/model/food.dart';
-
 class Nutrient {
   final int id;
   final String name;
@@ -21,13 +19,13 @@ class Nutrient {
       this.picURL});
 }
 
-class NutrientListItem {
-  final String name;
-  final String shortDesc;
-  final String longDesc;
-
-  const NutrientListItem({this.name, this.shortDesc, this.longDesc});
-}
+// class NutrientListItem {
+//   final String name;
+//   final String shortDesc;
+//   final String longDesc;
+//
+//   const NutrientListItem({this.name, this.shortDesc, this.longDesc});
+// }
 
 class NutrientDetails {
   final int id;
