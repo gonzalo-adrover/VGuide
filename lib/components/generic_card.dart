@@ -1,6 +1,4 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:vguide/components/rounded_button.dart';
 
 class GenericCard extends StatelessWidget {
   final String id;

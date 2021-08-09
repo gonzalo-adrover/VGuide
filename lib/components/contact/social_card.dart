@@ -10,26 +10,38 @@ class SocialCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(
-          _getSocialNetworkIcon(socialDetails.network),
-          color: Colors.black,
-        ),
-        Column(
-          children: [
-            Text(
-              _getSocialNetworkName(socialDetails.network),
-              style: VGuideTextStyles.subheader,
-            ),
-            Text(
-              socialDetails.data,
-              style: VGuideTextStyles.body,
-            )
-          ],
-        )
-      ],
-    );
+    return Expanded(
+        child: InkWell(
+            splashColor: Colors.indigo.shade200,
+            onTap: () => {},
+            child: Card(
+              color: Colors.white,
+              elevation: 4,
+              child: Padding(
+                padding: EdgeInsets.only(
+                    top: 4.0, bottom: 2.0, left: 6.0, right: 6.0),
+                child: Column(
+                  children: [
+                    Icon(
+                      _getSocialNetworkIcon(socialDetails.network),
+                      color: Colors.indigo.shade400,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          _getSocialNetworkName(socialDetails.network),
+                          style: VGuideTextStyles.subheader,
+                        ),
+                        Text(
+                          socialDetails.data,
+                          style: VGuideTextStyles.body,
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            )));
   }
 }
 

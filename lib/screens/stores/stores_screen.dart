@@ -4,12 +4,11 @@ import 'package:vguide/components/stores/store_card_item.dart';
 import 'package:vguide/components/stores/store_details.dart';
 import 'package:vguide/data/stores_data.dart';
 import 'package:vguide/domain/model/store.dart';
+import 'package:vguide/screens/stores/stores_map.dart';
 
 class StoresScreen extends StatefulWidget {
-  static Color pageColor = Colors.grey.shade300;
-
+  static Color pageColor = Colors.indigo.shade200;
   static final LatLng _kMapCenter = LatLng(-34.8851383, -56.1707025);
-
   static final CameraPosition _kInitialPosition =
       CameraPosition(target: _kMapCenter, zoom: 12.0, tilt: 0, bearing: 0);
 
@@ -19,66 +18,58 @@ class StoresScreen extends StatefulWidget {
 
 class _StoresScreenState extends State<StoresScreen> {
   Store selectedStore = StoresData.stores[0];
+  bool isStoreSelected = false;
   Set<Marker> mapMarkers = _getAllMarkers();
 
-  void onStoreSelected(storeName) {
+  void clearSelection() {
     setState(() {
-      selectedStore = StoresData.stores.firstWhere(
-          (element) => element.name == storeName,
-          orElse: () => StoresData.stores[0]);
-      mapMarkers = _getMarkersByStore(selectedStore);
+      isStoreSelected = false;
+      mapMarkers = _getAllMarkers();
+    });
+  }
+
+  void onStoreSelected(String storeName) {
+    setState(() {
+      if (isStoreSelected && selectedStore.name == storeName) {
+        clearSelection();
+      } else {
+        selectedStore = StoresData.stores.firstWhere(
+            (element) => element.name == storeName,
+            orElse: () => StoresData.stores[0]);
+        isStoreSelected = true;
+        mapMarkers = _getMarkersByStore(selectedStore);
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          backgroundColor: StoresScreen.pageColor,
+          title: Text("Tiendas"),
+          centerTitle: true,
+        ),
         body: SafeArea(
-      child: Stack(
-        children: [
-          _googleMap(context, StoresScreen._kInitialPosition, mapMarkers),
-          _bottomSheetContent(selectedStore),
-          _bottomCarousel(
-              context: context,
-              onStorePressed: (selectedStore) =>
-                  {onStoreSelected(selectedStore)}),
-        ],
-      ),
-    ));
+          child: Column(
+            children: [
+              Flexible(
+                  flex: isStoreSelected ? 3 : 10,
+                  child: StoresMap(context,
+                      position: StoresScreen._kInitialPosition,
+                      markers: mapMarkers)),
+              Flexible(
+                  flex: isStoreSelected ? 8 : 3,
+                  child: StoreSectionWidget(
+                    isStoreSelected: isStoreSelected,
+                    selectedStore: selectedStore,
+                    onStoreSelected: onStoreSelected,
+                  )),
+            ],
+          ),
+        ));
   }
 }
-
-Widget _googleMap(
-        BuildContext context, CameraPosition position, Set<Marker> markers) =>
-    Positioned.fill(
-        bottom: MediaQuery.of(context).size.height * 0.2,
-        child: Container(
-            child: GoogleMap(
-              initialCameraPosition: position,
-              myLocationEnabled: true,
-              markers: markers,
-            ),
-            color: Colors.amberAccent.shade400));
-
-Widget _bottomSheetContent(Store store) => StoreDetails(
-      store: store,
-    );
-
-Widget _bottomCarousel({BuildContext context, @required onStorePressed}) =>
-    Positioned.fill(
-      top: MediaQuery.of(context).size.height * 0.71,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: storesList(onStorePressed),
-      ),
-    );
-
-List<Widget> storesList(onCardPressed) => StoresData.stores
-    .map((e) => StoreCardItem(
-          store: e,
-          onCardPressed: onCardPressed,
-        ))
-    .toList();
 
 // Returns a Set containing the Markers of all the available stores
 Set<Marker> _getAllMarkers() {
@@ -86,7 +77,9 @@ Set<Marker> _getAllMarkers() {
   StoresData.stores.forEach((element) {
     element.contactList.forEach((element) {
       var current = Marker(
-          markerId: element.marker.markerId, position: element.marker.position);
+          markerId: element.marker.markerId,
+          infoWindow: InfoWindow(title: element.marker.description),
+          position: element.marker.position);
       markers.add(current);
     });
   });
