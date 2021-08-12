@@ -21,65 +21,65 @@ class StoreSectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: Container(
-            color: Colors.indigo.shade200,
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: StoresData.stores.length,
-                itemBuilder: (context, index) => StoreCardItem(
-                      store: StoresData.stores[index],
-                      onCardPressed: onStoreSelected,
-                    )),
-          ),
-        ),
-        AnimatedContainer(
-            duration: Duration(milliseconds: 700),
-            height: isStoreSelected ? 280 : 0,
-            curve: Curves.fastOutSlowIn,
-            child: Expanded(
-                child: Container(
+    return Container(
+      color: StoresScreen.pageColor,
+      child: isStoreSelected
+          ? Expanded(
               child: _bottomSheetContent(selectedStore),
-            )))
-      ],
+            )
+          : Expanded(
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: StoresData.stores.length,
+                  itemBuilder: (context, index) => StoreCardItem(
+                        store: StoresData.stores[index],
+                        onCardPressed: onStoreSelected,
+                      )),
+            ),
     );
   }
 }
 
 Widget _bottomSheetContent(Store store) {
-  return Container(
-      color: StoresScreen.pageColor,
-      alignment: Alignment.center,
-      padding: EdgeInsets.all(7.0),
+  return Expanded(
       child: Card(
-        color: Colors.white,
-        child: Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Center(
+    color: Colors.white,
+    child: Center(
+        child: Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.all(15.0),
+          child: Column(
+            children: [
+              Text(
+                store.name,
+                style: VGuideTextStyles.header,
+              ),
+              Text(
+                store.description,
+                style: VGuideTextStyles.body,
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+            child: Row(
+          children: [
+            Flexible(
+                flex: 3,
                 child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text(
-                    store.name,
-                    style: VGuideTextStyles.header,
-                  ),
-                ),
-                Text(
-                  store.description,
-                  style: VGuideTextStyles.body,
-                ),
-                Column(
                   children: _getStoreAddresses(store.contactList),
-                ),
-                Row(
+                )),
+            Flexible(
+                flex: 2,
+                child: Column(
                   children: _getSocialNetwordCards(store.socialMediaLinks),
-                )
-              ],
-            ))),
-      ));
+                ))
+          ],
+        ))
+      ],
+    )),
+  ));
 }
 
 List<AddressCard> _getStoreAddresses(List<Contact> contacts) {

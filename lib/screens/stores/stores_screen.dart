@@ -54,17 +54,29 @@ class _StoresScreenState extends State<StoresScreen> {
           child: Column(
             children: [
               Flexible(
-                  flex: isStoreSelected ? 3 : 10,
-                  child: StoresMap(context,
-                      position: StoresScreen._kInitialPosition,
-                      markers: mapMarkers)),
-              Flexible(
-                  flex: isStoreSelected ? 8 : 3,
+                flex: isStoreSelected ? 1 : 3,
+                child: StoresMap(context,
+                    position: StoresScreen._kInitialPosition,
+                    markers: mapMarkers),
+              ),
+              // ConstrainedBox(
+              //     constraints: BoxConstraints.loose(Size(140)),
+              //     child: StoreSectionWidget(
+              //       isStoreSelected: isStoreSelected,
+              //       selectedStore: selectedStore,
+              //       onStoreSelected: onStoreSelected,
+              //     )),
+              // Stack(
+              //   children: [
+
+              //   ],
+              // ),
+              Expanded(
                   child: StoreSectionWidget(
-                    isStoreSelected: isStoreSelected,
-                    selectedStore: selectedStore,
-                    onStoreSelected: onStoreSelected,
-                  )),
+                isStoreSelected: isStoreSelected,
+                selectedStore: selectedStore,
+                onStoreSelected: onStoreSelected,
+              )),
             ],
           ),
         ));
