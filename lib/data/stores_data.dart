@@ -13,6 +13,7 @@ class StoresData {
               department: Department.montevideo,
               marker: MapMarker(
                   markerId: MarkerId('Mercado Verde #1'),
+                  description: 'Mercado Verde - Av. Dr. Juan B. Alberdi 6587',
                   position: LatLng(-34.8796742, -56.0662053))),
           Contact(
               address: "Jaime Zudañez 2511",
@@ -20,6 +21,7 @@ class StoresData {
               department: Department.montevideo,
               marker: MapMarker(
                   markerId: MarkerId('Mercado Verde #2'),
+                  description: 'Mercado Verde - Jaime Zudañez 2511',
                   position: LatLng(-34.9161501, -56.1604712))),
           Contact(
               address: "Juan Rodríguez Correa 1329",
@@ -27,13 +29,14 @@ class StoresData {
               department: Department.montevideo,
               marker: MapMarker(
                   markerId: MarkerId('Mercado Verde #3'),
+                  description: 'Mercado Verde - Juan Rodríguez Correa 1329',
                   position: LatLng(-34.8675641, -56.1961091)))
         ],
         description:
             "Tienda ecofriendly con un amplio surtido en productos orgánicos, naturales y saludables.",
         socialMediaLinks: [
           SocialLink(network: NetworkType.instagram, data: "@mercadoverde"),
-          SocialLink(network: NetworkType.web, data: "mercadoverde.com.uy")
+          SocialLink(network: NetworkType.web, data: "www.mercadoverde.com.uy")
         ]),
     Store(
         name: "Go Vegan",
@@ -44,6 +47,7 @@ class StoresData {
               department: Department.montevideo,
               marker: MapMarker(
                   markerId: MarkerId('Go Vegan'),
+                  description: 'Go Vegan - Rivera 4183',
                   position: LatLng(-34.8964545, -56.1254235))),
         ],
         description: "Supermercado vegano.",
@@ -61,6 +65,7 @@ class StoresData {
               department: Department.montevideo,
               marker: MapMarker(
                   markerId: MarkerId('Vegan Wraps'),
+                  description: 'Vegan Wraps - Lorenzo J. Perez 3010',
                   position: LatLng(-34.9047406, -56.1504157))),
         ],
         description: "Comida vegetariana.",

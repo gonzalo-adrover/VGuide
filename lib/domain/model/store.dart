@@ -21,9 +21,10 @@ class Contact {
 
 class MapMarker {
   final MarkerId markerId;
+  final String description;
   final LatLng position;
 
-  const MapMarker({this.markerId, this.position});
+  const MapMarker({this.markerId, this.description, this.position});
 }
 
 class SocialLink {

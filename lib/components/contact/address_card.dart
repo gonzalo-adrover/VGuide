@@ -10,25 +10,34 @@ class AddressCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(
-          Entypo.location_pin,
-          color: Colors.black,
-        ),
-        Column(
-          children: [
-            Text(
-              contactDetails.address,
-              style: VGuideTextStyles.subheader,
-            ),
-            Text(
-              contactDetails.phoneNumber,
-              style: VGuideTextStyles.body,
-            )
-          ],
-        )
-      ],
-    );
+    return Card(
+        color: Colors.white,
+        elevation: 1,
+        child: Padding(
+            padding: EdgeInsets.all(10),
+            child: Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(right: 10.0),
+                  child: Icon(
+                    Entypo.location_pin,
+                    color: Colors.red.shade300,
+                  ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      contactDetails.address,
+                      style: VGuideTextStyles.mapDetailsHeaders,
+                    ),
+                    Text(
+                      contactDetails.phoneNumber,
+                      style: VGuideTextStyles.mapDetailsBody,
+                    )
+                  ],
+                )
+              ],
+            )));
   }
 }

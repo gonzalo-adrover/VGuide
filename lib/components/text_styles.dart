@@ -15,6 +15,12 @@ class VGuideTextStyles {
   static TextStyle chip =
       GoogleFonts.balsamiqSans(fontSize: 15.0, fontWeight: FontWeight.w300);
 
+  static TextStyle mapDetailsHeaders =
+      GoogleFonts.raleway(fontSize: 12.0, fontWeight: FontWeight.w700);
+
+  static TextStyle mapDetailsBody =
+      GoogleFonts.raleway(fontSize: 10.0, fontWeight: FontWeight.w500);
+
   static const servingInfoBorderColor = Color(0xffb0b0b0);
 
   static TextStyle detailsPreferredCategoryText(CupertinoThemeData themeData) =>
