@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:vguide/components/stores/store_card_item.dart';
 import 'package:vguide/components/stores/store_details.dart';
 import 'package:vguide/data/stores_data.dart';
 import 'package:vguide/domain/model/store.dart';
@@ -45,7 +44,9 @@ class _StoresScreenState extends State<StoresScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: StoresScreen.pageColor,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: StoresScreen.pageColor,
           title: Text("Tiendas"),
           centerTitle: true,
@@ -59,19 +60,7 @@ class _StoresScreenState extends State<StoresScreen> {
                     position: StoresScreen._kInitialPosition,
                     markers: mapMarkers),
               ),
-              // ConstrainedBox(
-              //     constraints: BoxConstraints.loose(Size(140)),
-              //     child: StoreSectionWidget(
-              //       isStoreSelected: isStoreSelected,
-              //       selectedStore: selectedStore,
-              //       onStoreSelected: onStoreSelected,
-              //     )),
-              // Stack(
-              //   children: [
-
-              //   ],
-              // ),
-              Expanded(
+              Container(
                   child: StoreSectionWidget(
                 isStoreSelected: isStoreSelected,
                 selectedStore: selectedStore,
