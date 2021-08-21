@@ -10,12 +10,7 @@ class NutrientsData {
         id: 0,
         name: "Proteinas",
         longDesc: """
-          Las proteínas son grandes moléculas que desempeñan el mayor número de funciones en las células de los seres vivos. 
-          Forman parte de la estructura de tejidos (músculos, tendones, piel, uñas) durante todos los procesos de crecimiento y desarrollo. 
-          Además desempeñan funciones metabólicas (actúan como enzimas, hormonas y anticuerpos.)
-          Una proteína se conforman por varios aminoácidos y existen algunos que los humanos no podemos formar, si nos faltan no podemos generar estas proteínas. Los aminoacidos que no podemos formar son llamados “aminoácidos esenciales”. Debido a esto, debemos obtenerlos de los  alimentos. 
-          La deficiencia de este nutriente puede causar desnutrición proteica, fatiga, dermatitis.
-          """,
+          Las proteínas son grandes moléculas que desempeñan el mayor número de funciones en las células de los seres vivos. Forman parte de la estructura de tejidos (músculos, tendones, piel, uñas) durante todos los procesos de crecimiento y desarrollo. Además desempeñan funciones metabólicas (actúan como enzimas, hormonas y anticuerpos.)Una proteína se conforman por varios aminoácidos y existen algunos que los humanos no podemos formar, si nos faltan no podemos generar estas proteínas. Los aminoacidos que no podemos formar son llamados “aminoácidos esenciales”. Debido a esto, debemos obtenerlos de los  alimentos. La deficiencia de este nutriente puede causar desnutrición proteica, fatiga, dermatitis.""",
         foods: [
           "Legumbres y derivados",
           "Cereales",
@@ -35,7 +30,7 @@ class NutrientsData {
           """,
         inhibitors: "",
         picURL:
-            "https://www.lavanguardia.com/uploads/2019/12/16/5e997b3957634.jpeg"),
+            "https://www.prensalibre.com/wp-content/uploads/2019/08/Prote%C3%ADnas-2.jpg?quality=82"),
     Nutrient(
         id: 1,
         name: "Ácidos grasos omega 3",
@@ -71,7 +66,7 @@ class NutrientsData {
           aprovechamiento.
         """,
         picURL:
-            "https://www.lavanguardia.com/uploads/2019/12/16/5e997b3957634.jpeg"),
+            "https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/01/sources-of-omega-3-and-healthy-fats-1024x683.jpg?w=1155&h=1541"),
     Nutrient(
         id: 2,
         name: "Calcio",
@@ -103,7 +98,7 @@ class NutrientsData {
               Algunos alimentos como la acelga o la espinaca pueden inhibir su absorción.
             """,
         picURL:
-            "https://www.lavanguardia.com/uploads/2019/12/16/5e997b3957634.jpeg"),
+            "https://cdn.nof.org/wp-content/uploads/2015/12/diary-and-fish.png"),
     Nutrient(
         id: 3,
         name: "Hierro",
@@ -129,7 +124,7 @@ class NutrientsData {
           Las bebidas con cafeína como café, té, mate, refrescos. 
         """,
         picURL:
-            "https://www.lavanguardia.com/uploads/2019/12/16/5e997b3957634.jpeg"),
+            "https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/07/18/Pictures/_54f1141e-8a7c-11e8-b2f4-2ee9fa0c7dec.jpg"),
     Nutrient(
         id: 4,
         name: "Zinc",
@@ -162,7 +157,7 @@ class NutrientsData {
           que aportan Zinc.
         """,
         picURL:
-            "https://www.lavanguardia.com/uploads/2019/12/16/5e997b3957634.jpeg"),
+            "https://www.unlockfood.ca/EatRightOntario/media/Website-images-resized/What-you-need-to-know-about-Zinc-resized.jpg"),
     Nutrient(
         id: 5,
         name: "Yodo",
@@ -184,7 +179,7 @@ class NutrientsData {
         """,
         inhibitors: "",
         picURL:
-            "https://www.lavanguardia.com/uploads/2019/12/16/5e997b3957634.jpeg"),
+            "https://2pybk2la9r-flywheel.netdna-ssl.com/wp-content/uploads/2020/01/iStock-1154896831-food-eating-healthy.jpg"),
     Nutrient(
         id: 6,
         name: "Vitamina D",
@@ -206,7 +201,7 @@ class NutrientsData {
         facilitators: "",
         inhibitors: "",
         picURL:
-            "https://www.lavanguardia.com/uploads/2019/12/16/5e997b3957634.jpeg"),
+            "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F12%2F2020%2F06%2F25%2Fvitamin-d-AdobeStock_270150827.jpg"),
     Nutrient(
         id: 7,
         name: "Vitamina B12",
@@ -232,6 +227,6 @@ class NutrientsData {
           HIPERVICULO A LA PESTAÑA DE CONTACTO DE NUTRICIONISTAS
         """,
         picURL:
-            "https://www.lavanguardia.com/uploads/2019/12/16/5e997b3957634.jpeg"),
+            "https://domf5oio6qrcr.cloudfront.net/medialibrary/4529/b12-foods.jpg"),
   ];
 }
