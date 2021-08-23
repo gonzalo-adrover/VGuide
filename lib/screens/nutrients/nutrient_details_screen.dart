@@ -15,47 +15,9 @@ class NutrientDetailsScreen extends StatelessWidget {
     return Scaffold(
         appBar: buildAppBar(context),
         backgroundColor: Color.fromRGBO(76, 92, 155, 1),
-        body: Body(nutrient: nutrient)
-
-      // Padding(
-      //   padding: const EdgeInsets.all(0),
-      //   child: Column(
-      //     crossAxisAlignment: CrossAxisAlignment.stretch,
-      //     children: [
-      //       Container(
-      //         width: 200,
-      //         height: 200,
-      //         decoration: BoxDecoration(
-      //           shape: BoxShape.circle,
-      //           boxShadow: [
-      //             BoxShadow(
-      //               color: Colors.grey.withOpacity(0.5),
-      //               spreadRadius: 5,
-      //               blurRadius: 7,
-      //               offset: Offset(0, 3), // changes position of shadow
-      //             ),
-      //           ],
-      //           image: DecorationImage(
-      //               image: NetworkImage(imageUrl), fit: BoxFit.fill),
-      //         ),
-      //       ),
-      //       SizedBox(height: 20),
-      //       Text(
-      //         this.title,
-      //         style: VGuideTextStyles.detailsTitleText(themeData),
-      //         textAlign: TextAlign.center,
-      //       ),
-      //       SizedBox(height: 40),
-      //       Text(
-      //         this.longDesc,
-      //         style: VGuideTextStyles.detailsDescriptionText(themeData),
-      //         textAlign: TextAlign.center,
-      //       ),
-      //       // ServingInfoChart(veggie, prefs),
-      //     ],
-      //   ),
-      // ),
-    );
+        body: Container(
+          child: Body(nutrient: nutrient),
+        ));
   }
 
   AppBar buildAppBar(BuildContext context) {
@@ -64,5 +26,4 @@ class NutrientDetailsScreen extends StatelessWidget {
       elevation: 0,
     );
   }
-
 }

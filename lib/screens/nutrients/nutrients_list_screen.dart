@@ -23,6 +23,5 @@ List<NutrientListItem> getTipList() {
           ))
       .toList();
 
-
   return tipListItem;
 }

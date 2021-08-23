@@ -21,14 +21,15 @@ class NutrientTitleWithImage extends StatelessWidget {
           ),
           Text(
             nutrient.name,
-            style: Theme.of(context).textTheme.headline4.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold),
+            style: Theme.of(context)
+                .textTheme
+                .headline4
+                .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 30.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              // SizedBox(width: 20.0),
               Container(
                 width: 320,
                 height: 200,
@@ -42,16 +43,14 @@ class NutrientTitleWithImage extends StatelessWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
+                      color: Colors.black12.withOpacity(0.3),
                       spreadRadius: 5,
                       blurRadius: 7,
-                      offset: Offset(
-                          0, 3), // changes position of shadow
+                      offset: Offset(0, 3), // changes position of shadow
                     ),
                   ],
                   image: DecorationImage(
-                      image: NetworkImage(nutrient.picURL),
-                      fit: BoxFit.fill),
+                      image: NetworkImage(nutrient.picURL), fit: BoxFit.fill),
                 ),
               ),
             ],
