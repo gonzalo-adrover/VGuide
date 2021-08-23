@@ -15,7 +15,7 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           SizedBox(
-            height: size.height,
+            height: size.height*1.5,
             child: Stack(
               children: <Widget>[
                 Container(
