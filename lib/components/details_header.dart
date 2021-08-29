@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:vguide/domain/model/nutrient.dart';
 
-class NutrientTitleWithImage extends StatelessWidget {
-  const NutrientTitleWithImage({
-    this.nutrient,
-  });
+class DetailsHeader extends StatelessWidget {
+  final String imageUrl;
+  final String sectionName;
+  final String title;
 
-  final Nutrient nutrient;
+  DetailsHeader({this.imageUrl, this.sectionName, this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +15,11 @@ class NutrientTitleWithImage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Nutriente',
+            sectionName,
             style: TextStyle(color: Colors.white),
           ),
           Text(
-            nutrient.name,
+            title,
             style: Theme.of(context)
                 .textTheme
                 .headline4
@@ -50,7 +49,7 @@ class NutrientTitleWithImage extends StatelessWidget {
                     ),
                   ],
                   image: DecorationImage(
-                      image: NetworkImage(nutrient.picURL), fit: BoxFit.fill),
+                      image: NetworkImage(imageUrl), fit: BoxFit.fill),
                 ),
               ),
             ],
