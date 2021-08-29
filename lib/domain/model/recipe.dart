@@ -6,7 +6,9 @@ class Recipe {
   final String name;
   final List<VeggieType> veggieTypes;
   final List<Food> foodList;
-  final Map<Nutrient, String> nutrientsList;
+  final List<String> steps;
+  final String serving;
+  final List<RecipeNutrient> nutrientsList;
   final String description;
   final String picURL;
 
@@ -14,6 +16,8 @@ class Recipe {
       {this.name,
       this.veggieTypes,
       this.foodList,
+      this.steps,
+      this.serving,
       this.nutrientsList,
       this.description,
       this.picURL});

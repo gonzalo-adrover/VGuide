@@ -7,13 +7,17 @@ class FoodsData {
         return Food(
             name: "${amount == Amount.singular ? "Calabacin" : "Calabacines"}",
             category: FoodCategory.vegetables,
-            serving: serving);
+            serving: serving,
+            picUrl:
+                "https://http2.mlstatic.com/D_NQ_NP_933336-MLU32029663688_082019-O.jpg");
         break;
       case FoodNames.tomate:
         return Food(
             name: "${amount == Amount.singular ? "Tomate" : "Tomates"}",
             category: FoodCategory.fruits,
-            serving: serving);
+            serving: serving,
+            picUrl:
+                "https://geant.vteximg.com.br/arquivos/ids/252446-1000-1000/401026.jpg?v=637281946630130000");
         break;
       default:
     }

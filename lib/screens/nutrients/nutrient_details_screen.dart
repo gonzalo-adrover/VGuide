@@ -19,8 +19,7 @@ class NutrientDetailsScreen extends StatelessWidget {
           child: DetailsLayout(
             header: DetailsHeader(
               imageUrl: nutrient.picURL,
-              sectionName: "Nutriente",
-              title: nutrient.name,
+              headerContent: headerText(context),
             ),
             body: NutrientDescription(
               nutrient: nutrient,
@@ -28,6 +27,24 @@ class NutrientDetailsScreen extends StatelessWidget {
           ),
         ));
   }
+
+  Widget headerText(BuildContext context) => Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Nutriente",
+            style: TextStyle(color: Colors.white),
+          ),
+          Text(
+            nutrient.name,
+            style: Theme.of(context)
+                .textTheme
+                .headline4
+                .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+          ),
+        ],
+      );
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(

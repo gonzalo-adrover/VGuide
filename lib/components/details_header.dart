@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 
 class DetailsHeader extends StatelessWidget {
   final String imageUrl;
-  final String sectionName;
-  final String title;
+  final Widget headerContent;
 
-  DetailsHeader({this.imageUrl, this.sectionName, this.title});
+  DetailsHeader({this.imageUrl, this.headerContent});
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +13,7 @@ class DetailsHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
-            sectionName,
-            style: TextStyle(color: Colors.white),
-          ),
-          Text(
-            title,
-            style: Theme.of(context)
-                .textTheme
-                .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
+          headerContent,
           SizedBox(height: 30.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
