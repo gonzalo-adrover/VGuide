@@ -6,12 +6,12 @@ import 'package:vguide/screens/tips/tip_screen.dart';
 class TipListItem extends StatelessWidget {
   final String title;
   final String imageUrl;
-  final VoidCallback onPressed;
+  final String description;
 
   TipListItem({
     this.title,
     this.imageUrl,
-    this.onPressed,
+    this.description,
   });
 
   @override
@@ -32,7 +32,7 @@ class TipListItem extends StatelessWidget {
                 name: title,
                 longDesc: title,
                 pageColor: Colors.white,
-              )),
+              ))
     );
   }
 }

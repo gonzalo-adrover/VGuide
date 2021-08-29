@@ -19,8 +19,7 @@ List<NutrientListItem> getTipList() {
   List<Nutrient> tipData = NutrientsData().getNutrients();
   List<NutrientListItem> tipListItem = tipData
       .map((nutrient) => NutrientListItem(
-            title: nutrient.name,
-            imageUrl: nutrient.picURL,
+            nutrient: nutrient,
           ))
       .toList();
 

@@ -32,11 +32,24 @@ class VGuideTextStyles {
   static TextStyle detailsPreferredCategoryText(CupertinoThemeData themeData) =>
       themeData.textTheme.textStyle.copyWith(
         fontWeight: FontWeight.bold,
+        // color: Colors.white,
       );
 
   static TextStyle detailsTitleText(CupertinoThemeData themeData) =>
-      themeData.textTheme.textStyle.copyWith(
-        fontSize: 30,
-        fontWeight: FontWeight.bold,
+      GoogleFonts.montserrat(
+        textStyle: TextStyle(
+          fontSize: 45,
+          //   fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      );
+
+  static TextStyle detailsDescriptionText(CupertinoThemeData themeData) =>
+      GoogleFonts.openSans(
+        textStyle: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.w300,
+          color: Colors.white,
+        ),
       );
 }
