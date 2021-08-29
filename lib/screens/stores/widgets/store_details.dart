@@ -1,12 +1,12 @@
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:vguide/components/contact/address_card.dart';
-import 'package:vguide/components/contact/social_card.dart';
-import 'package:vguide/components/stores/store_card_item.dart';
+import 'package:vguide/components/text_styles.dart';
 import 'package:vguide/data/stores_data.dart';
 import 'package:vguide/domain/model/store.dart';
+import 'package:vguide/screens/stores/widgets/social_card.dart';
+import 'package:vguide/screens/stores/widgets/store_card_item.dart';
 
-import '../text_styles.dart';
+import 'address_card.dart';
 
 class StoreSectionWidget extends StatelessWidget {
   final bool isStoreSelected;

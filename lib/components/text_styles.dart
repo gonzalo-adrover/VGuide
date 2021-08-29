@@ -15,6 +15,12 @@ class VGuideTextStyles {
   static TextStyle chip =
       GoogleFonts.balsamiqSans(fontSize: 15.0, fontWeight: FontWeight.w300);
 
+  static TextStyle chipLight = GoogleFonts.raleway(
+      fontSize: 14.0, fontWeight: FontWeight.w500, color: Colors.black);
+
+  static TextStyle itemTitle =
+      GoogleFonts.redHatDisplay(fontSize: 18.0, fontWeight: FontWeight.w700);
+
   static TextStyle mapDetailsHeaders =
       GoogleFonts.raleway(fontSize: 12.0, fontWeight: FontWeight.w700);
 

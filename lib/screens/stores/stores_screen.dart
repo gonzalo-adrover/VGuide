@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:vguide/components/stores/store_details.dart';
 import 'package:vguide/data/stores_data.dart';
 import 'package:vguide/domain/model/store.dart';
 import 'package:vguide/screens/stores/stores_map.dart';
+import 'package:vguide/screens/stores/widgets/store_details.dart';
 
 class StoresScreen extends StatefulWidget {
   static Color pageColor = Colors.indigo.shade200;
