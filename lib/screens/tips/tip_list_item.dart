@@ -19,20 +19,19 @@ class TipListItem extends StatelessWidget {
     return ListItemWithImage(
       id: title,
       imageUrl: imageUrl,
-      content: Text(title, style: VGuideTextStyles.header),
+      content: Text(title, style: VGuideTextStyles.itemTitle),
       onClick: () => routeToTipPage(context),
     );
   }
 
   Future routeToTipPage(context) {
     return Navigator.push(
-      context,
-      MaterialPageRoute(
-          builder: (context) => TipScreen(
-                name: title,
-                longDesc: title,
-                pageColor: Colors.white,
-              ))
-    );
+        context,
+        MaterialPageRoute(
+            builder: (context) => TipScreen(
+                  title: title,
+                  longDesc: title,
+                  pageColor: Colors.white,
+                )));
   }
 }
