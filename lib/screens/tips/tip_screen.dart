@@ -4,38 +4,39 @@ import 'package:vguide/components/text_styles.dart';
 
 class TipScreen extends StatelessWidget {
   final Color pageColor;
-  final String name;
+  final String title;
   final String longDesc;
+  final String imageUrl;
 
-  const TipScreen({this.pageColor, this.name, this.longDesc});
+  const TipScreen({this.pageColor, this.title, this.longDesc, this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
     final themeData = CupertinoTheme.of(context);
 
-    return Container(
-      color: pageColor,
-      child: Padding(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Tip: ' + title),
+      ),
+      backgroundColor: pageColor,
+      body: Padding(
         padding: const EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
-                Text('Nutriente',
-                    style: VGuideTextStyles.detailsPreferredCategoryText(
-                        themeData)),
-              ],
+            Image.network(
+              imageUrl,
+              height: 200,
+              fit: BoxFit.cover,
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 20),
             Text(
-              this.name,
+              this.title,
               style: VGuideTextStyles.detailsTitleText(themeData),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 20),
             Text(
-              this.name,
+              this.longDesc,
               style: CupertinoTheme.of(context).textTheme.textStyle,
             ),
             // ServingInfoChart(veggie, prefs),

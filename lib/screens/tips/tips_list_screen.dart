@@ -21,6 +21,7 @@ List<TipListItem> getTipList() {
       .map((tip) => TipListItem(
             title: tip.name,
             imageUrl: tip.picURL,
+            description: tip.description,
           ))
       .toList();
 

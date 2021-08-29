@@ -151,7 +151,7 @@ class HeroAnimatingCard extends StatelessWidget {
       builder: (context, child) {
         return PressableCard(
           onPressed: heroAnimation.value == 0 ? onPressed : null,
-          color: color,
+          color: color  ,
           flattenAnimation: heroAnimation,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
