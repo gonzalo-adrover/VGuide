@@ -19,14 +19,6 @@ class Nutrient {
       this.picURL});
 }
 
-class RecipeNutrient {
-  final NutrientKey key;
-  final String name;
-  final String amount;
-
-  RecipeNutrient({this.key, this.name, this.amount});
-}
-
 enum NutrientKey {
   carbohidratos,
   proteina,
