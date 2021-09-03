@@ -41,27 +41,140 @@ class RecipesData {
               FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "2,1 mg"),
               FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "1,6 mg")
             ],
-            picURL:
-                "https://i0.wp.com/cocinainspira.com/wp-content/uploads/2019/09/DSCF9814-1024x683.jpg?resize=750%2C500&ssl=1"),
+            picResource: "assets/img/recipes/calabacin_capresse.HEIC"),
         Recipe(
             name: "Tortilla de garbanzo",
             veggieTypes: [VeggieTypes.all],
-            picURL:
-                "https://cdn.queapetito.com/wp-content/uploads/2019/11/tortilla-3-600x469.jpg"),
+            picResource: "assets/img/recipes/tortilla_garbanzos.PNG"),
         Recipe(
             name: "Pastel de lentejas",
             veggieTypes: [VeggieTypes.ovoLactoVegetarian],
-            picURL:
-                "https://recetasveganas.net/wp-content/uploads/2019/01/recetas-vegetarianas-pastel-patata-lentejas-facil-sano7-1170x775.png"),
-        Recipe(name: "Pastel de verduras", veggieTypes: [VeggieTypes.all]),
-        Recipe(name: "Nuggets de proteína", veggieTypes: [VeggieTypes.all]),
-        Recipe(name: "Queso de caju", veggieTypes: [VeggieTypes.all]),
-        Recipe(name: "Paté de girasol", veggieTypes: [VeggieTypes.all]),
-        Recipe(name: "Mayonesa de zanahoria", veggieTypes: [VeggieTypes.all]),
-        Recipe(name: "Quinotto (Risotto de quinoa)", veggieTypes: [
-          VeggieTypes.ovoLactoVegetarian,
-          VeggieTypes.lactoVegetarian
-        ]),
-        Recipe(name: "Hummus de garbanzos", veggieTypes: [VeggieTypes.all])
+            picResource: "assets/img/recipes/pastel_lentejas.jpg"),
+        Recipe(
+            name: "Pastel de verduras",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/pastel_verduras.jpg"),
+        Recipe(
+            name: "Nuggets de proteína",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/nuggets_proteina.jpg"),
+        Recipe(
+            name: "Queso de caju",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/queso_caju.jpg"),
+        Recipe(
+            name: "Paté de girasol",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/pate_girasol.jpg"),
+        Recipe(
+            name: "Mayonesa de zanahoria",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/mayo_zanahoria.jpg"),
+        Recipe(
+            name: "Quinotto (Risotto de quinoa)",
+            veggieTypes: [
+              VeggieTypes.ovoLactoVegetarian,
+              VeggieTypes.lactoVegetarian
+            ],
+            picResource: "assets/img/recipes/quinotto.jpg"),
+        Recipe(
+            name: "Hummus de garbanzos",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/hummus_garbanzos.jpg"),
+        Recipe(
+            name: "Bocaditos de tofu y garbanzo",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/bocaditos_tofu.jpg"),
+        Recipe(
+            name: "Hamburguesas de porotos",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/bocaditos_tofu.jpg"),
+        Recipe(
+            name: "Crepes de garbanzo",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/crepes_garbanzo.jpg"),
+        Recipe(
+            name: "Ricotta de almendras",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/ricotta_almendras.jpg"),
+        Recipe(
+            name: "Bebida vegetal de avena",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/bebida_avena.jpg"),
+        Recipe(
+            name: "Queso cheddar vegano",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/cheddar_vegano.jpg"),
+        Recipe(
+            name: "Sopa de quinoa",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/sopa_quinoa.jpg"),
+        Recipe(
+            name: "Empanadas de humita",
+            veggieTypes: [VeggieTypes.ovoLactoVegetarian],
+            picResource: "assets/img/recipes/empanadas_humita.jpg"),
+        Recipe(
+            name: "Bolognesa de proteína de soja",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/bolognesa_proteina.jpg"),
+        Recipe(
+            name: "Albóndigas de lentejas",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/albondigas_lenteja.jpg"),
+        Recipe(
+            name: "Parmesano de semillas",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/parmesano_semillas.jpg"),
+        Recipe(
+            name: "Fainá de verduras",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/faina_verduras.jpg"),
+        Recipe(
+            name: "Pasta al wok con vegetales",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/pasta_wok.PNG"),
+        Recipe(
+            name: "Nuggets de coliflor",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/nuggets_coliflor.HEIC"),
+        Recipe(
+            name: "Arepas con salsa criolla",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/arepas.jpg"),
+        Recipe(
+            name: "Masa de tacos",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/masa_tacos.jpg"),
+        Recipe(
+            name: "Brownie de porotos negros",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/brownie_porotos.jpg"),
+        Recipe(
+            name: "Bebida vegetal de almendras",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/bebida_almendras.jpg"),
+        Recipe(
+            name: "Galletas de gabazo de la bebida de almendras",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/galletas_bagazo_almendras.HEIC"),
+        Recipe(
+            name: "Pudding de chia y manzana",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/pudding_chia_manzana.jpg"),
+        Recipe(
+            name: "Pudding de chia y chocolate",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/pudding_chia_chocolate.jpg"),
+        Recipe(
+            name: "Trufas de maní y limón",
+            veggieTypes: [VeggieTypes.all],
+            picResource: "assets/img/recipes/trufas_limon_mani.jpg"),
+        Recipe(
+            name: "Panqueques de banana y avena",
+            veggieTypes: [
+              VeggieTypes.ovoLactoVegetarian,
+              VeggieTypes.ovoVegetarian
+            ],
+            picResource: "assets/img/recipes/panqueque_avena_banana.jpg")
       ];
 }

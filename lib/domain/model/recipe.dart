@@ -9,7 +9,7 @@ class Recipe {
   final String serving;
   final List<RecipeNutrient> nutrientsList;
   final String description;
-  final String picURL;
+  final String picResource;
 
   const Recipe(
       {this.name,
@@ -19,7 +19,7 @@ class Recipe {
       this.serving,
       this.nutrientsList,
       this.description,
-      this.picURL});
+      this.picResource});
 }
 
 class RecipeFood {

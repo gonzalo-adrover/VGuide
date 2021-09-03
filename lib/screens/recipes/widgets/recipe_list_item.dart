@@ -13,7 +13,7 @@ class RecipeListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListItemWithImage(
       id: recipe.name,
-      imageUrl: recipe.picURL,
+      imageSource: recipe.picResource,
       content: listItemContent(),
       onClick: () => routeToRecipePage(context),
     );

@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'constants.dart' as Constants;
 
 class DetailsHeader extends StatelessWidget {
-  final String imageUrl;
+  final String imageUrl; // For remote image
+  final String imageSource; // For local image
   final Widget headerContent;
 
-  DetailsHeader({this.imageUrl, this.headerContent});
+  DetailsHeader({this.imageUrl, this.imageSource, this.headerContent});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,10 @@ class DetailsHeader extends StatelessWidget {
                     ),
                   ],
                   image: DecorationImage(
-                      image: NetworkImage(imageUrl), fit: BoxFit.fill),
+                      image: imageUrl != null
+                          ? NetworkImage(imageUrl)
+                          : AssetImage(imageSource),
+                      fit: BoxFit.cover),
                 ),
               ),
             ],

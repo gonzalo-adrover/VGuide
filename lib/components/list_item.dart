@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class ListItemWithImage extends StatelessWidget {
   final String id;
   final String imageUrl;
+  final String imageSource;
   final Widget content;
   final Function onClick;
 
-  ListItemWithImage({this.id, this.imageUrl, this.content, this.onClick});
+  ListItemWithImage(
+      {this.id, this.imageUrl, this.imageSource, this.content, this.onClick});
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +25,10 @@ class ListItemWithImage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                     child: FadeInImage(
                       fadeInCurve: Curves.easeIn,
-                      placeholder: Image.asset(
-                        'assets/img/loading.gif',
-                        scale: 0.07,
-                      ).image,
-                      image: NetworkImage(imageUrl),
+                      placeholder: AssetImage('assets/img/VGuideLogo.jpeg'),
+                      image: imageUrl != null
+                          ? NetworkImage(imageUrl)
+                          : AssetImage(imageSource),
                       fit: BoxFit.fitWidth,
                       width: MediaQuery.of(context).size.width,
                       height: 180,
