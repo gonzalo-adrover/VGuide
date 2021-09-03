@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:vguide/components/details_header.dart';
 import 'package:vguide/components/details_layout.dart';
-import 'package:vguide/components/text_styles.dart';
 import 'package:vguide/domain/model/recipe.dart';
-import 'package:vguide/screens/recipes/recipes_screen.dart';
 import 'package:vguide/screens/recipes/widgets/recipe_details_content.dart';
 import 'package:vguide/screens/recipes/widgets/recipe_details_header.dart';
 
 class RecipeDetails extends StatelessWidget {
   final Recipe recipe;
+  static Color pageColor = Colors.lightBlue.shade200;
 
   RecipeDetails({this.recipe});
 
@@ -16,14 +15,14 @@ class RecipeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: RecipesScreen.pageColor.withAlpha(40),
+          backgroundColor: pageColor,
           elevation: 0,
         ),
-        backgroundColor: RecipesScreen.pageColor,
+        backgroundColor: pageColor,
         body: Container(
           child: DetailsLayout(
             header: DetailsHeader(
-              imageUrl: recipe.picURL,
+              imageSource: recipe.picResource,
               headerContent: RecipeDetailsHeader(
                 recipe: recipe,
               ),

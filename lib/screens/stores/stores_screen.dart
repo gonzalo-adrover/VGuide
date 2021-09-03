@@ -6,7 +6,7 @@ import 'package:vguide/screens/stores/stores_map.dart';
 import 'package:vguide/screens/stores/widgets/store_details.dart';
 
 class StoresScreen extends StatefulWidget {
-  static Color pageColor = Colors.lightGreen.shade100;
+  static Color pageColor = Colors.green.shade50;
   static final LatLng _kMapCenter = LatLng(-34.8851383, -56.1707025);
   static final CameraPosition _kInitialPosition =
       CameraPosition(target: _kMapCenter, zoom: 12.0, tilt: 0, bearing: 0);
@@ -47,7 +47,7 @@ class _StoresScreenState extends State<StoresScreen> {
         backgroundColor: StoresScreen.pageColor,
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: StoresScreen.pageColor,
+          backgroundColor: Colors.green.shade200,
           title: Text("Tiendas"),
           centerTitle: true,
         ),
