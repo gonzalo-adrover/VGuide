@@ -24,36 +24,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      'VGuide',
-                      style: GoogleFonts.raleway(
-                          color: Colors.black87,
-                          fontSize: 45.0,
-                          fontWeight: FontWeight.w900),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 25.0,
-                ),
-                Text('La guía para vegetarianos',
-                    style: VGuideTextStyles.subheader),
-              ],
-            ),
-            SizedBox(
-              height: 48.0,
-            ),
-            Image(image: AssetImage("assets/img/VGuideLogo.jpeg")),
             SizedBox(
               height: 38.0,
             ),
+            Image(image: AssetImage("assets/img/VGuideLogo.jpeg")),
+            SizedBox(
+              height: 28.0,
+            ),
             RoundedButton(
-              title: "Start",
+              title: "Entrar",
               color: Colors.lightBlueAccent,
               onPressed: () {
                 Navigator.pushNamed(context, VGuidePages.id);
