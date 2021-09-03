@@ -1,7 +1,6 @@
 import 'package:vguide/data/foods_data.dart';
-import 'package:vguide/data/nutrients_data.dart';
 import 'package:vguide/data/veggie_types.dart';
-import 'package:vguide/domain/model/nutrient.dart';
+import 'package:vguide/domain/model/food.dart';
 import 'package:vguide/domain/model/recipe.dart';
 
 class RecipesData {
@@ -10,11 +9,17 @@ class RecipesData {
             name: "Calabacín capresse",
             veggieTypes: [VeggieTypes.ovoLactoVegetarian],
             foodList: [
-              FoodsData.getFood(
-                  FoodNames.calabacin, Amount.singular, """1,5kg\n~ 1/2 uni"""),
-              FoodsData.getFood(
-                  FoodNames.tomate, Amount.plural, """800gr\n~ 4 uni""")
-              // TODO: put more foods here
+              FoodsData.getRecipeFood(
+                  FoodKey.calabacin, """1,5kg\n~ 1/2 uni"""),
+              FoodsData.getRecipeFood(FoodKey.tomate, """800g\n~ 4 uni"""),
+              FoodsData.getRecipeFood(FoodKey.quesoDambo, """10 fetas"""),
+              FoodsData.getRecipeFood(FoodKey.huevo, """100g\n ~ 2 uni"""),
+              FoodsData.getRecipeFood(FoodKey.albahaca, """5\n~ 1 puñado"""),
+              FoodsData.getRecipeFood(FoodKey.ajo, """2g\n~ 2 dientes"""),
+              FoodsData.getRecipeFood(
+                  FoodKey.aceiteOliva, """30mL\n~ 2 cdas"""),
+              FoodsData.getRecipeFood(FoodKey.sal, """5g\n~ 1 cta"""),
+              FoodsData.getRecipeFood(FoodKey.pimienta, """A gusto""")
             ],
             steps: [
               "Retirar las semillas del calabacín (reservarlas) y colocarlo en el horno a 180°C durante 30 minutos o hasta que esté cocido.",
@@ -26,14 +31,15 @@ class RecipesData {
             ],
             serving: "400g",
             nutrientsList: [
-              NutrientsData.getRecipeNutrient(
-                  NutrientKey.carbohidratos, "8,9 g"),
-              NutrientsData.getRecipeNutrient(NutrientKey.proteina, "10,1 g"),
-              NutrientsData.getRecipeNutrient(NutrientKey.grasas, "14,1 g"),
-              NutrientsData.getRecipeNutrient(NutrientKey.omega3, "0,4 g"),
-              NutrientsData.getRecipeNutrient(NutrientKey.calcio, "138,4 mg"),
-              NutrientsData.getRecipeNutrient(NutrientKey.hierro, "2,1 mg"),
-              NutrientsData.getRecipeNutrient(NutrientKey.zinc, "1,6 mg")
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "8,9 g"),
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.proteinas, "10,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "14,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,4 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "138,4 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "2,1 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "1,6 mg")
             ],
             picURL:
                 "https://i0.wp.com/cocinainspira.com/wp-content/uploads/2019/09/DSCF9814-1024x683.jpg?resize=750%2C500&ssl=1"),

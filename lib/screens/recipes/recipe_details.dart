@@ -28,7 +28,7 @@ class RecipeDetails extends StatelessWidget {
                 recipe: recipe,
               ),
             ),
-            body: Expanded(
+            body: SingleChildScrollView(
               child: RecipeDetailsContent(
                 recipe: recipe,
               ),

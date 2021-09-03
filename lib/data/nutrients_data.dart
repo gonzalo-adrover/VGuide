@@ -1,15 +1,10 @@
+import 'package:vguide/domain/model/recipe.dart';
+
 import '../domain/model/nutrient.dart';
 
 class NutrientsData {
   static Nutrient getNutrient(NutrientKey key) => getNutrients
       .firstWhere((element) => element.key == key, orElse: () => null);
-
-  static RecipeNutrient getRecipeNutrient(NutrientKey key, String serving) {
-    Nutrient nutrient = getNutrient(key);
-    RecipeNutrient recipeNutrient =
-        RecipeNutrient(key: key, name: "nutrient.name", amount: serving);
-    return recipeNutrient;
-  }
 
   static List<Nutrient> getNutrients = [
     Nutrient(

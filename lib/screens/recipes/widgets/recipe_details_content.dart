@@ -41,18 +41,23 @@ class RecipeDetailsContent extends StatelessWidget {
           "Porcion: ${recipe.serving}",
           style: VGuideTextStyles.chipLight,
         ),
-        Row(
-          children: nutrientsList(recipe.nutrientsList),
+        SizedBox(height: 20),
+        Container(
+          height: 180.0,
+          child: GridView.count(
+            crossAxisCount: 4,
+            crossAxisSpacing: 3.0,
+            mainAxisSpacing: 3.0,
+            children: nutrientsList(recipe.nutrientsList),
+          ),
         )
       ]),
     );
   }
 }
 
-List<Widget> ingredientsList(List<Food> ingredients) => ingredients
+List<Widget> ingredientsList(List<RecipeFood> ingredients) => ingredients
     .map((ing) => Container(
-          width: 70.0,
-          margin: EdgeInsets.only(right: 10),
           child: Column(children: [
             Card(
               elevation: 2,
@@ -64,7 +69,6 @@ List<Widget> ingredientsList(List<Food> ingredients) => ingredients
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 5, right: 5),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -90,9 +94,8 @@ List<Widget> ingredientsList(List<Food> ingredients) => ingredients
         ))
     .toList();
 
-Widget ingredientTile(Food ingredient) => SizedBox(
-    width: 70.0,
-    child: Column(children: [
+Widget ingredientTile(RecipeFood ingredient) => SizedBox(
+        child: Column(children: [
       Card(
         elevation: 0,
         child: Image.network(ingredient.picUrl),
@@ -137,7 +140,7 @@ Widget step(int number, String stepDetail) => Container(
         ]));
 
 List<Widget> nutrientsList(List<RecipeNutrient> nutrients) =>
-    nutrients.map((e) => nutrient(e));
+    nutrients.map((e) => nutrient(e)).toList();
 
 Widget nutrient(RecipeNutrient nutrient) => SizedBox(
       width: 70.0,
@@ -145,9 +148,18 @@ Widget nutrient(RecipeNutrient nutrient) => SizedBox(
         children: [
           Card(
             elevation: 0,
-            child: Text(nutrient.amount),
+            color: Colors.lightBlue.shade200,
+            child: Container(
+              alignment: Alignment.center,
+              width: 120,
+              padding: EdgeInsets.all(10.0),
+              child: Text(nutrient.amount),
+            ),
           ),
-          Text(nutrient.name)
+          Text(
+            nutrient.name,
+            style: VGuideTextStyles.body,
+          )
         ],
       ),
     );
