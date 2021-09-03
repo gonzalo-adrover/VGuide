@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vguide/domain/model/nutrient.dart';
+import 'package:vguide/components/constants.dart' as Constants;
 
 class NutrientDescription extends StatelessWidget {
   const NutrientDescription({
@@ -13,11 +14,11 @@ class NutrientDescription extends StatelessWidget {
     return Column(
       children: <Widget>[
         getInfo(nutrient.longDesc, 0, context),
-        SizedBox(height: 30.0),
+        SizedBox(height: Constants.sizedBoxHeight),
         getInfo(nutrient.foods.toString(), 1, context),
-        SizedBox(height: 30.0),
+        SizedBox(height: Constants.sizedBoxHeight),
         getInfo(nutrient.facilitators, 2, context),
-        SizedBox(height: 30.0),
+        SizedBox(height: Constants.sizedBoxHeight),
         getInfo(nutrient.inhibitors, 3, context),
       ],
     );

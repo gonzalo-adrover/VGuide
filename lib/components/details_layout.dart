@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constants.dart' as Constants;
 
 class DetailsLayout extends StatelessWidget {
   final Widget header;
@@ -11,18 +12,18 @@ class DetailsLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
-      padding: EdgeInsets.only(top: 10.0),
+      padding: EdgeInsets.only(top: Constants.paddingInContainer),
       child: Stack(
         children: <Widget>[
           Container(
             margin: EdgeInsets.only(top: size.height * 0.3),
             padding: EdgeInsets.only(
-                top: size.height * 0.18, left: 20, right: 20, bottom: 40.0),
+                top: size.height * 0.07, left: Constants.paddingInContainer, right: Constants.paddingInContainer),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(24),
-                topRight: Radius.circular(24),
+                topLeft: Radius.circular(Constants.boxDecorationRadius),
+                topRight: Radius.circular(Constants.boxDecorationRadius),
               ),
             ),
             child: body,

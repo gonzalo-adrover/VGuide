@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constants.dart' as Constants;
 
 class DetailsHeader extends StatelessWidget {
   final String imageUrl;
@@ -14,20 +15,20 @@ class DetailsHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           headerContent,
-          SizedBox(height: 30.0),
+          SizedBox(height: Constants.sizedBoxHeight),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                width: 320,
-                height: 200,
+                width: Constants.imageContainerWidth,
+                height: Constants.imageContainerHeight,
                 decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(25),
-                    topRight: Radius.circular(25),
-                    bottomLeft: Radius.circular(25),
-                    bottomRight: Radius.circular(25),
+                    topLeft: Radius.circular(Constants.boxRadiusImage),
+                    topRight: Radius.circular(Constants.boxRadiusImage),
+                    bottomLeft: Radius.circular(Constants.boxRadiusImage),
+                    bottomRight: Radius.circular(Constants.boxRadiusImage),
                   ),
                   boxShadow: [
                     BoxShadow(
