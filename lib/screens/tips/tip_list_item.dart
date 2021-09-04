@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:vguide/components/list_item.dart';
 import 'package:vguide/components/text_styles.dart';
-import 'package:vguide/components/widgets.dart';
 import 'package:vguide/screens/tips/tip_screen.dart';
 
 class TipListItem extends StatelessWidget {
@@ -16,22 +16,22 @@ class TipListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HeroAnimatingCard(
-      color: Colors.white,
+    return ListItemWithImage(
+      id: title,
       imageUrl: imageUrl,
-      cardWidth: 700,
-      textWidget: Text(title, style: VGuideTextStyles.header),
-      heroAnimation: AlwaysStoppedAnimation(0),
-      onPressed: () => Navigator.of(context).push<void>(
-        MaterialPageRoute(
-          builder: (context) => TipScreen(
-            title: title,
-            longDesc: description,
-            imageUrl: imageUrl,
-            pageColor: Color(0xff9B2B45),
-          ),
-        ),
-      ),
+      content: Text(title, style: VGuideTextStyles.itemTitle),
+      onClick: () => routeToTipPage(context),
     );
+  }
+
+  Future routeToTipPage(context) {
+    return Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => TipScreen(
+                  title: title,
+                  longDesc: title,
+                  pageColor: Colors.white,
+                )));
   }
 }

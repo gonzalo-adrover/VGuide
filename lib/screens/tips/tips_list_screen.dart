@@ -4,7 +4,7 @@ import 'package:vguide/domain/model/tip.dart';
 import 'tip_list_item.dart';
 
 class TipsScreen extends StatelessWidget {
-  static Color pageColor = Colors.yellow.shade300;
+  static Color pageColor = Colors.red.shade100;
 
   @override
   Widget build(BuildContext context) {

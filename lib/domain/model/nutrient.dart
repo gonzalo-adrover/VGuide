@@ -1,5 +1,6 @@
 class Nutrient {
   final int id;
+  final NutrientKey key;
   final String name;
   final String longDesc;
   final List<String> foods;
@@ -9,10 +10,24 @@ class Nutrient {
 
   const Nutrient(
       {this.id,
+      this.key,
       this.name,
       this.longDesc,
       this.foods,
       this.facilitators,
       this.inhibitors,
       this.picURL});
+}
+
+enum NutrientKey {
+  carbohidratos,
+  proteina,
+  grasas,
+  omega3,
+  calcio,
+  hierro,
+  zinc,
+  yodo,
+  vitD,
+  vitB12
 }

@@ -4,7 +4,7 @@ import 'package:vguide/data/nutrients_data.dart';
 import 'package:vguide/screens/nutrients/nutrient_list_item.dart';
 
 class NutrientsScreen extends StatelessWidget {
-  static Color pageColor = Colors.indigo.shade300;
+  static Color pageColor = Colors.indigo.shade100;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class NutrientsScreen extends StatelessWidget {
 }
 
 List<NutrientListItem> getTipList() {
-  List<Nutrient> tipData = NutrientsData().getNutrients();
+  List<Nutrient> tipData = NutrientsData.getNutrients;
   List<NutrientListItem> tipListItem = tipData
       .map((nutrient) => NutrientListItem(
             nutrient: nutrient,

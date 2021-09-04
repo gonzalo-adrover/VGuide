@@ -13,7 +13,7 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  static const color = Color.fromRGBO(143,170,89, 1);
+  static const color = Color.fromRGBO(143, 170, 89, 1);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,10 +41,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 SizedBox(
                   height: 25.0,
                 ),
-                Text(
-                  'La guía para vegetarianos',
-                  style: VGuideTextStyles.subheader
-                ),
+                Text('La guía para vegetarianos',
+                    style: VGuideTextStyles.subheader),
               ],
             ),
             SizedBox(
