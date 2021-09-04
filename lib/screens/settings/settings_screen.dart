@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:vguide/components/widgets.dart';
 
 class SettingsScreen extends StatefulWidget {
-  static Color pageColor = Colors.black45;
+  static Color pageColor = Colors.grey.shade50;
+  static Color tileColor = Colors.grey.shade400;
 
   static const title = 'Settings';
   static const iosIcon = Icon(CupertinoIcons.gear);
@@ -23,17 +24,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return ListView(
       children: [
         Padding(padding: EdgeInsets.only(top: 24)),
-        Center(
-          child: Text(
-            "Settings",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 35.0,
-                fontWeight: FontWeight.w600),
-          ),
-        ),
         ListTile(
           title: Text('Send me marketing emails'),
+          tileColor: SettingsScreen.tileColor,
           trailing: Switch.adaptive(
             value: switch1,
             onChanged: (value) => setState(() => switch1 = value),
@@ -41,6 +34,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         ListTile(
           title: Text('Enable notifications'),
+          tileColor: SettingsScreen.tileColor,
           trailing: Switch.adaptive(
             value: switch2,
             onChanged: (value) => setState(() => switch2 = value),
@@ -48,6 +42,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         ListTile(
           title: Text('Remind me to rate this app'),
+          tileColor: SettingsScreen.tileColor,
           trailing: Switch.adaptive(
             value: switch3,
             onChanged: (value) => setState(() => switch3 = value),
@@ -55,6 +50,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         ListTile(
           title: Text('Recommend me stores based on my location'),
+          tileColor: SettingsScreen.tileColor,
           trailing: Switch.adaptive(
             value: switch4,
             onChanged: (value) => setState(() => switch4 = value),
@@ -62,6 +58,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         ListTile(
           title: Text('Find friends from my contact list'),
+          tileColor: SettingsScreen.tileColor,
           trailing: Switch.adaptive(
             value: switch5,
             onChanged: (value) => setState(() => switch5 = value),
@@ -72,9 +69,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 
   Widget _build(BuildContext context) {
-    return Container(
-      color: SettingsScreen.pageColor,
-      child: _buildList(),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Notificaciones"),
+        backgroundColor: Colors.blueGrey.shade200,
+        automaticallyImplyLeading: false,
+      ),
+      backgroundColor: SettingsScreen.pageColor,
+      body: _buildList(),
     );
   }
 

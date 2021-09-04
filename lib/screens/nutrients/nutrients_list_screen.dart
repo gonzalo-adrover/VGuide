@@ -4,13 +4,18 @@ import 'package:vguide/data/nutrients_data.dart';
 import 'package:vguide/screens/nutrients/nutrient_list_item.dart';
 
 class NutrientsScreen extends StatelessWidget {
-  static Color pageColor = Colors.indigo.shade100;
+  static Color pageColor = Colors.indigo.shade50;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: pageColor,
-      child: ListView(children: getTipList()),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Nutrientes"),
+        backgroundColor: Colors.indigo.shade200,
+        automaticallyImplyLeading: false,
+      ),
+      backgroundColor: pageColor,
+      body: ListView(children: getTipList()),
     );
   }
 }
