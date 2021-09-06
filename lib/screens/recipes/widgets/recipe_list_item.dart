@@ -14,7 +14,7 @@ class RecipeListItem extends StatelessWidget {
     return ListItemWithImage(
       id: recipe.name,
       imageSource: recipe.picResource,
-      content: listItemContent(),
+      content: listItemContent(context),
       onClick: () => routeToRecipePage(context),
     );
   }
@@ -29,7 +29,7 @@ class RecipeListItem extends StatelessWidget {
     );
   }
 
-  Widget listItemContent() => Column(
+  Widget listItemContent(BuildContext context) => Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

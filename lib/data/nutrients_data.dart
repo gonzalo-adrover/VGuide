@@ -42,7 +42,7 @@ class NutrientsData {
             """Para obtener sus beneficios, los aceites altos en omega 3 deben consumirse en crudo, en preparaciones frías o cuando el alimento ya se retiró del fuego. En el caso de las semillas deben estar molidas o remojadas para facilitar su absorción a nivel intestinal. 
         """,
         inhibitors:
-            """Cocicnar estos aceites disminuye el impacto favorable que tienen para la salud. Además comer las semillas enteras, sin moler hace que sea más dificil su aprovechamiento.""",
+            """Cocinar estos aceites disminuye el impacto favorable que tienen para la salud. Además comer las semillas enteras, sin moler hace que sea más dificil su aprovechamiento.""",
         picURL:
             "https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/01/sources-of-omega-3-and-healthy-fats-1024x683.jpg?w=1155&h=1541"),
     Nutrient(

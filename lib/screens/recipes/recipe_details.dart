@@ -21,13 +21,11 @@ class RecipeDetails extends StatelessWidget {
         backgroundColor: pageColor,
         body: Container(
           child: DetailsLayout(
-            header: DetailsHeader(
-              imageSource: recipe.picResource,
-              headerContent: RecipeDetailsHeader(
-                recipe: recipe,
-              ),
+            imageSource: recipe.picResource,
+            headerContent: RecipeDetailsHeader(
+              recipe: recipe,
             ),
-            body: SingleChildScrollView(
+            bodyContent: SingleChildScrollView(
               child: RecipeDetailsContent(
                 recipe: recipe,
               ),

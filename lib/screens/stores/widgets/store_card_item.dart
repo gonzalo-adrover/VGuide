@@ -25,12 +25,12 @@ Widget _storeTextWidget(Store store) => Container(
         children: [
           Text(
             store.name,
-            style: VGuideTextStyles.header,
+            style: VGuideTextStyles.subheader,
           ),
           SizedBox(height: 10.0),
           Text(
             store.description,
-            style: VGuideTextStyles.body,
+            style: VGuideTextStyles.bodySmall,
           )
         ],
       ),
