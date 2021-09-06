@@ -34,7 +34,9 @@ class ListItemWithImage extends StatelessWidget {
                       height: 180,
                     ),
                   )),
-              Container(padding: EdgeInsets.only(left: 20.0), child: content)
+              Container(
+                  padding: EdgeInsets.only(left: 25.0, right: 25.0),
+                  child: content)
             ],
           ),
         ));

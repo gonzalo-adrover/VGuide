@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vguide/components/text_styles.dart';
 import 'package:vguide/domain/model/nutrient.dart';
 import 'package:vguide/components/constants.dart' as Constants;
 
@@ -20,6 +21,8 @@ class NutrientDescription extends StatelessWidget {
         getInfo(nutrient.facilitators, 2, context),
         SizedBox(height: Constants.sizedBoxHeight),
         getInfo(nutrient.inhibitors, 3, context),
+        SizedBox(height: Constants.sizedBoxHeight),
+        SizedBox(height: Constants.sizedBoxHeight),
       ],
     );
   }
@@ -47,12 +50,12 @@ Widget getInfo(String nutrientFieldData, int field, BuildContext context) {
       children: <Widget>[
         Text(
           title,
-          style: Theme.of(context)
-              .textTheme
-              .headline5
-              .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+          style: VGuideTextStyles.header,
         ),
-        Text(nutrientFieldData)
+        Text(
+          nutrientFieldData,
+          style: VGuideTextStyles.body,
+        )
       ],
     );
   }

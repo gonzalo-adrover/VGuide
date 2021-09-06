@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:vguide/components/list_item.dart';
 import 'package:vguide/components/text_styles.dart';
-import 'package:vguide/screens/tips/tip_screen.dart';
+import 'package:vguide/domain/model/tip.dart';
+import 'package:vguide/screens/tips/tip_details.dart';
 
 class TipListItem extends StatelessWidget {
-  final String title;
-  final String imageUrl;
-  final String description;
+  final Tip tip;
 
   TipListItem({
-    this.title,
-    this.imageUrl,
-    this.description,
+    this.tip,
   });
 
   @override
   Widget build(BuildContext context) {
     return ListItemWithImage(
-      id: title,
-      imageUrl: imageUrl,
-      content: Text(title, style: VGuideTextStyles.itemTitle),
+      id: tip.name,
+      imageUrl: tip.picURL,
+      content: Text(tip.name, style: VGuideTextStyles.itemTitle),
       onClick: () => routeToTipPage(context),
     );
   }
@@ -28,10 +25,8 @@ class TipListItem extends StatelessWidget {
     return Navigator.push(
         context,
         MaterialPageRoute(
-            builder: (context) => TipScreen(
-                  title: title,
-                  longDesc: title,
-                  pageColor: Colors.white,
+            builder: (context) => TipDetails(
+                  tip: tip,
                 )));
   }
 }

@@ -47,7 +47,8 @@ class DetailsHeader extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
+          SizedBox(height: Constants.sizedBoxHeight),
         ],
       ),
     );

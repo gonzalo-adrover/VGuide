@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:vguide/screens/nutrients/nutrients_list_screen.dart';
 import 'package:vguide/screens/nutritionists/nutritionists_screen.dart';
-import 'package:vguide/screens/recipes/recipes_screen.dart';
+import 'package:vguide/screens/recipes/recipes_list_screen.dart';
 import 'package:vguide/screens/settings/settings_screen.dart';
 import 'package:vguide/screens/stores/stores_screen.dart';
 import 'package:vguide/screens/tips/tips_list_screen.dart';
@@ -18,16 +18,16 @@ class _VGuidePagesState extends State<VGuidePages> {
   int _page = 0;
   GlobalKey _bottomNavigationKey = GlobalKey();
   List<Widget> pages = [
-    RecipesScreen(),
-    TipsScreen(),
     NutrientsScreen(),
+    TipsScreen(),
+    RecipesListScreen(),
     StoresScreen(),
     NutritionistsScreen(),
     SettingsScreen()
   ];
 
   List<Color> pageColors = [
-    RecipesScreen.pageColor,
+    RecipesListScreen.pageColor,
     TipsScreen.pageColor,
     NutrientsScreen.pageColor,
     StoresScreen.pageColor,
@@ -43,9 +43,9 @@ class _VGuidePagesState extends State<VGuidePages> {
           index: 0,
           height: 45.0,
           items: <Widget>[
-            Icon(Entypo.bowl, size: 20, color: Colors.green),
-            Icon(Entypo.light_bulb, size: 20, color: Colors.green),
             Icon(Entypo.leaf, size: 20, color: Colors.green),
+            Icon(Entypo.light_bulb, size: 20, color: Colors.green),
+            Icon(Entypo.bowl, size: 20, color: Colors.green),
             Icon(Entypo.shop, size: 20, color: Colors.green),
             Icon(Entypo.v_card, size: 20, color: Colors.green),
             Icon(Entypo.bell, size: 20, color: Colors.green),

@@ -12,6 +12,7 @@ class Food {
 }
 
 enum FoodCategory {
+  water,
   vegetables,
   fruits,
   diary,
