@@ -299,11 +299,11 @@ class FoodsData {
         picUrl:
             "https://www.lr21.com.uy/wp-content/uploads/2015/03/porotos-para-el-corazon-y-la-salud.png"),
     Food(
-        name: "Avena",
+        name: "Avena laminada",
         key: FoodKey.avena,
         category: FoodCategory.cereals,
         picUrl:
-            "https://mejorconsalud.as.com/wp-content/uploads/2015/09/avena-hojuelas.jpg"),
+            "https://static.wixstatic.com/media/99fefc_ca17537bfbd9437998db29d5bf6bd9de~mv2.jpg/v1/fill/w_720,h_480,al_c,lg_1,q_85/99fefc_ca17537bfbd9437998db29d5bf6bd9de~mv2.webp"),
     Food(
         name: "Aceite",
         key: FoodKey.aceite,
@@ -315,6 +315,45 @@ class FoodsData {
         category: FoodCategory.legumes,
         picUrl:
             "https://d1kxxrc2vqy8oa.cloudfront.net/wp-content/uploads/2020/05/19200119/RFB-2304-3-tofucasero-alphafoodiecom.jpg"),
+    Food(
+        name: "Almendras",
+        key: FoodKey.almendras,
+        category: FoodCategory.nuts,
+        picUrl: "https://placeralplato.com/files/2014/02/almendras.jpg"),
+    Food(
+        name: "Vinagre",
+        key: FoodKey.vinagre,
+        category: FoodCategory.other,
+        picUrl: "https://www.vinetur.com/imagenes/blog/1083/vinagres.jpg"),
+    Food(
+        name: "Apio",
+        key: FoodKey.apio,
+        category: FoodCategory.vegetables,
+        picUrl: "https://i.blogs.es/f466ab/1366_2000-2-/650_1200.jpg"),
+    Food(
+        name: "Cilantro",
+        key: FoodKey.cilantro,
+        category: FoodCategory.vegetables,
+        picUrl:
+            "https://http2.mlstatic.com/D_NQ_NP_821493-MLU41355209866_042020-V.jpg"),
+    Food(
+        name: "Choclo en grano",
+        key: FoodKey.choclo,
+        category: FoodCategory.legumes,
+        picUrl:
+            "https://delavegatucocina.cl/wp-content/uploads/2020/10/CHOCLO-GRANO.jpg"),
+    Food(
+        name: "Crema de choclo",
+        key: FoodKey.cremaChoclo,
+        category: FoodCategory.legumes,
+        picUrl:
+            "https://cdn.statically.io/img/www.comeperuano.pe/wp-content/uploads/2020/05/receta-crema-de-choclo.jpg?quality=100&f=auto"),
+    Food(
+        name: "Vainilla",
+        key: FoodKey.vainilla,
+        category: FoodCategory.seasonings,
+        picUrl:
+            "http://flavorix.com/wp-content/uploads/2018/08/extracto-de-Vainilla.jpg"),
     Food(
         name: "Pimienta",
         key: FoodKey.pimienta,

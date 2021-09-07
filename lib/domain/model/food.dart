@@ -23,7 +23,8 @@ enum FoodCategory {
   nuts,
   oils,
   seasonings,
-  vegetableDrinks
+  vegetableDrinks,
+  other
 }
 
 enum FoodKey {
@@ -91,5 +92,6 @@ enum FoodKey {
   bebidaVegetal,
   semillasChia,
   garbanzos,
-  aceite
+  aceite,
+  apio
 }
