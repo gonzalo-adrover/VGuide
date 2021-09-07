@@ -24,7 +24,7 @@ class RecipesListScreen extends StatelessWidget {
                       recipe: recipes[index],
                     ),
                 childCount: recipes.length),
-            itemExtent: 290,
+            itemExtent: 310,
           )
         ],
       ),
