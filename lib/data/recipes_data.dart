@@ -257,8 +257,7 @@ class RecipesData {
             foodList: [
               FoodsData.getRecipeFood(FoodKey.zanahoria, "300g\n~ 3 unidades"),
               FoodsData.getRecipeFood(FoodKey.aceiteCanola, "60mL\n~ 1/4 taza"),
-              FoodsData.getRecipeFood(
-                  FoodKey.jugoLimon, "24mL,5g\n~ 1/2 unidad"),
+              FoodsData.getRecipeFood(FoodKey.jugoLimon, "24mL\n~ 1/2 unidad"),
               FoodsData.getRecipeFood(FoodKey.sal, "A gusto"),
               FoodsData.getRecipeFood(FoodKey.pimienta, "A gusto"),
               FoodsData.getRecipeFood(FoodKey.mixHierbas, "A gusto"),
@@ -286,18 +285,137 @@ class RecipesData {
               VeggieTypes.ovoLactoVegetarian,
               VeggieTypes.lactoVegetarian
             ],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.quinoa, "320g\n~ 2 tazas"),
+              FoodsData.getRecipeFood(FoodKey.hongos, "45,6g\n~ 1/2 taza"),
+              FoodsData.getRecipeFood(FoodKey.cebolla, "240g\n~ 2 unidades"),
+              FoodsData.getRecipeFood(FoodKey.zanahoria, "100g\n~ 1 unidad"),
+              FoodsData.getRecipeFood(FoodKey.quesoParmesano, "24g\n~ 4 cdas"),
+              FoodsData.getRecipeFood(
+                  FoodKey.almendras, "14g\n~ 2 cdas - picadas"),
+              FoodsData.getRecipeFood(FoodKey.ajo, "1g\n~ 1 diente"),
+              FoodsData.getRecipeFood(FoodKey.aceiteOliva, "30mL\n~ 2 cdas"),
+            ],
+            serving: "300g ~ 1 y 1/2 taza",
+            steps: [
+              "Lavar la quinoa por lo menos 3 veces bajo el agua y reservar.",
+              "Hidratar los hongos en agua tibia durante 20 minutos.",
+              "Saltear en aceite la cebolla, el ajo y la zanahoria y condimentar.",
+              "Agregar los hongos con su líquido y la quinoa.",
+              "Cubrir con agua y cocinar durante 15 minutos, a fuego medio, revolviendo constantemente.",
+              "Cuando la quinoa esté cocida agregar el queso parmesano y servir caliente.",
+              "Decorar con las almendras picadas."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "94,7 g"),
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.proteinas, "27,2 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "24,8 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "10,5 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "349,7 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "17,7 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "6,2 mg")
+            ],
             picResource: "assets/img/recipes/quinotto.jpg"),
         Recipe(
             name: "Hummus de garbanzos",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.garbanzos, "2 tazas - crudos"),
+              FoodsData.getRecipeFood(FoodKey.aceite, "1/4 taza"),
+              FoodsData.getRecipeFood(FoodKey.jugoLimon, "2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.semillasSesamo, "3 cdas"),
+              FoodsData.getRecipeFood(FoodKey.sal, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.pimienta, "A gusto"),
+            ],
+            serving: "50g ~ 3 cucharadas",
+            steps: [
+              "Remojar los garbanzos durante 8 horas mínimo, luego escurrir y descartar el agua de remojo.",
+              "Hervir los garbanzos hasta que estén cocidos y enfriarlos antes de mixearlos.",
+              "Colocar en la procesadora con el resto de los ingredientes. ",
+              "Reservar en la heladera."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "16,2 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "5,2 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "6,5 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "31,8 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "2,2 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "0,9 mg")
+            ],
             picResource: "assets/img/recipes/hummus_garbanzos.jpg"),
         Recipe(
             name: "Bocaditos de tofu y garbanzo",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.tofu, "300g"),
+              FoodsData.getRecipeFood(
+                  FoodKey.garbanzos, "220g\n~ 1 taza - crudos"),
+              FoodsData.getRecipeFood(FoodKey.harinaGarbanzo, "190g\n~ 1 taza"),
+              FoodsData.getRecipeFood(FoodKey.agua, "250mL\n~ 1 taza"),
+              FoodsData.getRecipeFood(FoodKey.farinha, "300g\n~ 2 tazas"),
+              FoodsData.getRecipeFood(FoodKey.semillasSesamo, "18g\n~ 4 cdas"),
+              FoodsData.getRecipeFood(FoodKey.aceiteOliva, "30mL\n~ 2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.sal, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.pimenton, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.comino, "A gusto"),
+            ],
+            serving: "200g ~ 8 unidades",
+            steps: [
+              "Remojar los garbanzos durante 8 horas mínimo, luego escurrir y descartar el agua de remojo.",
+              "Hervir los garbanzos hasta que estén cocidos.",
+              "Procesar los garbanzos con el tofu y condimentar.",
+              "Hacer formitas con la mezcla y freezar durante 15 minutos.",
+              "Para el apanado: Mezclar la harina de garbanzo con el agua y la farinha con las semillas de sésamo.",
+              "Apanar las formitas primero en la mezcla líquida y luego por la farinha.",
+              "Cocinar en una asadera aceitada en horno precalentado a 250°C durante 20 minutos."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "96,9 g"),
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.proteinas, "21,7 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "14,7 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,5 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "184,6 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "6,4 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "2,9 mg")
+            ],
             picResource: "assets/img/recipes/bocaditos_tofu.jpg"),
         Recipe(
             name: "Hamburguesas de porotos",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.porotos, "540g\n~ 3 tazas"),
+              FoodsData.getRecipeFood(FoodKey.cebolla, "240g\n~ 2 unidades"),
+              FoodsData.getRecipeFood(FoodKey.ajo, "2g\n~ 2 dientes"),
+              FoodsData.getRecipeFood(FoodKey.morron, "45g\n~ 1/2 unidad"),
+              FoodsData.getRecipeFood(FoodKey.zanahoria, "100g\n~ 1 unidad"),
+              FoodsData.getRecipeFood(FoodKey.avena, "90g\n~ 1 taza"),
+              FoodsData.getRecipeFood(FoodKey.aceiteOliva, "30mL\n~ 2 cdas"),
+            ],
+            serving: "160g ~ 1 unidad",
+            steps: [
+              "Remojar los porotos la noche anterior, luego escurrirlos y hervirlos.",
+              "Cuando los porotos estén cocidos, colocar en un bowl con 1/2 taza de jugo de cocción.",
+              "Saltear en aceite los vegetales picados y agregarlos al bowl.",
+              "Condimentar y agregar la avena.",
+              "Formar las hamburguesas con las manos y colocar en la heladera para que logren mayor firmeza.",
+              "Cocinar en el horno o la sartén con el aceite hasta que estén doradas de ambos lados."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "20,6 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "9,8 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "6,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,2 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "127,3 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "7,9 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "2,9 mg")
+            ],
             picResource: "assets/img/recipes/bocaditos_tofu.jpg"),
         Recipe(
             name: "Crepes de garbanzo",

@@ -90,4 +90,6 @@ enum FoodKey {
   mixFrutosSecos,
   bebidaVegetal,
   semillasChia,
+  garbanzos,
+  aceite
 }

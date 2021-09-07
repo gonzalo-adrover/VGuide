@@ -270,6 +270,52 @@ class FoodsData {
         picUrl:
             "https://2.bp.blogspot.com/-X2Hg82g-Xr8/Vj5H3qtlsDI/AAAAAAAAAoE/S0rsXqfr1-w/s320/hierbas.png"),
     Food(
+        name: "Quinoa",
+        key: FoodKey.quinoa,
+        category: FoodCategory.cereals,
+        picUrl: "https://i.blogs.es/723d2f/1024_682/650_1200.jpg"),
+    Food(
+        name: "Hongos",
+        key: FoodKey.hongos,
+        category: FoodCategory.vegetables,
+        picUrl:
+            "https://media.istockphoto.com/photos/fresh-agaricus-bisporus-or-portobello-mushrooms-picture-id1140162145?k=20&m=1140162145&s=612x612&w=0&h=llOEXVVpUXU_e-Hsl6RS4TxJiZt_gcxwOTtnkLX_Cwk="),
+    Food(
+        name: "Garbanzos",
+        key: FoodKey.garbanzos,
+        category: FoodCategory.legumes,
+        picUrl:
+            "https://imagenes.20minutos.es/files/image_656_370/uploads/imagenes/2018/12/10/841167.jpg"),
+    Food(
+        name: "Farinha",
+        key: FoodKey.farinha,
+        category: FoodCategory.legumes,
+        picUrl:
+            "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/146/598/products/farinhamandioca1-feda7e7f0474bd5ea415951705253351-640-0.png"),
+    Food(
+        name: "Porotos",
+        key: FoodKey.porotos,
+        category: FoodCategory.legumes,
+        picUrl:
+            "https://www.lr21.com.uy/wp-content/uploads/2015/03/porotos-para-el-corazon-y-la-salud.png"),
+    Food(
+        name: "Avena",
+        key: FoodKey.avena,
+        category: FoodCategory.cereals,
+        picUrl:
+            "https://mejorconsalud.as.com/wp-content/uploads/2015/09/avena-hojuelas.jpg"),
+    Food(
+        name: "Aceite",
+        key: FoodKey.aceite,
+        category: FoodCategory.oils,
+        picUrl: "https://i.blogs.es/a9d4ca/aove2/840_560.jpg"),
+    Food(
+        name: "Tofu",
+        key: FoodKey.tofu,
+        category: FoodCategory.legumes,
+        picUrl:
+            "https://d1kxxrc2vqy8oa.cloudfront.net/wp-content/uploads/2020/05/19200119/RFB-2304-3-tofucasero-alphafoodiecom.jpg"),
+    Food(
         name: "Pimienta",
         key: FoodKey.pimienta,
         category: FoodCategory.seasonings,
