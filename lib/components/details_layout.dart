@@ -19,10 +19,9 @@ class DetailsLayout extends StatelessWidget {
       padding: EdgeInsets.only(top: Constants.paddingInContainer),
       child: Stack(
         children: <Widget>[
-          Expanded(
-              child: DetailsBody(
+          DetailsBody(
             content: bodyContent,
-          )),
+          ),
           DetailsHeader(
               imageSource: imageSource,
               imageUrl: imageUrl,
