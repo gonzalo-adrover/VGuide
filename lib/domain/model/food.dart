@@ -58,6 +58,7 @@ enum FoodKey {
   boniatoZanahoria,
   semillasGirasol,
   semillasSesamo,
+  semillasZapallo,
   proteinaSoja,
   harina,
   panRallado,
@@ -93,5 +94,7 @@ enum FoodKey {
   semillasChia,
   garbanzos,
   aceite,
-  apio
+  apio,
+  polvoHornear,
+  pastaMani
 }

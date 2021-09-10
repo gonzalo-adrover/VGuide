@@ -250,7 +250,7 @@ class FoodsData {
         key: FoodKey.curcuma,
         category: FoodCategory.seasonings,
         picUrl:
-            "https://lh3.googleusercontent.com/proxy/PBhzHVFwSMwNZoz440eDXERiFS1_J2dO9bg4Q58h7EVOy3ROM9Xmr6S0NLgxIDKdN729SVQ20FkLxZx7WjK6urEP-Qgzihni-bZDLXUTLIHZPlv0"),
+            "https://decacerola.com/wp-content/uploads/2020/06/curcuma.jpg"),
     Food(
         name: "Curry",
         key: FoodKey.curry,
@@ -354,6 +354,48 @@ class FoodsData {
         category: FoodCategory.seasonings,
         picUrl:
             "http://flavorix.com/wp-content/uploads/2018/08/extracto-de-Vainilla.jpg"),
+    Food(
+        name: "Semillas de zapallo",
+        key: FoodKey.semillasZapallo,
+        category: FoodCategory.seeds,
+        picUrl:
+            "https://granel.uy/web/image/product.product/2832/image_1024/Semillas%20de%20zapallo%20peladas%20%28100g%29?unique=9360525"),
+    Food(
+        name: "Polvo de hornear",
+        key: FoodKey.polvoHornear,
+        category: FoodCategory.other,
+        picUrl:
+            "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/04/que-usar-si-no-hay-polvo-para-hornear-sustituto-casero.jpg"),
+    Food(
+        name: "Pasta de maní",
+        key: FoodKey.pastaMani,
+        category: FoodCategory.legumes,
+        picUrl:
+            "https://cdn.recetas360.com/wp-content/uploads/2014/01/como-se-hace-la-crema-de-mani-compressor.jpg"),
+    Food(
+        name: "Salsa de soja",
+        key: FoodKey.salsaSoja,
+        category: FoodCategory.seasonings,
+        picUrl:
+            "https://placeralplato.com/files/2014/05/salsa-de-soja-640x480.jpg"),
+    Food(
+        name: "Jengibre",
+        key: FoodKey.jengibre,
+        category: FoodCategory.other,
+        picUrl:
+            "https://encolombia.com/wp-content/uploads/2019/06/Jengibre.jpg"),
+    Food(
+        name: "Brotes",
+        key: FoodKey.brotes,
+        category: FoodCategory.vegetables,
+        picUrl:
+            "https://www.cocinista.es/download/bancorecursos/ingredientes/ingrediente-brotes-alfalfa.jpg"),
+    Food(
+        name: "Fideos de arroz",
+        key: FoodKey.fideosArroz,
+        category: FoodCategory.legumes,
+        picUrl:
+            "https://d1kxxrc2vqy8oa.cloudfront.net/wp-content/uploads/2020/01/23212542/RFB-1001-1-fideosdearroz.jpg"),
     Food(
         name: "Pimienta",
         key: FoodKey.pimienta,

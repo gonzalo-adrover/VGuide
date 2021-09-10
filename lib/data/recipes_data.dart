@@ -598,7 +598,7 @@ class RecipesData {
               FoodsData.getRecipeNutrient(
                   RecipeNutrientKey.proteinas, "11,8 g"),
               FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "16,1 g"),
-              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,8g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,8 g"),
               FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "209,3 mg"),
               FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "1,7 mg"),
               FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "1,6 mg")
@@ -607,22 +607,175 @@ class RecipesData {
         Recipe(
             name: "Bolognesa de proteína de soja",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.proteinaSoja, "150g\n~ 1 taza"),
+              FoodsData.getRecipeFood(FoodKey.cebolla, "120g\n~ 1 unidad"),
+              FoodsData.getRecipeFood(FoodKey.morron, "45g\n~ 1/2 unidad"),
+              FoodsData.getRecipeFood(FoodKey.ajo, "1g\n~ 1 diente"),
+              FoodsData.getRecipeFood(FoodKey.zanahoria, "100g\n~ 1 unidad"),
+              FoodsData.getRecipeFood(FoodKey.tomate, "600g\n~ 3 unidades"),
+              FoodsData.getRecipeFood(FoodKey.aceiteOliva, "15mL\n~ 1 cda"),
+              FoodsData.getRecipeFood(FoodKey.sal, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.pimienta, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.pimenton, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.oregano, "A gusto"),
+            ],
+            serving: "60g",
+            steps: [
+              "Remojar la proteína de soja durante 30 minutos, luego escurrir y descartar el agua de remojo.",
+              "Picar en pequeños cubos la cebolla, el morrón, el ajo, la zanahoria y el tomate.",
+              "Saltear todos los vegetales menos el tomate en el aceite de oliva, cuando estén dorados agregar el tomate y la proteína de soja remojada.",
+              "Condimentar con pimentón, pimienta, orégano y sal y cocinar durante 15 minutos.",
+              "Servir caliente sobre pasta, polenta u otra preparación a elección."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "2,6 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "7,5 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "2,2 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "24,2 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "1,6 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "0,4 mg")
+            ],
             picResource: "assets/img/recipes/bolognesa_proteina.jpg"),
         Recipe(
             name: "Albóndigas de lentejas",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.lenteja, "360g\n~ 2 tazas"),
+              FoodsData.getRecipeFood(FoodKey.avena, "90g\n~ 1 taza"),
+              FoodsData.getRecipeFood(FoodKey.cebolla, "120g\n~ 1 unidad"),
+              FoodsData.getRecipeFood(FoodKey.morron, "45g\n~ 1/2 unidad"),
+              FoodsData.getRecipeFood(FoodKey.ajo, "2g\n~ 2 dientes"),
+              FoodsData.getRecipeFood(FoodKey.aceiteOliva, "30mL\n~ 2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.sal, "5g\n~ 1 cta"),
+              FoodsData.getRecipeFood(FoodKey.comino, "1 cta"),
+              FoodsData.getRecipeFood(FoodKey.pimenton, "1 cta"),
+              FoodsData.getRecipeFood(FoodKey.oregano, "1 cta"),
+            ],
+            serving: "150g - 5 unidades",
+            steps: [
+              "Remojar las lentejas durante 8 horas mínimo, luego escurrir y descartar el agua de cocción.",
+              "Cocinar las lentejas en una olla hasta que estén cocidas, escucrrir el agua y reservar en un bowl. ",
+              "Picar en pequeños cubos la cebolla, el morrón y el ajo y saltearlos en 1 cda de aceite hasta que estén dorados, luego agregarlos al bowl de las lentejas y mixear hasta formar una pasta uniforme.",
+              "Condimentar con la sal, comino y pimentón y agregar la avena hasta formar una masa maleable.",
+              "Formar las albóndigas haciendo bolitas con las manos y reservar durante 15 minutos en la heladera.",
+              "En una sartén calentar la cda de aceite restante y sellar las albóndigas hasta que se doren.",
+              "Servir con salsa o tomates frescos."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "62,2 g"),
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.proteinas, "24,3 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "10,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,4 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "69,1 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "7,3 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "3,6 mg")
+            ],
             picResource: "assets/img/recipes/albondigas_lenteja.jpg"),
         Recipe(
             name: "Parmesano de semillas",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.semillasSesamo, "150g\n~ 1 taza"),
+              FoodsData.getRecipeFood(
+                  FoodKey.semillasZapallo, "130g\n~ 1 taza"),
+              FoodsData.getRecipeFood(
+                  FoodKey.semillasGirasol, "140g\n~ 1 taza"),
+              FoodsData.getRecipeFood(FoodKey.curcuma, "2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.sal, "5g\n~ 1 cda"),
+              FoodsData.getRecipeFood(FoodKey.pimienta, "A gusto"),
+            ],
+            serving: "30g - 3 cucharadas",
+            steps: [
+              "Colocar los ingredientes en una licuadora o procesadora y procesar de a poco hasta conseguir una textura de arena gruesa.",
+              "Reservar en un recipiente hermético en la heladera.",
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "9,7 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "6,2 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "11,2 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "111,1 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "1,9 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "1,7 mg")
+            ],
             picResource: "assets/img/recipes/parmesano_semillas.jpg"),
         Recipe(
             name: "Fainá de verduras",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(
+                  FoodKey.harinaGarbanzo, "570g\n~ 3 tazas"),
+              FoodsData.getRecipeFood(FoodKey.zucchini, "500g\n~ 2 unidades"),
+              FoodsData.getRecipeFood(FoodKey.zanahoria, "300g\n~ 3 unidades"),
+              FoodsData.getRecipeFood(FoodKey.tomate, "400g\n~ 2 unidades"),
+              FoodsData.getRecipeFood(FoodKey.polvoHornear, "3g\n~ 1 cta"),
+              FoodsData.getRecipeFood(FoodKey.aceite, "60mL\n~ 4 cdas"),
+              FoodsData.getRecipeFood(FoodKey.sal, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.pimienta, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.curcuma, "A gusto"),
+            ],
+            serving: "250g - 1 trozo de 7 x 7 cm",
+            steps: [
+              "Precalentar el horno a 250°C.",
+              "Rallar los zucchinis y las zanahorias, cortar los tomates en rodajas.",
+              "Mezclar la harina de garbanzo con el agua hasta integrar, luego incorporar los vegetales rallados.",
+              "Por último agregar el polvo de hornear y los condimentos.",
+              "Verter la mezcla en una asadera aceitada y decorar con las rodajas de tomate.",
+              "Hornear durante 30 minutos a 250°C."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "51,1 g"),
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.proteinas, "18,8 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "13,8 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,8 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "74,2 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "4,7 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "2,6 mg")
+            ],
             picResource: "assets/img/recipes/faina_verduras.jpg"),
         Recipe(
             name: "Pasta al wok con vegetales",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.zanahoria, "200g\n~ 2 unidades"),
+              FoodsData.getRecipeFood(FoodKey.zucchini, "250\n~ 1 unidad"),
+              FoodsData.getRecipeFood(FoodKey.berenjena, "160g\n~ 1 unidad"),
+              FoodsData.getRecipeFood(FoodKey.jengibre, "3g\n~ 1 cta"),
+              FoodsData.getRecipeFood(FoodKey.pastaMani, "30g\n~ 2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.semillasSesamo, "8g\n~ 2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.aceite, "15mL\n~ 1 cda"),
+              FoodsData.getRecipeFood(FoodKey.salsaSoja, "15mL\n~ 1 cda"),
+              FoodsData.getRecipeFood(FoodKey.fideosArroz, "300g"),
+              FoodsData.getRecipeFood(FoodKey.brotes, "A gusto - opcional"),
+            ],
+            serving: "250g - 1 y 1/2 tazas",
+            steps: [
+              "Poner a hervir en una olla 5 tazas de agua.",
+              "Pelar las zanahorias y cortarlas en bastones junto con los demás vegetales.",
+              "Saltear los vegetales en el aceite y agregar la salsa de soja, la pasta de maní y el jengibre rallado.",
+              "Cuando el agua rompa el hervor, apagar el fuego y sumergir los fideos de arroz durante 10 minutos.",
+              "Colar los fideos y agregarlos a la sartén de los vegetales integrando todos los alimentos.",
+              "Servir caliente y agregar brotes para decorar."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "121,0 g"),
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.proteinas, "14,6 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "15,3 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "63,7 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "2,1mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "1,1 mg")
+            ],
             picResource: "assets/img/recipes/pasta_wok.PNG"),
         Recipe(
             name: "Nuggets de coliflor",
