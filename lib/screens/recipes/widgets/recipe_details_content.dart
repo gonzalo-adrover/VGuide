@@ -69,13 +69,6 @@ List<Widget> ingredientsList(List<RecipeFood> ingredients) => ingredients
                 width: 70,
                 height: 60,
               ),
-
-              // Image.network(
-              //   ing.picUrl,
-              //   fit: BoxFit.cover,
-              //   width: 70,
-              //   height: 60,
-              // ),
             ),
             Container(
               child: Column(
@@ -152,9 +145,12 @@ Widget nutrient(RecipeNutrient nutrient) => SizedBox(
               child: Text(nutrient.amount),
             ),
           ),
-          Text(
-            nutrient.name,
-            style: VGuideTextStyles.body,
+          Container(
+            padding: EdgeInsets.only(left: 7.0, right: 7.0),
+            child: Text(
+              nutrient.name,
+              style: VGuideTextStyles.body,
+            ),
           )
         ],
       ),

@@ -28,6 +28,12 @@ enum FoodCategory {
 }
 
 enum FoodKey {
+  manzana,
+  maniTostado,
+  ralladuraLimon,
+  cocoRallado,
+  banana,
+  canela,
   calabacin,
   tomate,
   quesoDambo,
@@ -58,6 +64,7 @@ enum FoodKey {
   boniatoZanahoria,
   semillasGirasol,
   semillasSesamo,
+  semillasZapallo,
   proteinaSoja,
   harina,
   panRallado,
@@ -93,5 +100,10 @@ enum FoodKey {
   semillasChia,
   garbanzos,
   aceite,
-  apio
+  apio,
+  polvoHornear,
+  pastaMani,
+  perejil,
+  harinaAvena,
+  bagazoAlmendras
 }

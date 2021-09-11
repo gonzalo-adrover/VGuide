@@ -250,7 +250,7 @@ class FoodsData {
         key: FoodKey.curcuma,
         category: FoodCategory.seasonings,
         picUrl:
-            "https://lh3.googleusercontent.com/proxy/PBhzHVFwSMwNZoz440eDXERiFS1_J2dO9bg4Q58h7EVOy3ROM9Xmr6S0NLgxIDKdN729SVQ20FkLxZx7WjK6urEP-Qgzihni-bZDLXUTLIHZPlv0"),
+            "https://decacerola.com/wp-content/uploads/2020/06/curcuma.jpg"),
     Food(
         name: "Curry",
         key: FoodKey.curry,
@@ -298,6 +298,12 @@ class FoodsData {
         category: FoodCategory.legumes,
         picUrl:
             "https://www.lr21.com.uy/wp-content/uploads/2015/03/porotos-para-el-corazon-y-la-salud.png"),
+    Food(
+        name: "Porotos negros",
+        key: FoodKey.porotosNegros,
+        category: FoodCategory.legumes,
+        picUrl:
+            "https://frutonchile.cl/wp-content/uploads/2019/12/porotos-negros.jpg"),
     Food(
         name: "Avena laminada",
         key: FoodKey.avena,
@@ -354,6 +360,144 @@ class FoodsData {
         category: FoodCategory.seasonings,
         picUrl:
             "http://flavorix.com/wp-content/uploads/2018/08/extracto-de-Vainilla.jpg"),
+    Food(
+        name: "Semillas de zapallo",
+        key: FoodKey.semillasZapallo,
+        category: FoodCategory.seeds,
+        picUrl:
+            "https://granel.uy/web/image/product.product/2832/image_1024/Semillas%20de%20zapallo%20peladas%20%28100g%29?unique=9360525"),
+    Food(
+        name: "Polvo de hornear",
+        key: FoodKey.polvoHornear,
+        category: FoodCategory.other,
+        picUrl:
+            "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/04/que-usar-si-no-hay-polvo-para-hornear-sustituto-casero.jpg"),
+    Food(
+        name: "Pasta de maní",
+        key: FoodKey.pastaMani,
+        category: FoodCategory.legumes,
+        picUrl:
+            "https://cdn.recetas360.com/wp-content/uploads/2014/01/como-se-hace-la-crema-de-mani-compressor.jpg"),
+    Food(
+        name: "Salsa de soja",
+        key: FoodKey.salsaSoja,
+        category: FoodCategory.seasonings,
+        picUrl:
+            "https://placeralplato.com/files/2014/05/salsa-de-soja-640x480.jpg"),
+    Food(
+        name: "Jengibre",
+        key: FoodKey.jengibre,
+        category: FoodCategory.other,
+        picUrl:
+            "https://encolombia.com/wp-content/uploads/2019/06/Jengibre.jpg"),
+    Food(
+        name: "Brotes",
+        key: FoodKey.brotes,
+        category: FoodCategory.vegetables,
+        picUrl:
+            "https://www.cocinista.es/download/bancorecursos/ingredientes/ingrediente-brotes-alfalfa.jpg"),
+    Food(
+        name: "Fideos de arroz",
+        key: FoodKey.fideosArroz,
+        category: FoodCategory.legumes,
+        picUrl:
+            "https://d1kxxrc2vqy8oa.cloudfront.net/wp-content/uploads/2020/01/23212542/RFB-1001-1-fideosdearroz.jpg"),
+    Food(
+        name: "Coliflor",
+        key: FoodKey.coliflor,
+        category: FoodCategory.vegetables,
+        picUrl:
+            "https://gastronomiaycia.republica.com/wp-content/uploads/2013/04/quitar_manchas_coliflor.jpg"),
+    Food(
+        name: "Perejil",
+        key: FoodKey.perejil,
+        category: FoodCategory.vegetables,
+        picUrl:
+            "https://http2.mlstatic.com/D_NQ_NP_631041-MLU41398441084_042020-O.jpg"),
+    Food(
+        name: "Harina PAN",
+        key: FoodKey.harinaPan,
+        category: FoodCategory.cereals,
+        picUrl:
+            "https://s.fenicio.app/f/mtu/productos/harina-pan-amarilla_460x460_1591580168_ea0.jpg"),
+    Food(
+        name: "Harina de Avena",
+        key: FoodKey.harinaAvena,
+        category: FoodCategory.cereals,
+        picUrl:
+            "https://frutosnaturales.com.ar/wp-content/uploads/2020/07/harina-de-avena-1.jpg"),
+    Food(
+        name: "Mix de frutos secos",
+        key: FoodKey.mixFrutosSecos,
+        category: FoodCategory.nuts,
+        picUrl:
+            "https://www.muyinteresante.com.mx/wp-content/uploads/2018/05/httpstved-prod.adobecqms.netcontentdameditorialTelevisamexicomuyinteresantemxjuniorsalud1502Frutos.imgo_.jpg"),
+    Food(
+        name: "Cacao amargo",
+        key: FoodKey.cacaoAmargo,
+        category: FoodCategory.nuts,
+        picUrl:
+            "https://www.mercadoverde.com.uy/content/images/thumbs/0000432_cacao-amargo-300g_600.jpeg"),
+    Food(
+        name: "Bagazo de almendras",
+        key: FoodKey.bagazoAlmendras,
+        category: FoodCategory.nuts,
+        picUrl:
+            "https://holavegan.com/wp-content/uploads/2018/04/crackers-de-almendra-y-tomates-secos-02.jpg"),
+    Food(
+        name: "Semillas de chia",
+        key: FoodKey.semillasChia,
+        category: FoodCategory.seeds,
+        picUrl:
+            "https://deliciaskitchen.com/wp-content/uploads/2020/07/semillas-de-chia-propiedades-beneficios-y-recetas-480x650.jpg"),
+    Food(
+        name: "Manzana roja",
+        key: FoodKey.manzana,
+        category: FoodCategory.fruits,
+        picUrl:
+            "https://delmercado.co/wp-content/uploads/2020/06/Manzana-roja.jpg"),
+    Food(
+        name: "Maní tostado",
+        key: FoodKey.maniTostado,
+        category: FoodCategory.nuts,
+        picUrl:
+            "https://http2.mlstatic.com/D_NQ_NP_678964-MLU44982711374_022021-O.jpg"),
+    Food(
+        name: "Coco rallado",
+        key: FoodKey.cocoRallado,
+        category: FoodCategory.fruits,
+        picUrl:
+            "https://http2.mlstatic.com/D_NQ_NP_780471-MLU44984417417_022021-O.jpg"),
+    Food(
+        name: "Ralladura de limón",
+        key: FoodKey.ralladuraLimon,
+        category: FoodCategory.fruits,
+        picUrl:
+            "https://www.comprarpomelos.com/blog/wp-content/uploads/2017/04/ralladura-de-limon.jpeg"),
+    Food(
+        name: "Banana",
+        key: FoodKey.banana,
+        category: FoodCategory.fruits,
+        picUrl:
+            "https://img.vixdata.io/pd/jpg-large/es/sites/default/files/banana_madura_vila_0.jpg"),
+    Food(
+        name: "Canela",
+        key: FoodKey.canela,
+        category: FoodCategory.seasonings,
+        picUrl:
+            "https://www.lagourmeta.com/modules/ph_simpleblog/featured/51.jpg"),
+    Food(
+        name: "Azucar",
+        key: FoodKey.azucar,
+        category: FoodCategory.seasonings,
+        picUrl:
+            "https://imagenes.20minutos.es/files/image_656_370/uploads/imagenes/2017/10/22/564090.jpg"),
+    Food(
+        name: "Bebida vegetal",
+        key: FoodKey.bebidaVegetal,
+        category: FoodCategory.vegetableDrinks,
+        picUrl:
+            "https://danzadefogones.com/wp-content/uploads/2021/06/leche-de-almendras-2.jpg"),
     Food(
         name: "Pimienta",
         key: FoodKey.pimienta,
