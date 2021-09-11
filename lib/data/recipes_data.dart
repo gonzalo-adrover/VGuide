@@ -773,51 +773,322 @@ class RecipesData {
               FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "15,3 g"),
               FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,1 g"),
               FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "63,7 mg"),
-              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "2,1mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "2,1 mg"),
               FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "1,1 mg")
             ],
             picResource: "assets/img/recipes/pasta_wok.PNG"),
         Recipe(
             name: "Nuggets de coliflor",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.coliflor, "800g\n~ 1 unidad"),
+              FoodsData.getRecipeFood(FoodKey.semillasSesamo, "8g\n~ 2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.aceiteCanola, "45mL\n~ 3 cdas"),
+              FoodsData.getRecipeFood(FoodKey.salsaSoja, "30mL\n~ 2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.farinha, "75g\n~ 1/2 taza"),
+              FoodsData.getRecipeFood(FoodKey.pimenton, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.pimienta, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.comino, "A gusto"),
+              FoodsData.getRecipeFood(FoodKey.oregano, "A gusto"),
+            ],
+            serving: "200g - 7 unidades",
+            steps: [
+              "Precalentar el horno a 250°C.",
+              "Mezclar todos los ingredientes menos el coliflor en un bowl.",
+              "Separar el coliflor en arbolitos pequeños y colocarlos en el bowl, marinar durante 30 minutos o más en la heladera. ",
+              "Colocar los arbolito marinados en el horno a 200°C durante 15 minutos y servir caliente.",
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "23,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "4,3 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "10,4 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,9 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "41,7 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "1,3 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "0,5 mg")
+            ],
             picResource: "assets/img/recipes/nuggets_coliflor.HEIC"),
         Recipe(
             name: "Arepas con salsa criolla",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.harinaPan, "320g\n~ 2 tazas"),
+              FoodsData.getRecipeFood(FoodKey.agua, "500mL\n~ 2 tazas"),
+              FoodsData.getRecipeFood(FoodKey.sal, "10g\n~ 2 ctas"),
+              FoodsData.getRecipeFood(FoodKey.cebolla, "120g\n~ 1 unidad"),
+              FoodsData.getRecipeFood(FoodKey.tomate, "400g\n~ 2 unidades"),
+              FoodsData.getRecipeFood(FoodKey.ajo, "1g\n~ 1 diente"),
+              FoodsData.getRecipeFood(FoodKey.perejil, "5g\n~ 1 puñado"),
+              FoodsData.getRecipeFood(FoodKey.jugoLimon, "15mL\n~ 1 cda"),
+              FoodsData.getRecipeFood(FoodKey.aceiteCanola, "30mL\n~ 2 cdas"),
+            ],
+            serving: "120g - 1 unidad",
+            steps: [
+              "Para la masa:",
+              "Colocar la harina pan en un bowl junto con el agua y la sal y amasar hasta lograr una masa uniforme y blanda (con textura de puré de papas), si es necesario agregar más agua o más harina.",
+              "Dejar descansar la masa durante 30 minutos cubierta con film o un repasador.",
+              "Dividir la masa en bolitas pequeñas y aplanar hasta obtener discos de 2cm de espesor.",
+              "Sellar las arepas en un sartén antiadherente hasta que estén doradas de ambos lados.",
+              "Para la salsa:",
+              "Picar los vegetales en pequeños cubos y colocar en un bowl.",
+              "Condimentar con el perejil picado, el jugo de limón, la sal y el aceite.",
+              "Para el armado: Abrir las arepas al medio con un cuchillo y colocar la salsa en el centro."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "25,6 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "3,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "5,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,3 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "24,5 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "2,6 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "0,2 mg")
+            ],
             picResource: "assets/img/recipes/arepas.jpg"),
         Recipe(
             name: "Masa de tacos",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.harinaPan, "480\n~ 3 tazas"),
+              FoodsData.getRecipeFood(FoodKey.choclo, "200g\n~ 1 taza"),
+              FoodsData.getRecipeFood(FoodKey.sal, "10g\n~ 2 ctas"),
+              FoodsData.getRecipeFood(FoodKey.agua, "500mL\n~ 2 tazas"),
+            ],
+            serving: "100g - 2 unidades",
+            steps: [
+              "Licuar el agua y el choclo de 6 a 10 segundos.",
+              "Colocar el líquido en un bowl y agregar la sal y la harina de maíz.",
+              "Amasar hasta lograr una masa uniforme, si es necesario agregar más agua.",
+              "Dejar descansar durante 20 minutos.",
+              "Amasar con el palote o con una máquina de tortillas y cocinar de ambos lados en la sartén.",
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "37,3 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "3,9 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "1,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "8,9 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "2,6 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "0,1 mg")
+            ],
             picResource: "assets/img/recipes/masa_tacos.jpg"),
         Recipe(
             name: "Brownie de porotos negros",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(
+                  FoodKey.porotosNegros, "130g\n~ 1 y 1/2 tazas"),
+              FoodsData.getRecipeFood(FoodKey.harinaAvena, "150g\n~ 1 taza"),
+              FoodsData.getRecipeFood(FoodKey.cacaoAmargo, "57g\n~ 1/3 taza"),
+              FoodsData.getRecipeFood(FoodKey.azucar, "65g\n~ 3/4 taza"),
+              FoodsData.getRecipeFood(FoodKey.polvoHornear, "3g\n~ 1 cdta"),
+              FoodsData.getRecipeFood(FoodKey.aceite, "200mL\n~ 1/2 taza"),
+              FoodsData.getRecipeFood(FoodKey.agua, "125mL\n~ 1/2 taza"),
+              FoodsData.getRecipeFood(FoodKey.vainilla, "3mL\n~ 1 cdta"),
+              FoodsData.getRecipeFood(
+                  FoodKey.mixFrutosSecos, "16g\n~ 4 cdas (troceados)"),
+            ],
+            serving: "70g - 1 unidad",
+            steps: [
+              "Remojar los porotos por mínimo 8 horas previo a la preparación.",
+              "Hervir los porotos en agua hasta que estén blandos. Escurrir y reservar.",
+              "Mezclar la harina de avena, el cacao, el azúcar y el polvo de hornear.",
+              "Agregar el aceite, el agua, la vainilla y los frutos secos y mezclar bien.",
+              "Procesar o mixear los porotos negros e incorporar a la mezcla.",
+              "Hornear a 180°C en un horno precalentado durante 20 minutos."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "24,8 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "3,9 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "24,6 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "2,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "22,0 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "1,7 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "1,0 mg")
+            ],
             picResource: "assets/img/recipes/brownie_porotos.jpg"),
         Recipe(
             name: "Bebida vegetal de almendras",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(FoodKey.almendras, "200g\n~ 1 taza"),
+              FoodsData.getRecipeFood(FoodKey.agua, "700mL\n~ 3 tazas"),
+              FoodsData.getRecipeFood(FoodKey.aceiteCanola, "15mL\n~ 1 cda"),
+            ],
+            serving: "250mL - 1 taza",
+            steps: [
+              "Remojar las almendras por mínimo 8 horas, luego escurrirlas y descartar el agua de remojo.",
+              "Colocar las almendras junto con el agua en la licuadora y licuar hasta que se hayan triturado todas.",
+              "Colocar una tela fina (de algodón o lienzo) sobre un bowl y colar la mezcla apretando la tela para extraer el líquido y separarlo de la parte sólida. ",
+              "Reservar el líquido en un recipiente en la heledra y NO descartar la parte sólida (bagazo) porque puede ser utilizado en otras recetas.",
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "10,3 g"),
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.proteinas, "11,4 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "37,9 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "0,6 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "111,9 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "1,9 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "1,6 mg")
+            ],
             picResource: "assets/img/recipes/bebida_almendras.jpg"),
         Recipe(
             name: "Galletas de gabazo de la bebida de almendras",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(
+                  FoodKey.bagazoAlmendras, "76g\n~ 3/4 tazas"),
+              FoodsData.getRecipeFood(FoodKey.semillasChia, "30g\n~ 3 cdas"),
+              FoodsData.getRecipeFood(FoodKey.azucar, "60g\n~ 4 cdas"),
+              FoodsData.getRecipeFood(FoodKey.aceite, "60mL\n~ 4 cdas"),
+              FoodsData.getRecipeFood(FoodKey.vainilla, "6mL\n~ 1 cta"),
+              FoodsData.getRecipeFood(FoodKey.jugoLimon, "30mL\n~ 2 cdas"),
+            ],
+            serving: "80g - 3 unidades",
+            steps: [
+              "Hidratar las semillas de chía con 6 cucharadas de agua.",
+              "Mezclar en un bowl: las semillas, el bagazo de almendras, el azúcar, el aceite, la vainilla y el jugo de limón.",
+              "Colocar en una asadera formando bolitas y cocinar durante 15 minutos a 180°C.",
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "35,5 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "7,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "16,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "3,6 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "31,0 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "2,2 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "1,8 mg")
+            ],
             picResource: "assets/img/recipes/galletas_bagazo_almendras.HEIC"),
         Recipe(
             name: "Pudding de chia y manzana",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(
+                  FoodKey.bebidaVegetal, "200mL\n~ 1 vaso (almendras)"),
+              FoodsData.getRecipeFood(FoodKey.manzana, "150g\n~ 1 unidad"),
+              FoodsData.getRecipeFood(FoodKey.vainilla, "3mL\n~ 1 cdta"),
+              FoodsData.getRecipeFood(FoodKey.semillasChia, "45g\n~ 3 cdas"),
+              FoodsData.getRecipeFood(FoodKey.azucar, "30g\n~ 2 cdas"),
+            ],
+            serving: "150g - 1/2 taza",
+            steps: [
+              "Licuar o mixear: la bebida vegetal, la manzana, la vainilla y el azúcar.",
+              "Verter la mezca en un bowl y agregar las semillas de chia.",
+              "Colocar la preparación en la heladera y revolver cada 10 minutos hasta que se hidrate la chia.",
+              "Colocar el pudding en recipientes pequeños."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "25,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "4,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "3,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "3,6 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "31,0 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "3,6 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "3,3 mg")
+            ],
             picResource: "assets/img/recipes/pudding_chia_manzana.jpg"),
         Recipe(
             name: "Pudding de chia y chocolate",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(
+                  FoodKey.bebidaVegetal, "200mL\n~ 1 vaso (almendras)"),
+              FoodsData.getRecipeFood(FoodKey.cacaoAmargo, "30g\n~ 2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.semillasChia, "45g\n~ 3 cdas"),
+              FoodsData.getRecipeFood(FoodKey.azucar, "30g\n~ 2 cdas"),
+            ],
+            serving: "150g - 1/2 taza",
+            steps: [
+              "Licuar o mixear: la bebida vegetal, el cacao, y el azúcar. ",
+              "Verter la mezca en un bowl y agregar las semillas de chia.",
+              "Colocar la preparación en la heladera y revolver cada 10 minutos hasta que se hidrate la chia.",
+              "Colocar el pudding en recipientes pequeños."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "30,2 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.proteinas, "8,4 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "5,8 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "5,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "74,6 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "5,0 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "4,6 mg")
+            ],
             picResource: "assets/img/recipes/pudding_chia_chocolate.jpg"),
         Recipe(
             name: "Trufas de maní y limón",
             veggieTypes: [VeggieTypes.all],
+            foodList: [
+              FoodsData.getRecipeFood(
+                  FoodKey.maniTostado, "250g\n~ 1 taza (sin sal)"),
+              FoodsData.getRecipeFood(FoodKey.jugoLimon, "45mL\n~ 3 cdas"),
+              FoodsData.getRecipeFood(FoodKey.aceiteOliva, "30mL\n~ 2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.azucar, "40g\n~ 2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.ralladuraLimon, "3g\n~ 1 cdta"),
+              FoodsData.getRecipeFood(FoodKey.cocoRallado, "40g\n~ 1/2 taza"),
+            ],
+            serving: "70g - 3 unidades",
+            steps: [
+              "Colocar en la procesadora: el maní, el jugo de limón, el aceite de oliva, el azúcar y la ralladura de limón.",
+              "Procesar hasta lograr una mezcla uniforme.",
+              "Formar bolitas y pasarlas por el coco rallado. ",
+              "Refrigerar."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "15,3 g"),
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.proteinas, "11,2 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "25,0 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "1,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "29,8 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "1,4 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "1,3 mg")
+            ],
             picResource: "assets/img/recipes/trufas_limon_mani.jpg"),
         Recipe(
             name: "Panqueques de banana y avena",
             veggieTypes: [
               VeggieTypes.ovoLactoVegetarian,
               VeggieTypes.ovoVegetarian
+            ],
+            foodList: [
+              FoodsData.getRecipeFood(
+                  FoodKey.banana, "240g\n~ 2 unidades (maduras)"),
+              FoodsData.getRecipeFood(FoodKey.huevo, "100g\n~ 2 unidades"),
+              FoodsData.getRecipeFood(
+                  FoodKey.bebidaVegetal, "125mL\n~ 1/2 taza (avena)"),
+              FoodsData.getRecipeFood(FoodKey.vainilla, "3mL\n~ 1 cdta"),
+              FoodsData.getRecipeFood(FoodKey.avena, "375\n~ 1 y 1/2 taza"),
+              FoodsData.getRecipeFood(FoodKey.polvoHornear, "6g\n~ 2 cdas"),
+              FoodsData.getRecipeFood(FoodKey.canela, "2g\n~ 1/2 cdta"),
+              FoodsData.getRecipeFood(FoodKey.sal, "1g\n~ 1/4 cdta"),
+            ],
+            serving: "150g - 2 unidades",
+            steps: [
+              "Pisar las bananas con un tenedor.",
+              "Agregar el resto de los ingredientes e incorporar bien.",
+              "Precalentar una asadera antiadherente y con un cucharón verter la mezcla hasta que toda la sartén esté cubierta.",
+              "Cuando se formen burbujas en la superficie dar vuelta el panqueque y reservar."
+            ],
+            nutrientsList: [
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.carbohidratos, "53,9 g"),
+              FoodsData.getRecipeNutrient(
+                  RecipeNutrientKey.proteinas, "13,8 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.lipidos, "7,1 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.omega3, "1,3 g"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.calcio, "62,0 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.hierro, "2,3 mg"),
+              FoodsData.getRecipeNutrient(RecipeNutrientKey.zinc, "3,6 mg")
             ],
             picResource: "assets/img/recipes/panqueque_avena_banana.jpg")
       ];

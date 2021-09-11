@@ -28,6 +28,12 @@ enum FoodCategory {
 }
 
 enum FoodKey {
+  manzana,
+  maniTostado,
+  ralladuraLimon,
+  cocoRallado,
+  banana,
+  canela,
   calabacin,
   tomate,
   quesoDambo,
@@ -96,5 +102,8 @@ enum FoodKey {
   aceite,
   apio,
   polvoHornear,
-  pastaMani
+  pastaMani,
+  perejil,
+  harinaAvena,
+  bagazoAlmendras
 }

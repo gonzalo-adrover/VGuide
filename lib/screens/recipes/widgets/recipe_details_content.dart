@@ -10,49 +10,47 @@ class RecipeDetailsContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(top: 40.0),
-        child: Expanded(
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text("Ingredientes", style: VGuideTextStyles.header),
-            SizedBox(height: 20),
-            Container(
-              height: 150.0,
-              child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: ingredientsList(recipe.foodList)),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text("Procedimiento", style: VGuideTextStyles.header),
-            SizedBox(height: 20),
-            Column(
-              children: stepList(recipe.steps),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              "Valores nutricionales",
-              style: VGuideTextStyles.header,
-            ),
-            Text(
-              "Porcion: ${recipe.serving}",
-              style: VGuideTextStyles.chipLight,
-            ),
-            SizedBox(height: 20),
-            Container(
-              height: 180.0,
-              child: GridView.count(
-                crossAxisCount: 4,
-                crossAxisSpacing: 3.0,
-                mainAxisSpacing: 3.0,
-                children: nutrientsList(recipe.nutrientsList),
-              ),
-            )
-          ]),
-        ));
+      margin: EdgeInsets.only(top: 40.0),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text("Ingredientes", style: VGuideTextStyles.header),
+        SizedBox(height: 20),
+        Container(
+          height: 150.0,
+          child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: ingredientsList(recipe.foodList)),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Text("Procedimiento", style: VGuideTextStyles.header),
+        SizedBox(height: 20),
+        Column(
+          children: stepList(recipe.steps),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Text(
+          "Valores nutricionales",
+          style: VGuideTextStyles.header,
+        ),
+        Text(
+          "Porcion: ${recipe.serving}",
+          style: VGuideTextStyles.chipLight,
+        ),
+        SizedBox(height: 20),
+        Container(
+          height: 180.0,
+          child: GridView.count(
+            crossAxisCount: 4,
+            crossAxisSpacing: 3.0,
+            mainAxisSpacing: 3.0,
+            children: nutrientsList(recipe.nutrientsList),
+          ),
+        )
+      ]),
+    );
   }
 }
 
@@ -71,13 +69,6 @@ List<Widget> ingredientsList(List<RecipeFood> ingredients) => ingredients
                 width: 70,
                 height: 60,
               ),
-
-              // Image.network(
-              //   ing.picUrl,
-              //   fit: BoxFit.cover,
-              //   width: 70,
-              //   height: 60,
-              // ),
             ),
             Container(
               child: Column(
@@ -154,9 +145,12 @@ Widget nutrient(RecipeNutrient nutrient) => SizedBox(
               child: Text(nutrient.amount),
             ),
           ),
-          Text(
-            nutrient.name,
-            style: VGuideTextStyles.body,
+          Container(
+            padding: EdgeInsets.only(left: 7.0, right: 7.0),
+            child: Text(
+              nutrient.name,
+              style: VGuideTextStyles.body,
+            ),
           )
         ],
       ),
