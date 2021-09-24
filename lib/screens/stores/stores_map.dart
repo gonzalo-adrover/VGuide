@@ -4,7 +4,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 class StoresMap extends StatefulWidget {
   final BuildContext context;
   final CameraPosition position;
-  final Set<Marker> markers;
+  final List<Marker> markers;
 
   const StoresMap(this.context, {this.position, this.markers});
 
@@ -17,6 +17,6 @@ class _StoresMapState extends State<StoresMap> {
   Widget build(BuildContext context) => GoogleMap(
         initialCameraPosition: widget.position,
         myLocationEnabled: true,
-        markers: widget.markers,
+        markers: widget.markers.toSet(),
       );
 }

@@ -9,16 +9,23 @@ class StoresScreen extends StatefulWidget {
   static Color pageColor = Colors.green.shade50;
   static final LatLng _kMapCenter = LatLng(-34.8851383, -56.1707025);
   static final CameraPosition _kInitialPosition =
-      CameraPosition(target: _kMapCenter, zoom: 12.0, tilt: 0, bearing: 0);
+      CameraPosition(target: _kMapCenter, zoom: 11.0, tilt: 0, bearing: 0);
 
   @override
   State<StatefulWidget> createState() => _StoresScreenState();
 }
 
 class _StoresScreenState extends State<StoresScreen> {
-  Store selectedStore = StoresData.stores[0];
-  bool isStoreSelected = false;
-  Set<Marker> mapMarkers = _getAllMarkers();
+  Store selectedStore;
+  bool isStoreSelected;
+  List<Marker> mapMarkers;
+
+  @override
+  void initState() {
+    isStoreSelected = false;
+    mapMarkers = _getAllMarkers();
+    super.initState();
+  }
 
   void clearSelection() {
     setState(() {
@@ -32,9 +39,9 @@ class _StoresScreenState extends State<StoresScreen> {
       if (isStoreSelected && selectedStore.name == storeName) {
         clearSelection();
       } else {
-        selectedStore = StoresData.stores.firstWhere(
-            (element) => element.name == storeName,
-            orElse: () => StoresData.stores[0]);
+        mapMarkers = [];
+        selectedStore = StoresData.stores
+            .firstWhere((element) => element.name == storeName);
         isStoreSelected = true;
         mapMarkers = _getMarkersByStore(selectedStore);
       }
@@ -73,8 +80,8 @@ class _StoresScreenState extends State<StoresScreen> {
 }
 
 // Returns a Set containing the Markers of all the available stores
-Set<Marker> _getAllMarkers() {
-  Set<Marker> markers = Set<Marker>();
+List<Marker> _getAllMarkers() {
+  List<Marker> markers = [];
   StoresData.stores.forEach((element) {
     element.contactList.forEach((element) {
       var current = Marker(
@@ -87,12 +94,13 @@ Set<Marker> _getAllMarkers() {
   return markers;
 }
 
-Set<Marker> _getMarkersByStore(Store store) {
-  Set<Marker> markers = Set<Marker>();
+List<Marker> _getMarkersByStore(Store store) {
+  List<Marker> markers = [];
   StoresData
       // Get the store from all the data
       .stores
-      .firstWhere((element) => element.name == store.name)
+      .firstWhere((element) => element.name == store.name,
+          orElse: () => StoresData.stores[0])
       // Loop through contacts to get the markers
       .contactList
       .forEach((element) {
