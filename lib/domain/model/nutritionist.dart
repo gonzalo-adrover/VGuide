@@ -1,14 +1,16 @@
 class Nutritionist {
   final String name;
   final String address;
-  final String description;
+  final String email;
   final String phoneNumber;
   final String socialMedia;
+  final String picURL;
 
   const Nutritionist(
       {this.name,
       this.address,
-      this.description,
+      this.email,
       this.phoneNumber,
-      this.socialMedia});
+      this.socialMedia,
+      this.picURL});
 }
