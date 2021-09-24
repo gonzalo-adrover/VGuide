@@ -12,9 +12,13 @@ class StoreSectionWidget extends StatelessWidget {
   final bool isStoreSelected;
   final Store selectedStore;
   final Function onStoreSelected;
+  final List<Store> stores;
 
   const StoreSectionWidget(
-      {this.isStoreSelected, this.selectedStore, this.onStoreSelected});
+      {this.isStoreSelected,
+      this.selectedStore,
+      this.onStoreSelected,
+      this.stores});
 
   @override
   Widget build(BuildContext context) {
@@ -22,15 +26,15 @@ class StoreSectionWidget extends StatelessWidget {
         ? Expanded(
             child: _bottomSheetContent(selectedStore, onStoreSelected),
           )
-        : Expanded(
+        : Flexible(
+            flex: 3,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: StoresData.stores.length,
+                itemCount: stores.length,
                 itemBuilder: (context, index) => StoreCardItem(
-                      store: StoresData.stores[index],
+                      store: stores[index],
                       onCardPressed: onStoreSelected,
-                    )),
-          );
+                    )));
   }
 }
 

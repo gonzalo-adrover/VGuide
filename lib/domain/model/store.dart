@@ -34,6 +34,25 @@ class SocialLink {
   const SocialLink({this.network, this.data});
 }
 
-enum Department { montevideo, maldonado, canelones }
+class Department {
+  final DepartmentType key;
+  final String name;
+
+  const Department({this.key, this.name});
+}
+
+enum DepartmentType {
+  montevideo,
+  maldonado,
+  canelones,
+  colonia,
+  paysandu,
+  rocha,
+  florida,
+  durazno,
+  rio_negro,
+  tacuarembo,
+  lavalleja
+}
 
 enum NetworkType { instagram, web, facebook }

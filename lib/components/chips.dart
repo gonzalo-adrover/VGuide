@@ -6,7 +6,7 @@ Widget chipsStore() => Container(
       color: Colors.grey.shade200,
       child: ListView(
         scrollDirection: Axis.horizontal,
-        children: Department.values
+        children: DepartmentType.values
             .map((dep) => Container(
                 color: Colors.lightBlueAccent.shade100,
                 child: Row(
