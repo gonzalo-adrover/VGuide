@@ -17,21 +17,20 @@ class GenericCard extends StatelessWidget {
     return Container(
         width: cardWidth,
         child: GestureDetector(
-            onTap: cardTapped,
-            child: Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0)),
-              margin: EdgeInsets.all(10.0),
-              elevation: 2,
-              color: Colors.white,
-              child: ClipRRect(
+          onTap: cardTapped,
+          child: Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0)),
+            margin: EdgeInsets.all(10.0),
+            elevation: 2,
+            color: Colors.white,
+            child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
-                child: Column(
-                  children: [
-                    Container(padding: EdgeInsets.all(10), child: content)
-                  ],
-                ),
-              ),
-            )));
+                child: SingleChildScrollView(
+                  child: content,
+                  padding: EdgeInsets.all(10.0),
+                )),
+          ),
+        ));
   }
 }
