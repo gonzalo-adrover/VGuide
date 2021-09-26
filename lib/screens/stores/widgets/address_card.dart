@@ -24,7 +24,8 @@ class AddressCard extends StatelessWidget {
                     color: Colors.red.shade300,
                   ),
                 ),
-                Column(
+                Expanded(
+                    child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -36,7 +37,7 @@ class AddressCard extends StatelessWidget {
                       style: VGuideTextStyles.mapDetailsBody,
                     )
                   ],
-                )
+                ))
               ],
             )));
   }
