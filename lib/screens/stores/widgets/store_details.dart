@@ -44,7 +44,7 @@ Widget _bottomSheetContent(Store store, Function onCloseTap) {
     children: [
       Card(
         color: Colors.white,
-        child: Center(
+        child: Container(
             child: Column(
           children: [
             Padding(
@@ -63,18 +63,15 @@ Widget _bottomSheetContent(Store store, Function onCloseTap) {
               ),
             ),
             Expanded(
-                child: Row(
+                child: ListView(
               children: [
-                Flexible(
-                    flex: 3,
-                    child: Column(
-                      children: _getStoreAddresses(store.contactList),
-                    )),
-                Flexible(
-                    flex: 2,
-                    child: Column(
-                      children: _getSocialNetwordCards(store.socialMediaLinks),
-                    ))
+                Column(
+                  children: _getStoreAddresses(store.contactList),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: _getSocialNetwordCards(store.socialMediaLinks),
+                ),
               ],
             ))
           ],

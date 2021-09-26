@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:vguide/components/text_styles.dart';
 import 'package:vguide/data/stores_data.dart';
 import 'package:vguide/domain/model/store.dart';
 import 'package:vguide/screens/stores/stores_map.dart';
@@ -7,9 +8,6 @@ import 'package:vguide/screens/stores/widgets/store_details.dart';
 
 class StoresScreen extends StatefulWidget {
   static Color pageColor = Colors.green.shade50;
-  static final LatLng _kMapCenter = LatLng(-34.8851383, -56.1707025);
-  static final CameraPosition _kInitialPosition =
-      CameraPosition(target: _kMapCenter, zoom: 11.0, tilt: 0, bearing: 0);
 
   @override
   State<StatefulWidget> createState() => _StoresScreenState();
@@ -21,6 +19,7 @@ class _StoresScreenState extends State<StoresScreen> {
   bool isStoreSelected;
   List<Marker> mapMarkers;
   List<Store> storesToDisplay;
+  CameraPosition mapCamera;
 
   @override
   void initState() {
@@ -28,6 +27,11 @@ class _StoresScreenState extends State<StoresScreen> {
     selectedDepartment = DepartmentType.montevideo;
     mapMarkers = _getCurrentDepartmentMarkers(selectedDepartment);
     storesToDisplay = StoresData.montevideoStores;
+    mapCamera = CameraPosition(
+        target: LatLng(-34.8851383, -56.1707025),
+        zoom: 11.0,
+        tilt: 0,
+        bearing: 0);
     super.initState();
   }
 
@@ -45,6 +49,7 @@ class _StoresScreenState extends State<StoresScreen> {
           .firstWhere((element) => element.key == type)
           .value;
       selectedDepartment = type;
+      mapCamera = _getMapPositionByDepartment(type);
       mapMarkers = _getCurrentDepartmentMarkers(type);
     });
   }
@@ -60,6 +65,7 @@ class _StoresScreenState extends State<StoresScreen> {
             .value
             .firstWhere((element) => element.name == storeName);
         isStoreSelected = true;
+        mapCamera = _getMapPositionByStore(selectedStore);
         mapMarkers = _getMarkersByStore(selectedStore, selectedDepartment);
       }
     });
@@ -80,8 +86,7 @@ class _StoresScreenState extends State<StoresScreen> {
               Flexible(
                 flex: isStoreSelected ? 1 : 7,
                 child: StoresMap(context,
-                    position: StoresScreen._kInitialPosition,
-                    markers: mapMarkers),
+                    position: mapCamera, markers: mapMarkers),
               ),
               !isStoreSelected
                   ? Container(
@@ -96,7 +101,10 @@ class _StoresScreenState extends State<StoresScreen> {
                               child: Transform(
                                   transform: new Matrix4.identity()..scale(0.7),
                                   child: Chip(
-                                      label: Text(e.name),
+                                      label: Text(
+                                        e.name,
+                                        style: VGuideTextStyles.chip,
+                                      ),
                                       elevation:
                                           selectedDepartment == e.key ? 1 : 0,
                                       backgroundColor:
@@ -145,12 +153,29 @@ List<Marker> _getMarkersByStore(Store store, DepartmentType type) {
       .entries
       .firstWhere((element) => element.key == type)
       .value
+      .firstWhere((element) => element.name == store.name)
+      .contactList
       .forEach((element) {
-    element.contactList.forEach((element) {
-      markers.add(Marker(
-          markerId: element.marker.markerId,
-          position: element.marker.position));
-    });
+    markers.add(Marker(
+        markerId: element.marker.markerId, position: element.marker.position));
   });
   return markers;
+}
+
+CameraPosition _getMapPositionByDepartment(DepartmentType type) {
+  return CameraPosition(
+      target: StoresData.departments
+          .firstWhere((element) => element.key == type)
+          .position,
+      zoom: 12,
+      bearing: 15.0,
+      tilt: 75.0);
+}
+
+CameraPosition _getMapPositionByStore(Store store) {
+  return CameraPosition(
+      target: store.contactList[0].marker.position,
+      zoom: 11.0,
+      bearing: 15.0,
+      tilt: 75.0);
 }

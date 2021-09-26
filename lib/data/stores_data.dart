@@ -4,17 +4,50 @@ import '../domain/model/store.dart';
 
 class StoresData {
   static List<Department> departments = [
-    Department(key: DepartmentType.montevideo, name: "Montevideo"),
-    Department(key: DepartmentType.canelones, name: "Canelones"),
-    Department(key: DepartmentType.maldonado, name: "Maldonado"),
-    Department(key: DepartmentType.colonia, name: "Colonia"),
-    Department(key: DepartmentType.paysandu, name: "Paysandú"),
-    Department(key: DepartmentType.rocha, name: "Rocha"),
-    Department(key: DepartmentType.florida, name: "Florida"),
-    Department(key: DepartmentType.durazno, name: "Durazno"),
-    Department(key: DepartmentType.rio_negro, name: "Rio Negro"),
-    Department(key: DepartmentType.tacuarembo, name: "Tacuarembó"),
-    Department(key: DepartmentType.lavalleja, name: "Lavalleja")
+    Department(
+        key: DepartmentType.montevideo,
+        name: "Montevideo",
+        position: LatLng(-34.8210176, -56.3768677)),
+    Department(
+        key: DepartmentType.canelones,
+        name: "Canelones",
+        position: LatLng(-34.8328436, -56.1727491)),
+    Department(
+        key: DepartmentType.maldonado,
+        name: "Maldonado",
+        position: LatLng(-34.9065419, -55.0111501)),
+    Department(
+        key: DepartmentType.colonia,
+        name: "Colonia",
+        position: LatLng(-34.1195871, -58.2636359)),
+    Department(
+        key: DepartmentType.paysandu,
+        name: "Paysandú",
+        position: LatLng(-32.3104764, -58.1110246)),
+    Department(
+        key: DepartmentType.rocha,
+        name: "Rocha",
+        position: LatLng(-34.4799035, -54.3455461)),
+    Department(
+        key: DepartmentType.florida,
+        name: "Florida",
+        position: LatLng(-34.0951052, -56.2404604)),
+    Department(
+        key: DepartmentType.durazno,
+        name: "Durazno",
+        position: LatLng(-33.3851616, -56.5919309)),
+    Department(
+        key: DepartmentType.rio_negro,
+        name: "Rio Negro",
+        position: LatLng(-33.1299286, -58.3207513)),
+    Department(
+        key: DepartmentType.tacuarembo,
+        name: "Tacuarembó",
+        position: LatLng(-31.7200553, -56.0170401)),
+    Department(
+        key: DepartmentType.lavalleja,
+        name: "Lavalleja",
+        position: LatLng(-34.3744614, -55.2895552))
   ];
 
   static Map<DepartmentType, List<Store>> stores = {

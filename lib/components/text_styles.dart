@@ -16,7 +16,7 @@ class VGuideTextStyles {
       GoogleFonts.raleway(fontSize: 13.0, fontWeight: FontWeight.w500);
 
   static TextStyle chip =
-      GoogleFonts.balsamiqSans(fontSize: 15.0, fontWeight: FontWeight.w300);
+      GoogleFonts.balsamiqSans(fontSize: 16.0, fontWeight: FontWeight.w500);
 
   static TextStyle chipLight = GoogleFonts.raleway(
       fontSize: 14.0, fontWeight: FontWeight.w500, color: Colors.black);
@@ -31,10 +31,10 @@ class VGuideTextStyles {
       GoogleFonts.raleway(fontSize: 12.0, fontWeight: FontWeight.w500);
 
   static TextStyle mapDetailsHeaders =
-      GoogleFonts.raleway(fontSize: 12.0, fontWeight: FontWeight.w700);
+      GoogleFonts.raleway(fontSize: 15.0, fontWeight: FontWeight.w700);
 
   static TextStyle mapDetailsBody =
-      GoogleFonts.raleway(fontSize: 10.0, fontWeight: FontWeight.w500);
+      GoogleFonts.raleway(fontSize: 13.0, fontWeight: FontWeight.w500);
 
   static const servingInfoBorderColor = Color(0xffb0b0b0);
 

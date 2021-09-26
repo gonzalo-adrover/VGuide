@@ -37,8 +37,9 @@ class SocialLink {
 class Department {
   final DepartmentType key;
   final String name;
+  final LatLng position;
 
-  const Department({this.key, this.name});
+  const Department({this.key, this.name, this.position});
 }
 
 enum DepartmentType {
