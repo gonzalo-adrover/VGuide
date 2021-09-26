@@ -31,7 +31,7 @@ class TipDetails extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: Color.fromRGBO(76, 92, 155, 1),
+      backgroundColor: TipDetails.pageColor,
       elevation: 0,
     );
   }

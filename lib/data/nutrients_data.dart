@@ -25,7 +25,7 @@ class NutrientsData {
             """La digestión de las proteínas es más fácil para el cuerpo cuando los alimentos se cocinan. Los alimentos de origen vegetal deben combinarse para alcanzar las cantidades de aminoácidos requeridas por el cuerpo.  Combinando legumbres con cereales y pseudo cereales se logra obtener la proteína completa para cubrir el requerimiento de este nutriente.""",
         inhibitors: "",
         picURL:
-            "https://www.prensalibre.com/wp-content/uploads/2019/08/Prote%C3%ADnas-2.jpg?quality=82"),
+            "https://greenandgreat.eu/wp-content/uploads/2020/10/cuales-son-las-principales-fuentes-de-proteina-vegetal-para-los-mayores-980x654.jpeg"),
     Nutrient(
         id: 1,
         key: NutrientKey.omega3,
@@ -44,7 +44,7 @@ class NutrientsData {
         inhibitors:
             """Cocinar estos aceites disminuye el impacto favorable que tienen para la salud. Además comer las semillas enteras, sin moler hace que sea más dificil su aprovechamiento.""",
         picURL:
-            "https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/01/sources-of-omega-3-and-healthy-fats-1024x683.jpg?w=1155&h=1541"),
+            "https://www.excelenciasgourmet.com/sites/default/files/styles/slideshow_large/public/2018-03/mascobe.jpg?itok=ryzq6S9b"),
     Nutrient(
         id: 2,
         key: NutrientKey.calcio,
@@ -104,7 +104,7 @@ class NutrientsData {
         inhibitors:
             """Evitar suplementos de Calcio y Hierro dos horas antes y después de comer alimentos que aportan Zinc.""",
         picURL:
-            "https://www.unlockfood.ca/EatRightOntario/media/Website-images-resized/What-you-need-to-know-about-Zinc-resized.jpg"),
+            "https://www.cocinayvino.com/wp-content/uploads/2016/11/fuentesdezinc.jpg"),
     Nutrient(
         id: 5,
         key: NutrientKey.yodo,
@@ -122,7 +122,7 @@ class NutrientsData {
         """,
         inhibitors: "",
         picURL:
-            "https://2pybk2la9r-flywheel.netdna-ssl.com/wp-content/uploads/2020/01/iStock-1154896831-food-eating-healthy.jpg"),
+            "https://asset-americas.unileversolutions.com/content/dam/unilever/knorr_world/global/english/general_image/toss_the_salt_try_some_seaweed_1143px-1541862-jpg.jpg.ulenscale.1982x930.jpg"),
     Nutrient(
         id: 6,
         key: NutrientKey.vitD,
@@ -137,7 +137,7 @@ class NutrientsData {
         facilitators: "",
         inhibitors: "",
         picURL:
-            "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F12%2F2020%2F06%2F25%2Fvitamin-d-AdobeStock_270150827.jpg"),
+            "http://www.cancerdepiel.org.ar/images/vit_D.png"),
     Nutrient(
         id: 7,
         key: NutrientKey.vitB12,
@@ -153,6 +153,6 @@ class NutrientsData {
         facilitators:
             """Para informarte sobre la suplementación de Vitamina B12 adecuada para ti consulta a un Nutricionista. HIPERVICULO A LA PESTAÑA DE CONTACTO DE NUTRICIONISTAS""",
         picURL:
-            "https://domf5oio6qrcr.cloudfront.net/medialibrary/4529/b12-foods.jpg"),
+            "https://biowebaruhaz.hu/uploads/shop/biowebaruhaz.hu/fajltar/134589.jpg"),
   ];
 }
