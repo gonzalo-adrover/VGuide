@@ -9,21 +9,43 @@ class StoresScreen extends StatefulWidget {
   static Color pageColor = Colors.green.shade50;
   static final LatLng _kMapCenter = LatLng(-34.8851383, -56.1707025);
   static final CameraPosition _kInitialPosition =
-      CameraPosition(target: _kMapCenter, zoom: 12.0, tilt: 0, bearing: 0);
+      CameraPosition(target: _kMapCenter, zoom: 11.0, tilt: 0, bearing: 0);
 
   @override
   State<StatefulWidget> createState() => _StoresScreenState();
 }
 
 class _StoresScreenState extends State<StoresScreen> {
-  Store selectedStore = StoresData.stores[0];
-  bool isStoreSelected = false;
-  Set<Marker> mapMarkers = _getAllMarkers();
+  Store selectedStore;
+  DepartmentType selectedDepartment;
+  bool isStoreSelected;
+  List<Marker> mapMarkers;
+  List<Store> storesToDisplay;
+
+  @override
+  void initState() {
+    isStoreSelected = false;
+    selectedDepartment = DepartmentType.montevideo;
+    mapMarkers = _getCurrentDepartmentMarkers(selectedDepartment);
+    storesToDisplay = StoresData.montevideoStores;
+    super.initState();
+  }
 
   void clearSelection() {
     setState(() {
       isStoreSelected = false;
-      mapMarkers = _getAllMarkers();
+      mapMarkers = _getCurrentDepartmentMarkers(selectedDepartment);
+    });
+  }
+
+  void onDepartmentSelected(DepartmentType type) {
+    setState(() {
+      isStoreSelected = false;
+      storesToDisplay = StoresData.stores.entries
+          .firstWhere((element) => element.key == type)
+          .value;
+      selectedDepartment = type;
+      mapMarkers = _getCurrentDepartmentMarkers(type);
     });
   }
 
@@ -32,11 +54,13 @@ class _StoresScreenState extends State<StoresScreen> {
       if (isStoreSelected && selectedStore.name == storeName) {
         clearSelection();
       } else {
-        selectedStore = StoresData.stores.firstWhere(
-            (element) => element.name == storeName,
-            orElse: () => StoresData.stores[0]);
+        mapMarkers = [];
+        selectedStore = StoresData.stores.entries
+            .firstWhere((element) => element.key == selectedDepartment)
+            .value
+            .firstWhere((element) => element.name == storeName);
         isStoreSelected = true;
-        mapMarkers = _getMarkersByStore(selectedStore);
+        mapMarkers = _getMarkersByStore(selectedStore, selectedDepartment);
       }
     });
   }
@@ -49,22 +73,45 @@ class _StoresScreenState extends State<StoresScreen> {
           automaticallyImplyLeading: false,
           backgroundColor: Colors.green.shade200,
           title: Text("Tiendas"),
-          centerTitle: true,
         ),
         body: SafeArea(
           child: Column(
             children: [
               Flexible(
-                flex: isStoreSelected ? 1 : 3,
+                flex: isStoreSelected ? 1 : 7,
                 child: StoresMap(context,
                     position: StoresScreen._kInitialPosition,
                     markers: mapMarkers),
               ),
+              !isStoreSelected
+                  ? Container(
+                      child: Expanded(
+                          child: ListView(
+                      padding:
+                          EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                      scrollDirection: Axis.horizontal,
+                      children: StoresData.departments
+                          .map((e) => InkWell(
+                              onTap: () => onDepartmentSelected(e.key),
+                              child: Transform(
+                                  transform: new Matrix4.identity()..scale(0.7),
+                                  child: Chip(
+                                      label: Text(e.name),
+                                      elevation:
+                                          selectedDepartment == e.key ? 1 : 0,
+                                      backgroundColor:
+                                          selectedDepartment == e.key
+                                              ? Colors.teal.shade400
+                                              : Colors.blueGrey.shade300))))
+                          .toList(),
+                    )))
+                  : Container(),
               Container(
                   child: StoreSectionWidget(
                 isStoreSelected: isStoreSelected,
                 selectedStore: selectedStore,
                 onStoreSelected: onStoreSelected,
+                stores: storesToDisplay,
               )),
             ],
           ),
@@ -73,9 +120,12 @@ class _StoresScreenState extends State<StoresScreen> {
 }
 
 // Returns a Set containing the Markers of all the available stores
-Set<Marker> _getAllMarkers() {
-  Set<Marker> markers = Set<Marker>();
-  StoresData.stores.forEach((element) {
+List<Marker> _getCurrentDepartmentMarkers(DepartmentType type) {
+  List<Marker> markers = [];
+  StoresData.stores.entries
+      .firstWhere((element) => element.key == type)
+      .value
+      .forEach((element) {
     element.contactList.forEach((element) {
       var current = Marker(
           markerId: element.marker.markerId,
@@ -87,17 +137,20 @@ Set<Marker> _getAllMarkers() {
   return markers;
 }
 
-Set<Marker> _getMarkersByStore(Store store) {
-  Set<Marker> markers = Set<Marker>();
+List<Marker> _getMarkersByStore(Store store, DepartmentType type) {
+  List<Marker> markers = [];
   StoresData
       // Get the store from all the data
       .stores
-      .firstWhere((element) => element.name == store.name)
-      // Loop through contacts to get the markers
-      .contactList
+      .entries
+      .firstWhere((element) => element.key == type)
+      .value
       .forEach((element) {
-    markers.add(Marker(
-        markerId: element.marker.markerId, position: element.marker.position));
+    element.contactList.forEach((element) {
+      markers.add(Marker(
+          markerId: element.marker.markerId,
+          position: element.marker.position));
+    });
   });
   return markers;
 }
