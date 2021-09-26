@@ -7,7 +7,7 @@ class NutritionistData {
         address: "Centro (Montevideo)",
         email: "stefanie.heguy@gmail.com",
         phoneNumber: "099408140",
-        socialMedia: "IG: @nutriveg__uy",
+        socialMedia: "nutriveg__uy",
         picURL:
             "https://instagram.fmvd4-1.fna.fbcdn.net/v/t51.2885-19/s150x150/66059310_426636707945682_3945805236727185408_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net&_nc_ohc=RKb6NYiBXiMAX-XhXrW&edm=ABmJApABAAAA&ccb=7-4&oh=f82d3b003484a5033da4e37ec9dadcfe&oe=61535678&_nc_sid=6136e7"),
     Nutritionist(
@@ -21,8 +21,8 @@ class NutritionistData {
     Nutritionist(
         name: "Leticia Romero",
         address: "Nueva Helvecia (Colonia) y Montevideo",
-        email: "NaN",
-        phoneNumber: "NaN",
+        email: "No disponible",
+        phoneNumber: "No disponible",
         socialMedia: "IG: @lic.leticiaromero",
         picURL:
             "https://instagram.fmvd4-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/36954456_639199276437872_8321596412714287104_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=dIHxTamU9bUAX8WQ_VX&edm=AABBvjUBAAAA&ccb=7-4&oh=cbc5a752338b7d232d96ffd860fb5a02&oe=61534F65&_nc_sid=83d603"),
@@ -44,7 +44,7 @@ class NutritionistData {
             "https://instagram.fmvd4-1.fna.fbcdn.net/v/t51.2885-19/s150x150/189174458_2927332287485023_2198901859065671485_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net&_nc_ohc=IDjRP5usmBkAX-KdROn&edm=ABmJApABAAAA&ccb=7-4&oh=6cfecfe338cc2b9b7674e0e432eb9f54&oe=61547EEB&_nc_sid=6136e7"),
     Nutritionist(
         name: "Karen Hernandez",
-        address: "NaN",
+        address: "No disponible",
         email: "lic.nut.karenhernandez@gmail.com",
         phoneNumber: "094016346",
         socialMedia: "IG: @amocomer.uy",
@@ -63,7 +63,7 @@ class NutritionistData {
         address: "Puerto Buceo (Montevideo)",
         phoneNumber: "094 027 299",
         email: "apitare@gmail.com",
-        socialMedia: "",
+        socialMedia: "No disponible",
         picURL:
             "https://media-exp1.licdn.com/dms/image/C4D03AQG8NTkQQkgPPw/profile-displayphoto-shrink_800_800/0/1525643067356?e=1637798400&v=beta&t=5xqFRGdOuYCpsCRzXnWZGO-BELNkCNdN375Bs2P5F1k"),
     Nutritionist(

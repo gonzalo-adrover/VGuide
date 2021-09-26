@@ -1,34 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:vguide/components/details_body.dart';
-import 'package:vguide/components/details_header.dart';
-import 'package:vguide/components/constants.dart' as Constants;
 import 'package:vguide/components/generic_card.dart';
 import 'package:vguide/components/text_styles.dart';
-import 'package:vguide/data/nutrients_data.dart';
 import 'package:vguide/data/nutritionists_data.dart';
-import 'package:vguide/data/stores_data.dart';
 import 'package:vguide/domain/model/nutritionist.dart';
 import 'package:vguide/screens/nutritionists/nutritionist_details_screen.dart';
-import 'package:vguide/screens/stores/widgets/store_card_item.dart';
 
 class NutritionistsScreen extends StatefulWidget {
   static Color pageColor = Color.fromRGBO(76, 92, 155, 1);
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Scaffold(
-  //     // appBar: AppBar(
-  //     //   title: Text("Nutricionistas"),
-  //     //   backgroundColor: Colors.orange.shade200,
-  //     //   automaticallyImplyLeading: false,
-  //     // ),
-  //     backgroundColor: pageColor,
-  //     body: NutritionistDetails(
-  //         nutritionist: NutritionistData.getNutritionists[0],
-  //         pageColor: pageColor),
-  //   );
-  // }
 
   @override
   State<StatefulWidget> createState() => _NutritionistsScreenState();
@@ -37,6 +15,38 @@ class NutritionistsScreen extends StatefulWidget {
 class _NutritionistsScreenState extends State<NutritionistsScreen> {
   Nutritionist selectedNutritionist = NutritionistData.getNutritionists[0];
   bool isNutritionistSelected = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: NutritionistsScreen.pageColor,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: NutritionistsScreen.pageColor,
+        title: Text("Nutricionistas"),
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Flexible(
+              flex: 4,
+              child: NutritionistDetails(
+                  nutritionist: selectedNutritionist,
+                  pageColor: NutritionistsScreen.pageColor),
+            ),
+            Container(
+              child: NutritionistSectionWidget(
+                isNutritionistSelected: isNutritionistSelected,
+                selectedNutritionist: selectedNutritionist,
+                onNutritionistSelected: onNutritionistSelected,
+              )
+            )
+          ],
+        ),
+      ),
+    );
+  }
 
   void clearSelection() {
     setState(() {
@@ -56,37 +66,6 @@ class _NutritionistsScreenState extends State<NutritionistsScreen> {
         isNutritionistSelected = true;
       }
     });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
-    return Scaffold(
-        backgroundColor: NutritionistsScreen.pageColor,
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          backgroundColor: NutritionistsScreen.pageColor,
-          title: Text("Nutricionistas"),
-          centerTitle: true,
-        ),
-        body: SafeArea(
-          child: Column(
-            children: [
-              Flexible(
-                child: NutritionistDetails(
-                    nutritionist: selectedNutritionist,
-                    pageColor: NutritionistsScreen.pageColor),
-              ),
-              Container(
-                  child: NutritionistSectionWidget(
-                isNutritionistSelected: isNutritionistSelected,
-                selectedNutritionist: selectedNutritionist,
-                onNutritionistSelected: onNutritionistSelected,
-              )),
-            ],
-          ),
-        ));
   }
 }
 
