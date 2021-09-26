@@ -73,7 +73,6 @@ class _StoresScreenState extends State<StoresScreen> {
           automaticallyImplyLeading: false,
           backgroundColor: Colors.green.shade200,
           title: Text("Tiendas"),
-          centerTitle: true,
         ),
         body: SafeArea(
           child: Column(

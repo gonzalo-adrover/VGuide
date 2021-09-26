@@ -3,6 +3,7 @@ import 'package:vguide/components/text_styles.dart';
 import 'package:vguide/domain/model/food.dart';
 import 'package:vguide/domain/model/nutrient.dart';
 import 'package:vguide/domain/model/tip.dart';
+import 'package:vguide/components/constants.dart' as Constants;
 
 class TipDetailsContent extends StatelessWidget {
   final Tip tip;
@@ -11,49 +12,37 @@ class TipDetailsContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text("Descripción", style: VGuideTextStyles.header),
-      SizedBox(height: 20),
-      Container(
-        child: Text(tip.description, style: VGuideTextStyles.body),
-      ),
-      SizedBox(
-        height: 20,
-      ),
-      Text("Alimentos relacionados", style: VGuideTextStyles.header),
-      Text(
-        tip.foodList,
-        style: VGuideTextStyles.body,
-      ),
-      // Column(
-      //   children: relatedFoodsList(tip.foodList),
-      // ),
-      SizedBox(
-        height: 20,
-      ),
-      Text(
-        "Nutrientes que se absorven mejor",
-        style: VGuideTextStyles.header,
-      ),
-      Text(
-        tip.nutrientList,
-        style: VGuideTextStyles.body,
-      ),
-      // Container(
-      //   height: 180.0,
-      //   child: GridView.count(
-      //     crossAxisCount: 4,
-      //     crossAxisSpacing: 3.0,
-      //     mainAxisSpacing: 3.0,
-      //     children: nutrientsList(tip.nutrientList),
-      //   ),
-      // )
-      SizedBox(
-        height: 20,
-      ),
-    ]);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        getData("Descripción", tip.description),
+        SizedBox(height: Constants.sizedBoxHeight),
+        getData("Alimentos relacionados", tip.foodList),
+        SizedBox(height: Constants.sizedBoxHeight),
+        getData("Nutrientes que se absorven mejor", tip.nutrientList),
+      ],
+    );
   }
 }
+
+Widget getData(String title, String descripcion) => Container(
+      child: descripcion != ""
+          ? Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  title,
+                  style: VGuideTextStyles.header,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  descripcion,
+                  style: VGuideTextStyles.body,
+                ),
+              ],
+            )
+          : null,
+    );
 
 List<Widget> relatedFoodsList(List<Food> foods) =>
     foods.map((e) => Text(e.name)).toList();

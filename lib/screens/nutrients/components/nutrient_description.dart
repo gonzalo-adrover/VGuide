@@ -14,21 +14,20 @@ class NutrientDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        getInfo(nutrient.longDesc, 0, context),
+        getInfo(nutrient.longDesc, 0),
         SizedBox(height: Constants.sizedBoxHeight),
-        getInfo(nutrient.foods.toString(), 1, context),
+        getInfo(nutrient.foods.toString(), 1),
         SizedBox(height: Constants.sizedBoxHeight),
-        getInfo(nutrient.facilitators, 2, context),
+        getInfo(nutrient.facilitators, 2),
         SizedBox(height: Constants.sizedBoxHeight),
-        getInfo(nutrient.inhibitors, 3, context),
-        SizedBox(height: Constants.sizedBoxHeight),
+        getInfo(nutrient.inhibitors, 3),
         SizedBox(height: Constants.sizedBoxHeight),
       ],
     );
   }
 }
 
-Widget getInfo(String nutrientFieldData, int field, BuildContext context) {
+Widget getInfo(String nutrientFieldData, int field) {
   String title;
   if (nutrientFieldData != "") {
     switch (field) {

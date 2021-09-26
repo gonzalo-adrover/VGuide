@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:vguide/components/widgets.dart';
 
 class SettingsScreen extends StatefulWidget {
-  static Color pageColor = Colors.grey.shade50;
-  static Color tileColor = Colors.grey.shade400;
+  static Color pageColor = Colors.black26;
+  static Color tileColor = Colors.black26;
 
   static const title = 'Settings';
   static const iosIcon = Icon(CupertinoIcons.gear);
@@ -72,7 +72,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Notificaciones"),
-        backgroundColor: Colors.blueGrey.shade200,
+        backgroundColor: SettingsScreen.pageColor,
         automaticallyImplyLeading: false,
       ),
       backgroundColor: SettingsScreen.pageColor,

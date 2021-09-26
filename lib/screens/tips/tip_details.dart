@@ -14,10 +14,7 @@ class TipDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: pageColor,
-          elevation: 0,
-        ),
+        appBar: buildAppBar(context),
         backgroundColor: pageColor,
         body: Container(
           child: DetailsLayout(
@@ -25,12 +22,17 @@ class TipDetails extends StatelessWidget {
             headerContent: TipDetailsHeader(
               title: tip.shortName,
             ),
-            bodyContent: SingleChildScrollView(
-              child: TipDetailsContent(
+            bodyContent: TipDetailsContent(
                 tip: tip,
-              ),
             ),
           ),
         ));
+  }
+
+  AppBar buildAppBar(BuildContext context) {
+    return AppBar(
+      backgroundColor: Color.fromRGBO(76, 92, 155, 1),
+      elevation: 0,
+    );
   }
 }
