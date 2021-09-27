@@ -40,7 +40,7 @@ class TipsData {
             "https://www.webconsultas.com/sites/default/files/styles/wc_adaptive_image__small/public/temas/agua.jpg"),
     Tip(
         name:
-            "Evita consumir alimentos ricos en calcio junto con aquellos que tengan cafeína o vegetales de color verde (espinaca, acelga)",
+            "Evita consumir alimentos ricos en calcio junto con aquellos que tengan cafeína o vegetales de color verde (espinaca, acelga) o remolacha",
         shortName: "No mezclar calcio con cafeína o vegetales verdes.",
         description:
             """Consumir alimentos ricos en calcio junto con estos alimentos disminuye su absorción en el organismo. Es importante esperar al menos dos horas luego de comer un alimento alto en calcio para que esto no suceda.""",

@@ -16,7 +16,7 @@ class NutritionistDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(76, 92, 155, 1),
+      backgroundColor: pageColor,
       body: Container(
         child: SingleChildScrollView(
           child: Column(
@@ -77,11 +77,14 @@ class NutritionistDetails extends StatelessWidget {
                         title: "Contactar",
                         color: Colors.lightBlueAccent,
                         onPressed: () async {
-                          String url = "https://www.instagram.com/"+nutritionist.socialMedia.toString();
-                          var urllaunchable = await canLaunch(url); //canLaunch is from url_launcher package
-                          if(urllaunchable){
-                            await launch(url); //launch is from url_launcher package to launch URL
-                          }else{
+                          String url = "https://www.instagram.com/" +
+                              nutritionist.socialMedia.toString();
+                          var urllaunchable = await canLaunch(
+                              url); //canLaunch is from url_launcher package
+                          if (urllaunchable) {
+                            await launch(
+                                url); //launch is from url_launcher package to launch URL
+                          } else {
                             print("URL can't be launched.");
                           }
                         },
@@ -138,5 +141,4 @@ class NutritionistDetails extends StatelessWidget {
           bottomRight: Radius.circular(Constants.boxDecorationRadius),
         ),
       );
-
 }

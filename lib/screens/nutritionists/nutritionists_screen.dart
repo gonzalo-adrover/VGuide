@@ -6,7 +6,7 @@ import 'package:vguide/domain/model/nutritionist.dart';
 import 'package:vguide/screens/nutritionists/nutritionist_details_screen.dart';
 
 class NutritionistsScreen extends StatefulWidget {
-  static Color pageColor = Color.fromRGBO(76, 92, 155, 1);
+  static Color pageColor = Colors.indigo.shade50;
 
   @override
   State<StatefulWidget> createState() => _NutritionistsScreenState();
@@ -22,7 +22,7 @@ class _NutritionistsScreenState extends State<NutritionistsScreen> {
       backgroundColor: NutritionistsScreen.pageColor,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: NutritionistsScreen.pageColor,
+        backgroundColor: Colors.indigo.shade200,
         title: Text("Nutricionistas"),
         centerTitle: true,
       ),
@@ -33,7 +33,7 @@ class _NutritionistsScreenState extends State<NutritionistsScreen> {
               flex: 4,
               child: NutritionistDetails(
                   nutritionist: selectedNutritionist,
-                  pageColor: NutritionistsScreen.pageColor),
+                  pageColor: Colors.indigo.shade100),
             ),
             Container(
               child: NutritionistSectionWidget(

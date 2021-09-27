@@ -7,11 +7,11 @@ class StoresData {
     Department(
         key: DepartmentType.montevideo,
         name: "Montevideo",
-        position: LatLng(-34.8750706, -56.1895005)),
+        position: LatLng(-34.8766597, -56.1369795)),
     Department(
         key: DepartmentType.canelones,
         name: "Canelones",
-        position: LatLng(-34.8159431, -56.0879976)),
+        position: LatLng(-34.7794135, -55.9860697)),
     Department(
         key: DepartmentType.maldonado,
         name: "Maldonado",

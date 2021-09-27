@@ -1,7 +1,6 @@
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:vguide/components/text_styles.dart';
-import 'package:vguide/data/stores_data.dart';
 import 'package:vguide/domain/model/store.dart';
 import 'package:vguide/screens/stores/widgets/social_card.dart';
 import 'package:vguide/screens/stores/widgets/store_card_item.dart';
@@ -12,19 +11,22 @@ class StoreSectionWidget extends StatelessWidget {
   final bool isStoreSelected;
   final Store selectedStore;
   final Function onStoreSelected;
+  final Function onStoreDirectionSelected;
   final List<Store> stores;
 
   const StoreSectionWidget(
       {this.isStoreSelected,
       this.selectedStore,
       this.onStoreSelected,
+      this.onStoreDirectionSelected,
       this.stores});
 
   @override
   Widget build(BuildContext context) {
     return isStoreSelected
         ? Expanded(
-            child: _bottomSheetContent(selectedStore, onStoreSelected),
+            child: _bottomSheetContent(
+                selectedStore, onStoreSelected, onStoreDirectionSelected),
           )
         : Flexible(
             flex: 3,
@@ -38,7 +40,8 @@ class StoreSectionWidget extends StatelessWidget {
   }
 }
 
-Widget _bottomSheetContent(Store store, Function onCloseTap) {
+Widget _bottomSheetContent(
+    Store store, Function onCloseTap, Function onStoreDirectionTap) {
   return Container(
       child: Stack(
     children: [
@@ -66,7 +69,8 @@ Widget _bottomSheetContent(Store store, Function onCloseTap) {
                 child: ListView(
               children: [
                 Column(
-                  children: _getStoreAddresses(store.contactList),
+                  children: _getStoreAddresses(
+                      store.contactList, onStoreDirectionTap),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -84,10 +88,11 @@ Widget _bottomSheetContent(Store store, Function onCloseTap) {
   ));
 }
 
-List<AddressCard> _getStoreAddresses(List<Contact> contacts) {
+List<AddressCard> _getStoreAddresses(List<Contact> contacts, Function onTap) {
   var addressCards = List<AddressCard>.empty(growable: true);
   contacts.forEach((element) {
     addressCards.add(AddressCard(
+      onAddressCardTap: onTap,
       contactDetails: element,
     ));
   });

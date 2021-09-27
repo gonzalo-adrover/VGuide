@@ -27,9 +27,9 @@ class _VGuidePagesState extends State<VGuidePages> {
   ];
 
   List<Color> pageColors = [
-    RecipesListScreen.pageColor,
-    TipsScreen.pageColor,
     NutrientsScreen.pageColor,
+    TipsScreen.pageColor,
+    RecipesListScreen.pageColor,
     StoresScreen.pageColor,
     NutritionistsScreen.pageColor,
     SettingsScreen.pageColor

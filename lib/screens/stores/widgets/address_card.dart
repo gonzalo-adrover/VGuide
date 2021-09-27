@@ -5,40 +5,43 @@ import 'package:vguide/domain/model/store.dart';
 
 class AddressCard extends StatelessWidget {
   final Contact contactDetails;
+  final Function onAddressCardTap;
 
-  AddressCard({this.contactDetails});
+  AddressCard({this.contactDetails, this.onAddressCardTap});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-        color: Colors.white,
-        elevation: 1,
-        child: Padding(
-            padding: EdgeInsets.all(10),
-            child: Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(right: 10.0),
-                  child: Icon(
-                    Entypo.location_pin,
-                    color: Colors.red.shade300,
-                  ),
-                ),
-                Expanded(
-                    child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+    return InkWell(
+        onTap: () => onAddressCardTap(contactDetails.marker),
+        child: Card(
+            color: Colors.white,
+            elevation: 1,
+            child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Row(
                   children: [
-                    Text(
-                      contactDetails.address,
-                      style: VGuideTextStyles.mapDetailsHeaders,
+                    Padding(
+                      padding: EdgeInsets.only(right: 10.0),
+                      child: Icon(
+                        Entypo.location_pin,
+                        color: Colors.red.shade300,
+                      ),
                     ),
-                    Text(
-                      contactDetails.phoneNumber,
-                      style: VGuideTextStyles.mapDetailsBody,
-                    )
+                    Expanded(
+                        child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          contactDetails.address,
+                          style: VGuideTextStyles.mapDetailsHeaders,
+                        ),
+                        Text(
+                          contactDetails.phoneNumber,
+                          style: VGuideTextStyles.mapDetailsBody,
+                        )
+                      ],
+                    ))
                   ],
-                ))
-              ],
-            )));
+                ))));
   }
 }

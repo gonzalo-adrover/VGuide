@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:vguide/components/widgets.dart';
 
 class SettingsScreen extends StatefulWidget {
-  static Color pageColor = Colors.black26;
-  static Color tileColor = Colors.black26;
+  static Color pageColor = Colors.deepOrange.shade50;
+  static Color tileColor = Colors.deepOrange.shade200;
 
   static const title = 'Settings';
   static const iosIcon = Icon(CupertinoIcons.gear);
@@ -25,7 +25,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       children: [
         Padding(padding: EdgeInsets.only(top: 24)),
         ListTile(
-          title: Text('Send me marketing emails'),
+          title: Text('Remojá tus legumbres.'),
           tileColor: SettingsScreen.tileColor,
           trailing: Switch.adaptive(
             value: switch1,
@@ -33,7 +33,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
         ),
         ListTile(
-          title: Text('Enable notifications'),
+          title: Text('¡No olvides tomar agua!'),
           tileColor: SettingsScreen.tileColor,
           trailing: Switch.adaptive(
             value: switch2,
@@ -41,27 +41,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
         ),
         ListTile(
-          title: Text('Remind me to rate this app'),
+          title: Text('No olvides tomar tu vitamina B12.'),
           tileColor: SettingsScreen.tileColor,
           trailing: Switch.adaptive(
             value: switch3,
             onChanged: (value) => setState(() => switch3 = value),
-          ),
-        ),
-        ListTile(
-          title: Text('Recommend me stores based on my location'),
-          tileColor: SettingsScreen.tileColor,
-          trailing: Switch.adaptive(
-            value: switch4,
-            onChanged: (value) => setState(() => switch4 = value),
-          ),
-        ),
-        ListTile(
-          title: Text('Find friends from my contact list'),
-          tileColor: SettingsScreen.tileColor,
-          trailing: Switch.adaptive(
-            value: switch5,
-            onChanged: (value) => setState(() => switch5 = value),
           ),
         ),
       ],
@@ -72,7 +56,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Notificaciones"),
-        backgroundColor: SettingsScreen.pageColor,
+        backgroundColor: Colors.deepOrange.shade200,
         automaticallyImplyLeading: false,
       ),
       backgroundColor: SettingsScreen.pageColor,

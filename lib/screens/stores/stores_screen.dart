@@ -47,10 +47,18 @@ class _StoresScreenState extends State<StoresScreen> {
   void updateMapStore() {
     setState(() {
       CameraPosition pos = CameraPosition(
-          target: _getMapLatLngByStore(selectedStore),
-          zoom: 14.0,
+          target: _getLatLngByDepartment(selectedDepartment),
+          zoom: 10.0,
           bearing: 0.0,
-          tilt: 75.0);
+          tilt: 65.0);
+      mapController.animateCamera(CameraUpdate.newCameraPosition(pos));
+    });
+  }
+
+  void updateMapStoreDirection(MapMarker storeMarker) {
+    setState(() {
+      CameraPosition pos = CameraPosition(
+          target: storeMarker.position, zoom: 15.0, bearing: 0.0, tilt: 75.0);
       mapController.animateCamera(CameraUpdate.newCameraPosition(pos));
     });
   }
@@ -146,6 +154,7 @@ class _StoresScreenState extends State<StoresScreen> {
                 isStoreSelected: isStoreSelected,
                 selectedStore: selectedStore,
                 onStoreSelected: onStoreSelected,
+                onStoreDirectionSelected: updateMapStoreDirection,
                 stores: storesToDisplay,
               )),
             ],
@@ -193,14 +202,5 @@ LatLng _getLatLngByDepartment(DepartmentType type) {
   LatLng target = StoresData.departments
       .firstWhere((element) => element.key == type)
       .position;
-  return target;
-}
-
-CameraUpdate _getMapPositionByDepartment(DepartmentType type) {
-  return CameraUpdate.newLatLng(_getLatLngByDepartment(type));
-}
-
-LatLng _getMapLatLngByStore(Store store) {
-  LatLng target = store.contactList[0].marker.position;
   return target;
 }
