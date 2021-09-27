@@ -20,8 +20,7 @@ class NutrientDescription extends StatelessWidget {
         SizedBox(height: Constants.sizedBoxHeight),
         getInfo(nutrient.facilitators, 2),
         SizedBox(height: Constants.sizedBoxHeight),
-        getInfo(nutrient.inhibitors, 3),
-        SizedBox(height: Constants.sizedBoxHeight),
+        getInfo(nutrient.inhibitors, 3)
       ],
     );
   }

@@ -118,7 +118,7 @@ class NutrientsData {
           "Semillas (Principalmente chia y lino y sus aceites)"
         ],
         facilitators:
-            """En el caso de no padecer hipertensión o enfermedades cardiovasculares consumir sal yodada. De lo contrato se debe consumir algas o alcelga para evitar deficiencias.
+            """En el caso de no padecer hipertensión o enfermedades cardiovasculares consumir sal yodada. De lo contrario se debe consumir algas o alcelga para evitar deficiencias.
         """,
         inhibitors: "",
         picURL:
@@ -136,8 +136,7 @@ class NutrientsData {
         ],
         facilitators: "",
         inhibitors: "",
-        picURL:
-            "http://www.cancerdepiel.org.ar/images/vit_D.png"),
+        picURL: "http://www.cancerdepiel.org.ar/images/vit_D.png"),
     Nutrient(
         id: 7,
         key: NutrientKey.vitB12,
@@ -151,7 +150,7 @@ class NutrientsData {
           "Alimentos fortificados"
         ],
         facilitators:
-            """Para informarte sobre la suplementación de Vitamina B12 adecuada para ti consulta a un Nutricionista. HIPERVICULO A LA PESTAÑA DE CONTACTO DE NUTRICIONISTAS""",
+            """Para informarte sobre la suplementación de Vitamina B12 adecuada para ti consulta a un Nutricionista.""",
         picURL:
             "https://biowebaruhaz.hu/uploads/shop/biowebaruhaz.hu/fajltar/134589.jpg"),
   ];

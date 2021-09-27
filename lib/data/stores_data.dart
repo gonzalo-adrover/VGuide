@@ -7,19 +7,19 @@ class StoresData {
     Department(
         key: DepartmentType.montevideo,
         name: "Montevideo",
-        position: LatLng(-34.8210176, -56.3768677)),
+        position: LatLng(-34.8750706, -56.1895005)),
     Department(
         key: DepartmentType.canelones,
         name: "Canelones",
-        position: LatLng(-34.8328436, -56.1727491)),
+        position: LatLng(-34.8159431, -56.0879976)),
     Department(
         key: DepartmentType.maldonado,
         name: "Maldonado",
-        position: LatLng(-34.9065419, -55.0111501)),
+        position: LatLng(-34.9322195, -54.893053)),
     Department(
         key: DepartmentType.colonia,
         name: "Colonia",
-        position: LatLng(-34.1195871, -58.2636359)),
+        position: LatLng(-34.3044225, -57.2267488)),
     Department(
         key: DepartmentType.paysandu,
         name: "Paysandú",
@@ -35,7 +35,7 @@ class StoresData {
     Department(
         key: DepartmentType.durazno,
         name: "Durazno",
-        position: LatLng(-33.3851616, -56.5919309)),
+        position: LatLng(-33.3905888, -56.5270581)),
     Department(
         key: DepartmentType.rio_negro,
         name: "Rio Negro",

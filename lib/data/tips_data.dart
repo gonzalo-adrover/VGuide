@@ -22,8 +22,8 @@ class TipsData {
         picURL:
             "https://phantom-telva.unidadeditorial.es/ba78a86554ab6ae727fea4a51dfe3e92/crop/73x0/1249x882/resize/1280/f/webp/assets/multimedia/imagenes/2020/04/21/15874784567857.png"),
     Tip(
-        name: "Tomar vitamina B12",
-        shortName: "Tomar vitamina B12",
+        name: "Consulta si debes tomar vitamina B12",
+        shortName: "Vitamina B12",
         description:
             """Debes consultar a tu Lic en Nutrición para consumir este suplemento y que sea adecuado para ti. Es importante que tengas una hora fija todos los días para tomar tu vitamina B12. Recuerda que es esencial que consumas este nutriente y solo se encuentra en los alimentos de origen animal y en los suplementos.""",
         foodList: "Agua",
@@ -40,7 +40,7 @@ class TipsData {
             "https://www.webconsultas.com/sites/default/files/styles/wc_adaptive_image__small/public/temas/agua.jpg"),
     Tip(
         name:
-            "Evita consumir alimentos ricos en calcio junto con aquellos que tengan cafeína o vegetales de color verde (espinaca, acelga, rúcula, brócoli)",
+            "Evita consumir alimentos ricos en calcio junto con aquellos que tengan cafeína o vegetales de color verde (espinaca, acelga)",
         shortName: "No mezclar calcio con cafeína o vegetales verdes.",
         description:
             """Consumir alimentos ricos en calcio junto con estos alimentos disminuye su absorción en el organismo. Es importante esperar al menos dos horas luego de comer un alimento alto en calcio para que esto no suceda.""",

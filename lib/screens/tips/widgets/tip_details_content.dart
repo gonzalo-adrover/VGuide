@@ -19,7 +19,7 @@ class TipDetailsContent extends StatelessWidget {
         SizedBox(height: Constants.sizedBoxHeight),
         getData("Alimentos relacionados", tip.foodList),
         SizedBox(height: Constants.sizedBoxHeight),
-        getData("Nutrientes que se absorven mejor", tip.nutrientList),
+        getData("Nutrientes que se absorben mejor", tip.nutrientList),
       ],
     );
   }

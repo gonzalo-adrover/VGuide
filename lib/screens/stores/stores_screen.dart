@@ -3,7 +3,6 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:vguide/components/text_styles.dart';
 import 'package:vguide/data/stores_data.dart';
 import 'package:vguide/domain/model/store.dart';
-import 'package:vguide/screens/stores/stores_map.dart';
 import 'package:vguide/screens/stores/widgets/store_details.dart';
 
 class StoresScreen extends StatefulWidget {
@@ -19,7 +18,9 @@ class _StoresScreenState extends State<StoresScreen> {
   bool isStoreSelected;
   List<Marker> mapMarkers;
   List<Store> storesToDisplay;
-  CameraPosition mapCamera;
+  CameraPosition initialPosition;
+  CameraUpdate updateCamera;
+  GoogleMapController mapController;
 
   @override
   void initState() {
@@ -27,18 +28,38 @@ class _StoresScreenState extends State<StoresScreen> {
     selectedDepartment = DepartmentType.montevideo;
     mapMarkers = _getCurrentDepartmentMarkers(selectedDepartment);
     storesToDisplay = StoresData.montevideoStores;
-    mapCamera = CameraPosition(
-        target: LatLng(-34.8851383, -56.1707025),
-        zoom: 11.0,
-        tilt: 0,
-        bearing: 0);
+    initialPosition = CameraPosition(
+        target: _getLatLngByDepartment(selectedDepartment), zoom: 11.0);
     super.initState();
+  }
+
+  void updateMapDepartment() {
+    setState(() {
+      CameraPosition pos = CameraPosition(
+          target: _getLatLngByDepartment(selectedDepartment),
+          zoom: 10.0,
+          bearing: 0.0,
+          tilt: 0.0);
+      mapController.animateCamera(CameraUpdate.newCameraPosition(pos));
+    });
+  }
+
+  void updateMapStore() {
+    setState(() {
+      CameraPosition pos = CameraPosition(
+          target: _getMapLatLngByStore(selectedStore),
+          zoom: 14.0,
+          bearing: 0.0,
+          tilt: 75.0);
+      mapController.animateCamera(CameraUpdate.newCameraPosition(pos));
+    });
   }
 
   void clearSelection() {
     setState(() {
       isStoreSelected = false;
       mapMarkers = _getCurrentDepartmentMarkers(selectedDepartment);
+      updateMapDepartment();
     });
   }
 
@@ -49,7 +70,7 @@ class _StoresScreenState extends State<StoresScreen> {
           .firstWhere((element) => element.key == type)
           .value;
       selectedDepartment = type;
-      mapCamera = _getMapPositionByDepartment(type);
+      updateMapDepartment();
       mapMarkers = _getCurrentDepartmentMarkers(type);
     });
   }
@@ -65,7 +86,7 @@ class _StoresScreenState extends State<StoresScreen> {
             .value
             .firstWhere((element) => element.name == storeName);
         isStoreSelected = true;
-        mapCamera = _getMapPositionByStore(selectedStore);
+        updateMapStore();
         mapMarkers = _getMarkersByStore(selectedStore, selectedDepartment);
       }
     });
@@ -85,8 +106,14 @@ class _StoresScreenState extends State<StoresScreen> {
             children: [
               Flexible(
                 flex: isStoreSelected ? 1 : 7,
-                child: StoresMap(context,
-                    position: mapCamera, markers: mapMarkers),
+                child: GoogleMap(
+                  onMapCreated: (GoogleMapController controller) {
+                    mapController = controller;
+                  },
+                  initialCameraPosition: initialPosition,
+                  myLocationEnabled: true,
+                  markers: mapMarkers.toSet(),
+                ),
               ),
               !isStoreSelected
                   ? Container(
@@ -162,20 +189,18 @@ List<Marker> _getMarkersByStore(Store store, DepartmentType type) {
   return markers;
 }
 
-CameraPosition _getMapPositionByDepartment(DepartmentType type) {
-  return CameraPosition(
-      target: StoresData.departments
-          .firstWhere((element) => element.key == type)
-          .position,
-      zoom: 12,
-      bearing: 15.0,
-      tilt: 75.0);
+LatLng _getLatLngByDepartment(DepartmentType type) {
+  LatLng target = StoresData.departments
+      .firstWhere((element) => element.key == type)
+      .position;
+  return target;
 }
 
-CameraPosition _getMapPositionByStore(Store store) {
-  return CameraPosition(
-      target: store.contactList[0].marker.position,
-      zoom: 11.0,
-      bearing: 15.0,
-      tilt: 75.0);
+CameraUpdate _getMapPositionByDepartment(DepartmentType type) {
+  return CameraUpdate.newLatLng(_getLatLngByDepartment(type));
+}
+
+LatLng _getMapLatLngByStore(Store store) {
+  LatLng target = store.contactList[0].marker.position;
+  return target;
 }

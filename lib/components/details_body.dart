@@ -13,7 +13,8 @@ class DetailsBody extends StatelessWidget {
       padding: EdgeInsets.only(
           top: size.height * 0.18,
           left: Constants.paddingInContainer,
-          right: Constants.paddingInContainer),
+          right: Constants.paddingInContainer,
+          bottom: Constants.paddingBottomInContainer),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
