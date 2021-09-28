@@ -18,7 +18,7 @@ class TipsData {
             """No olvides ponerle limon a tus comidas. Como el limón es alto en vitamina C aumenta la absorción del hierro (nutriente crítico para los vegetarianos). Otros alimentos como el tomate, la naranja y el morrón también son altos en vitamina C, siempre que no estén cocidos.""",
         foodList:
             """Limón, naranja, mandarina, kiwi \nLegumbres \nCereales integrales \nVerduras de hoja verde oscuro""",
-        nutrientList: "Hierro, ácido fólico, proteína, zinc",
+        nutrientList: "Hierro",
         picURL:
             "https://phantom-telva.unidadeditorial.es/ba78a86554ab6ae727fea4a51dfe3e92/crop/73x0/1249x882/resize/1280/f/webp/assets/multimedia/imagenes/2020/04/21/15874784567857.png"),
     Tip(
