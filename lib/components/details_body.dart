@@ -9,20 +9,22 @@ class DetailsBody extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.only(top: size.height * 0.3),
-      padding: EdgeInsets.only(
-          top: size.height * 0.18,
-          left: Constants.paddingInContainer,
-          right: Constants.paddingInContainer,
-          bottom: Constants.paddingBottomInContainer),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(Constants.boxDecorationRadius),
-          topRight: Radius.circular(Constants.boxDecorationRadius),
+        margin: EdgeInsets.only(top: size.height * 0.3),
+        padding: EdgeInsets.only(
+            top: size.height * 0.18,
+            left: Constants.paddingInContainer,
+            right: Constants.paddingInContainer,
+            bottom: Constants.paddingBottomInContainer),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(Constants.boxDecorationRadius),
+            topRight: Radius.circular(Constants.boxDecorationRadius),
+          ),
         ),
-      ),
-      child: content,
-    );
+        child: ConstrainedBox(
+            constraints: BoxConstraints(
+                minHeight: MediaQuery.of(context).size.height * 0.32),
+            child: content));
   }
 }

@@ -47,7 +47,7 @@ class TipsData {
         foodList: "",
         nutrientList: "",
         picURL:
-            "https://static4.abc.es/media/bienestar/2020/11/25/alimentos-calcio-kvlG--620x349@abc.jpg"),
+            "https://www.hola.com/imagenes/cocina/noticiaslibros/20190227137327/diferencias-vegano-vegetariano-dietas-saludables/0-647-213/diferencias-dieta-vegetariana-vegana-t.jpg"),
     Tip(
         name: "Cuando consumas panificados intenta que contengan levadura",
         shortName: "Preferir panificados con levadura",
@@ -98,7 +98,7 @@ class TipsData {
         foodList: "Patés, salsas y untables a base de semillas y frutos secos",
         nutrientList: "",
         picURL:
-            "https://www.ifeelgood.com.ar/img/posts/semillas_de_lino_beneficios_y_como_tomarlas_imagen.png"),
+            "https://www.hola.com/imagenes/estar-bien/20180702126110/semillas-lino-beneficios-gt/0-578-942/portada_semillas_lino-t.jpg"),
     Tip(
         name: "Se debe consumir los aceites altos en omega 3 en crudo",
         shortName: "Consumir aceites altos en Omega 3 en crudo",

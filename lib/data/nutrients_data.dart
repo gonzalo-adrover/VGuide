@@ -136,7 +136,7 @@ class NutrientsData {
         ],
         facilitators: "",
         inhibitors: "",
-        picURL: "http://www.cancerdepiel.org.ar/images/vit_D.png"),
+        picURL: "https://www.intramed.net/UserFiles/vinetas/96476.jpg"),
     Nutrient(
         id: 7,
         key: NutrientKey.vitB12,
