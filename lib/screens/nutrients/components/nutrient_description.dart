@@ -13,10 +13,11 @@ class NutrientDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         getInfo(nutrient.longDesc, 0),
         SizedBox(height: Constants.sizedBoxHeight),
-        getInfo(nutrient.foods.toString(), 1),
+        getInfo(nutrient.foods[0].toString(), 1),
         SizedBox(height: Constants.sizedBoxHeight),
         getInfo(nutrient.facilitators, 2),
         SizedBox(height: Constants.sizedBoxHeight),
@@ -53,6 +54,7 @@ Widget getInfo(String nutrientFieldData, int field) {
         Text(
           nutrientFieldData,
           style: VGuideTextStyles.body,
+          textAlign: TextAlign.justify,
         )
       ],
     );

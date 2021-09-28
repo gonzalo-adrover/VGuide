@@ -17,15 +17,15 @@ class DetailsLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       padding: EdgeInsets.only(top: Constants.paddingInContainer),
-      child: Stack(
+      child: Column(
         children: <Widget>[
-          DetailsBody(
-            content: bodyContent,
-          ),
           DetailsHeader(
               imageSource: imageSource,
               imageUrl: imageUrl,
-              headerContent: headerContent)
+              headerContent: headerContent),
+          DetailsBody(
+            content: bodyContent,
+          ),
         ],
       ),
     );

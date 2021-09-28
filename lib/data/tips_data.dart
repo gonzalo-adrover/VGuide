@@ -36,6 +36,7 @@ class TipsData {
         description:
             """Beber 2 litros (10 vasos) de agua diariamente está recomendado para mantener la salud del organismo.""",
         foodList: "",
+        nutrientList: "",
         picURL:
             "https://www.webconsultas.com/sites/default/files/styles/wc_adaptive_image__small/public/temas/agua.jpg"),
     Tip(
@@ -81,11 +82,7 @@ class TipsData {
         shortName: "Consumir alimentos altos en calcio",
         description:
             """Si no consumes lácteos diariamente debes consumir los alimentos de origen vegetal altos en Calcio para no tener carencias de este mineral.""",
-        foodList: """
-        Lácteos\nFrutos secos (Almendras, maní, nueces)
-        \nSemillas (sésamo, chía, lino, girasol, amaranto)
-        \nHortalizas de hoja verde (rúcula, perejil, berro, albahaca, etc). Crucíferas (brócoli, coliflor)
-        \nTofu\nBebidas vegetales enriquecidas""",
+        foodList: """Lácteos\nFrutos secos (Almendras, maní, nueces)\nSemillas (sésamo, chía, lino, girasol, amaranto)\nHortalizas de hoja verde (rúcula, perejil, berro, albahaca, etc). Crucíferas (brócoli, coliflor)\nTofu\nBebidas vegetales enriquecidas""",
         nutrientList: "",
         picURL:
             "https://www.clikisalud.net/wp-content/uploads/2017/11/importancia-calcio-salud-cuerpo.jpg"),
@@ -105,6 +102,7 @@ class TipsData {
         description:
             """Los ácidos grasos omega 3 son sensibles al calor, por ende, los aceites de canola y soja deben utilizarse para condimentar y NO para cocinar. De esta forma podemos obtener todos los beneficios de estos nutrientes.""",
         foodList: "Aceites de soja y canola.",
+        nutrientList: "",
         picURL:
             "https://www.triatloners.com/wp-content/uploads/2017/01/aceite-oliva-crudo-copia.jpg"),
     Tip(

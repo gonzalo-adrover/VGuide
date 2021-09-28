@@ -21,6 +21,7 @@ class NutritionistDetails extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
+              getSizedBoxHeight(15),
               Container(
                   padding: EdgeInsets.all(15.0),
                   margin: EdgeInsets.symmetric(horizontal: 20.0),
@@ -28,6 +29,7 @@ class NutritionistDetails extends StatelessWidget {
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
+                        getSizedBoxHeight(20),
                         Container(
                             width: 100,
                             height: 100,
@@ -51,7 +53,7 @@ class NutritionistDetails extends StatelessWidget {
                       ])),
               getSizedBoxHeight(30),
               Container(
-                padding: EdgeInsets.all(20.0),
+                padding: EdgeInsets.only(top: 20,bottom: 10,left: 20,right: 20),
                 margin: EdgeInsets.symmetric(horizontal: 20.0),
                 decoration: getBoxDecoration(),
                 child: Column(

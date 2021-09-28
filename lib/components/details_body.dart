@@ -9,9 +9,9 @@ class DetailsBody extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-        margin: EdgeInsets.only(top: size.height * 0.3),
+        // margin: EdgeInsets.only(top: size.height * 0.3),
         padding: EdgeInsets.only(
-            top: size.height * 0.18,
+            top: size.height * 0.04,
             left: Constants.paddingInContainer,
             right: Constants.paddingInContainer,
             bottom: Constants.paddingBottomInContainer),
@@ -24,7 +24,7 @@ class DetailsBody extends StatelessWidget {
         ),
         child: ConstrainedBox(
             constraints: BoxConstraints(
-                minHeight: MediaQuery.of(context).size.height * 0.32),
+                minHeight: MediaQuery.of(context).size.height * 0.45),
             child: content));
   }
 }

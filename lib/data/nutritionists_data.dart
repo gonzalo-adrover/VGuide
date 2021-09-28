@@ -7,7 +7,7 @@ class NutritionistData {
         address: "Centro (Montevideo)",
         email: "stefanie.heguy@gmail.com",
         phoneNumber: "099408140",
-        socialMedia: "nutriveg__uy",
+        socialMedia: "IG: @nutriveg__uy",
         picURL:
             "https://instagram.fmvd4-1.fna.fbcdn.net/v/t51.2885-19/s150x150/66059310_426636707945682_3945805236727185408_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net&_nc_ohc=RKb6NYiBXiMAX-XhXrW&edm=ABmJApABAAAA&ccb=7-4&oh=f82d3b003484a5033da4e37ec9dadcfe&oe=61535678&_nc_sid=6136e7"),
     Nutritionist(

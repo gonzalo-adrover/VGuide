@@ -26,7 +26,7 @@ class TipDetailsContent extends StatelessWidget {
 }
 
 Widget getData(String title, String descripcion) => Container(
-      child: descripcion != ""
+      child: descripcion != "" && title != ""
           ? Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -38,6 +38,7 @@ Widget getData(String title, String descripcion) => Container(
                 Text(
                   descripcion,
                   style: VGuideTextStyles.body,
+                  textAlign: TextAlign.justify,
                 ),
               ],
             )
