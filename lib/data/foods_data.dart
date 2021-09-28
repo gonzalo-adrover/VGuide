@@ -126,7 +126,7 @@ class FoodsData {
         key: FoodKey.ajil,
         category: FoodCategory.seasonings,
         picUrl:
-            "http://aromacosonline.com.uy/images/stories/virtuemart/product/10147.jpg"),
+            "https://especiaspedroza.es/62-large_default/ajo-y-perejil.jpg"),
     Food(
         name: "Ajo",
         key: FoodKey.ajo,
@@ -155,7 +155,7 @@ class FoodsData {
       key: FoodKey.quesoDambo,
       category: FoodCategory.diary,
       picUrl:
-          "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/212/971/products/dambo1-14196fc372f61f272d16001112998795-640-0.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo_CtB_tCFN_mSoJJCnm-aUNVNz9djqXoGlQ&usqp=CAU",
     ),
     Food(
         name: "Huevo",
@@ -291,7 +291,7 @@ class FoodsData {
         key: FoodKey.farinha,
         category: FoodCategory.legumes,
         picUrl:
-            "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/146/598/products/farinhamandioca1-feda7e7f0474bd5ea415951705253351-640-0.png"),
+            "https://www.receiteria.com.br/wp-content/uploads/receitas-com-farinha-de-mandioca-0.jpg"),
     Food(
         name: "Porotos",
         key: FoodKey.porotos,
@@ -359,7 +359,8 @@ class FoodsData {
         key: FoodKey.vainilla,
         category: FoodCategory.seasonings,
         picUrl:
-            "http://flavorix.com/wp-content/uploads/2018/08/extracto-de-Vainilla.jpg"),
+            "https://es.israel21c.org/wp-content/uploads/2018/12/vanilla3-1168x657.jpg"
+                ""),
     Food(
         name: "Semillas de zapallo",
         key: FoodKey.semillasZapallo,
