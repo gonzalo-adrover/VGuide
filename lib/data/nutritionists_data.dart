@@ -3,6 +3,30 @@ import 'package:vguide/domain/model/nutritionist.dart';
 class NutritionistData {
   static const List<Nutritionist> getNutritionists = [
     Nutritionist(
+        name: "Agustina Puente",
+        address: "Montevideo",
+        email: "aguspuente99@gmail.com",
+        phoneNumber: "092 275 619",
+        socialMedia: "IG: @aguspuente99",
+        picURL:
+            "https://instagram.fmvd2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/167012726_1121157585068120_4720815611123169828_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_ohc=pCmqsX0ehkwAX8Jex_c&edm=ACWDqb8BAAAA&ccb=7-4&oh=5538270e9999c214f6203a58570e60d3&oe=6159C632&_nc_sid=1527a3"),
+    Nutritionist(
+        name: "Constanza Fazio",
+        address: "Montevideo",
+        email: "constanzafazio28@gmail.com ",
+        phoneNumber: "099 385 843",
+        socialMedia: "IG: @conifazio",
+        picURL:
+            "https://instagram.fmvd2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/207446864_523217569106358_3197857412632045709_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_ohc=ILVrGS9jqdwAX_-eMOt&edm=ACWDqb8BAAAA&ccb=7-4&oh=3bb17d2c5e63961bcf78e3f88eb01cbf&oe=615B0D78&_nc_sid=1527a3"),
+    Nutritionist(
+        name: "Pía Leites",
+        address: "Montevideo",
+        email: "pialeites@gmail.com",
+        phoneNumber: "095 555 889",
+        socialMedia: "IG: @pepit0n",
+        picURL:
+            "https://instagram.fmvd2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/242905073_2079918942183757_7737739558264067221_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_ohc=io_umK6kz3MAX9Y8Auc&edm=ABfd0MgBAAAA&ccb=7-4&oh=762c276a7037263eb6183ffb1d7663d7&oe=615B1243&_nc_sid=7bff83"),
+    Nutritionist(
         name: "Stefanie Heguy",
         address: "Centro (Montevideo)",
         email: "stefanie.heguy@gmail.com",

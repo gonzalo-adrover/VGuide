@@ -1,16 +1,27 @@
-# vguide
+# VGuide
 
-VGuide App
+VGuide is a mobile app targeted to vegetarians and those wanting to adopt a plant based diet. It includes nutritional facts, tips, recipes, stores map and more in a compact app for users to download in their preffered device. Being implemented using entirely the Flutter SDK, this app enables users to make use of it in both iOS and Android devices. Follow along to see more!
 
-## Getting Started
+## Built With
 
-This project is a starting point for a Flutter application.
+* [Flutter](https://flutter.dev/) 
+* [Dart](https://dart.dev/) 
 
-A few resources to get you started if this is your first Flutter project:
+## Versioning
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Version 1.0.0
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Authors
+
+* **Gonzalo Adrover** - [Github](https://github.com/gonzalo-adrover)
+* **Bettina Carrizo** - [Github](https://github.com/3ettilina)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgements
+
+This is a collaborative project, part of the bachelor's degree final project for a group of students of the Nutrition BSc at the Universidad Católica del Uruguay. We were provided with the idea and specific knowkledge regarding the nutritional information of the app and we built a functional mobile application upon that. 
+
+The (now) nutritionists of which we owe our product are: Agustina Puente, Constanza Fazio and Pia Leites.
