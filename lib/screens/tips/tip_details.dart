@@ -18,7 +18,7 @@ class TipDetails extends StatelessWidget {
         backgroundColor: pageColor,
         body: Container(
           child: DetailsLayout(
-            imageUrl: tip.picURL,
+            imageSource: tip.picURL,
             headerContent: TipDetailsHeader(
               title: tip.shortName,
             ),

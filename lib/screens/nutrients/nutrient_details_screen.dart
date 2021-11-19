@@ -16,7 +16,7 @@ class NutrientDetailsScreen extends StatelessWidget {
         backgroundColor: Color.fromRGBO(76, 92, 155, 1),
         body: Container(
           child: DetailsLayout(
-            imageUrl: nutrient.picURL,
+            imageSource: nutrient.picURL,
             headerContent: headerText(context),
             bodyContent: NutrientDescription(
               nutrient: nutrient,

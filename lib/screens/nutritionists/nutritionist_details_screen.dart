@@ -45,8 +45,14 @@ class NutritionistDetails extends StatelessWidget {
                               ],
                               borderRadius:
                                   BorderRadius.all(Radius.circular(15.0)),
+                              // image: new DecorationImage(
+                              //   image: new AssetImage('assets\\test.png'),
+                              //   fit: BoxFit.cover,
+                              // ),
                               image: DecorationImage(
-                                  image: NetworkImage(nutritionist.picURL)),
+                                  image: new AssetImage(nutritionist.picURL),
+                                fit: BoxFit.cover,
+                              ),
                             )),
                         getSizedBoxWidth(20),
                         Text(nutritionist.name, style: VGuideTextStyles.header),

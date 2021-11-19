@@ -15,17 +15,11 @@ class NutrientsData {
             """Las proteínas son grandes moléculas que desempeñan el mayor número de funciones en las células de los seres vivos. Forman parte de la estructura de tejidos (músculos, tendones, piel, uñas) durante todos los procesos de crecimiento y desarrollo. Además desempeñan funciones metabólicas (actúan como enzimas, hormonas y anticuerpos.)Una proteína se conforman por varios aminoácidos y existen algunos que los humanos no podemos formar, si nos faltan no podemos generar estas proteínas. Los aminoacidos que no podemos formar son llamados “aminoácidos esenciales”. Debido a esto, debemos obtenerlos de los  alimentos. La deficiencia de este nutriente puede causar desnutrición proteica, fatiga, dermatitis.""",
         foods: [
           "Legumbres y derivados\nCereales\nPseudo cereales\nFrutos secos\nSemillas\nLacteos, huevos",
-          // "Cereales",
-          // "Pseudo cereales",
-          // "Frutos secos",
-          // "Semillas",
-          // "Lacteos, huevos"
         ],
         facilitators:
             """La digestión de las proteínas es más fácil para el cuerpo cuando los alimentos se cocinan. Los alimentos de origen vegetal deben combinarse para alcanzar las cantidades de aminoácidos requeridas por el cuerpo.  Combinando legumbres con cereales y pseudo cereales se logra obtener la proteína completa para cubrir el requerimiento de este nutriente.""",
         inhibitors: "",
-        picURL:
-            "https://greenandgreat.eu/wp-content/uploads/2020/10/cuales-son-las-principales-fuentes-de-proteina-vegetal-para-los-mayores-980x654.jpeg"),
+        picURL: "assets/img/nutrients/proteinas.jpeg"),
     Nutrient(
         id: 1,
         key: NutrientKey.omega3,
@@ -40,8 +34,7 @@ class NutrientsData {
         """,
         inhibitors:
             """Cocinar estos aceites disminuye el impacto favorable que tienen para la salud. Además comer las semillas enteras, sin moler hace que sea más dificil su aprovechamiento.""",
-        picURL:
-            "https://www.excelenciasgourmet.com/sites/default/files/styles/slideshow_large/public/2018-03/mascobe.jpg?itok=ryzq6S9b"),
+        picURL: "assets/img/nutrients/omega_3.jpg"),
     Nutrient(
         id: 2,
         key: NutrientKey.calcio,
@@ -55,8 +48,7 @@ class NutrientsData {
             """Si se consumen lácteos la absorción aumenta. En el caso de las semillas, es preferible que se consuman molidas en forma de pasta o paté.""",
         inhibitors:
             """El café, los refrescos con cafeína inhiben la absorción de Calcio. Algunos alimentos como la acelga o la espinaca pueden inhibir su absorción.""",
-        picURL:
-            "https://cdn.nof.org/wp-content/uploads/2015/12/diary-and-fish.png"),
+        picURL: "assets/img/nutrients/calcio.jpg"),
     Nutrient(
         id: 3,
         key: NutrientKey.hierro,
@@ -71,8 +63,7 @@ class NutrientsData {
         """,
         inhibitors:
             """Las bebidas con cafeína como café, té, mate, refrescos.""",
-        picURL:
-            "https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/07/18/Pictures/_54f1141e-8a7c-11e8-b2f4-2ee9fa0c7dec.jpg"),
+        picURL: "assets/img/nutrients/hierro.png"),
     Nutrient(
         id: 4,
         key: NutrientKey.zinc,
@@ -86,8 +77,7 @@ class NutrientsData {
             """Los azúcares de la fruta y los lácteos, las proteínas favorecen la absorción de Zinc. Remojar siempre las leguminosas y pseudo cereales mejora la absorción, como también hidratar y moler las semillas y frutos secos consumiéndolos en forma de pasta o paté.""",
         inhibitors:
             """Evitar suplementos de Calcio y Hierro dos horas antes y después de comer alimentos que aportan Zinc.""",
-        picURL:
-            "https://www.cocinayvino.com/wp-content/uploads/2016/11/fuentesdezinc.jpg"),
+        picURL: "assets/img/nutrients/zinc.jpg"),
     Nutrient(
         id: 5,
         key: NutrientKey.yodo,
@@ -101,8 +91,7 @@ class NutrientsData {
             """En el caso de no padecer hipertensión o enfermedades cardiovasculares consumir sal yodada. De lo contrario se debe consumir algas o alcelga para evitar deficiencias.
         """,
         inhibitors: "",
-        picURL:
-            "https://asset-americas.unileversolutions.com/content/dam/unilever/knorr_world/global/english/general_image/toss_the_salt_try_some_seaweed_1143px-1541862-jpg.jpg.ulenscale.1982x930.jpg"),
+        picURL: "assets/img/nutrients/yodo.png"),
     Nutrient(
         id: 6,
         key: NutrientKey.vitD,
@@ -114,7 +103,7 @@ class NutrientsData {
         ],
         facilitators: "",
         inhibitors: "",
-        picURL: "https://www.intramed.net/UserFiles/vinetas/96476.jpg"),
+        picURL: "assets/img/nutrients/vitamina_d.jpg"),
     Nutrient(
         id: 7,
         key: NutrientKey.vitB12,
@@ -127,7 +116,6 @@ class NutrientsData {
         facilitators:
             """Para informarte sobre la suplementación de Vitamina B12 adecuada para ti consulta a un Nutricionista.""",
         inhibitors: "",
-        picURL:
-            "https://biowebaruhaz.hu/uploads/shop/biowebaruhaz.hu/fajltar/134589.jpg"),
+        picURL: "assets/img/nutrients/b12.jpg"),
   ];
 }

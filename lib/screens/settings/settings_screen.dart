@@ -14,44 +14,6 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  var switch1 = false;
-  var switch2 = true;
-  var switch3 = true;
-  var switch4 = false;
-  var switch5 = false;
-
-  Widget _buildList() {
-    return ListView(
-      children: [
-        Padding(padding: EdgeInsets.only(top: 24)),
-        ListTile(
-          title: Text('Remojá tus legumbres.'),
-          tileColor: SettingsScreen.tileColor,
-          trailing: Switch.adaptive(
-            value: switch1,
-            onChanged: (value) => setState(() => switch1 = value),
-          ),
-        ),
-        ListTile(
-          title: Text('¡No olvides tomar agua!'),
-          tileColor: SettingsScreen.tileColor,
-          trailing: Switch.adaptive(
-            value: switch2,
-            onChanged: (value) => setState(() => switch2 = value),
-          ),
-        ),
-        ListTile(
-          title: Text('No olvides tomar tu vitamina B12.'),
-          tileColor: SettingsScreen.tileColor,
-          trailing: Switch.adaptive(
-            value: switch3,
-            onChanged: (value) => setState(() => switch3 = value),
-          ),
-        ),
-      ],
-    );
-  }
-
   Widget _build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -60,7 +22,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         automaticallyImplyLeading: false,
       ),
       backgroundColor: SettingsScreen.pageColor,
-      body: _buildList(),
+      body: Container(child: Text("Coming soon"),),
     );
   }
 

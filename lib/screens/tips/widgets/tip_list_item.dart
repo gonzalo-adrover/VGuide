@@ -15,7 +15,7 @@ class TipListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListItemWithImage(
       id: tip.name,
-      imageUrl: tip.picURL,
+      imageSource: tip.picURL,
       content: Text(tip.name, style: VGuideTextStyles.itemTitle),
       onClick: () => routeToTipPage(context),
     );

@@ -13,7 +13,7 @@ class NutrientListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListItemWithImage(
       id: nutrient.name,
-      imageUrl: nutrient.picURL,
+      imageSource: nutrient.picURL,
       content: Text(nutrient.name, style: VGuideTextStyles.itemTitle),
       onClick: () => routeToNutrientPage(context),
     );

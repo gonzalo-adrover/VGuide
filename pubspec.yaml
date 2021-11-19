@@ -60,6 +60,9 @@ flutter:
     - assets/img/VGuideLogo.jpeg
     - assets/img/back.svg
     - assets/img/recipes/
+    - assets/img/nutrients/
+    - assets/img/nutritionists/
+    - assets/img/tips/
     - assets/img/
   #   - images/a_dot_ham.jpeg
 
