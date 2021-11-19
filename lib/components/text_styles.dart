@@ -3,6 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
 class VGuideTextStyles {
+  static TextStyle hugeHeader = GoogleFonts.redHatDisplay(
+      fontSize: 30.0, fontWeight: FontWeight.w700, color: Colors.black54);
+
   static TextStyle header = GoogleFonts.redHatDisplay(
       fontSize: 20.0, fontWeight: FontWeight.w700, color: Colors.black54);
 

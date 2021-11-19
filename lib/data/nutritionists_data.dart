@@ -8,24 +8,21 @@ class NutritionistData {
         email: "aguspuente99@gmail.com",
         phoneNumber: "092 275 619",
         socialMedia: "IG: @aguspuente99",
-        picURL:
-            "https://instagram.fmvd2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/167012726_1121157585068120_4720815611123169828_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_ohc=pCmqsX0ehkwAX8Jex_c&edm=ACWDqb8BAAAA&ccb=7-4&oh=5538270e9999c214f6203a58570e60d3&oe=6159C632&_nc_sid=1527a3"),
+        picURL: "assets/img/nutritionists/puente.jpeg"),
     Nutritionist(
         name: "Constanza Fazio",
         address: "Montevideo",
         email: "constanzafazio28@gmail.com ",
         phoneNumber: "099 385 843",
         socialMedia: "IG: @conifazio",
-        picURL:
-            "https://instagram.fmvd2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/207446864_523217569106358_3197857412632045709_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_ohc=ILVrGS9jqdwAX_-eMOt&edm=ACWDqb8BAAAA&ccb=7-4&oh=3bb17d2c5e63961bcf78e3f88eb01cbf&oe=615B0D78&_nc_sid=1527a3"),
+        picURL: "assets/img/nutritionists/fazio.jpeg"),
     Nutritionist(
         name: "Pía Leites",
         address: "Montevideo",
         email: "pialeites@gmail.com",
         phoneNumber: "095 555 889",
         socialMedia: "IG: @pepit0n",
-        picURL:
-            "https://instagram.fmvd2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/207446864_523217569106358_3197857412632045709_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_ohc=ILVrGS9jqdwAX_-eMOt&edm=ACWDqb8BAAAA&ccb=7-4&oh=3bb17d2c5e63961bcf78e3f88eb01cbf&oe=615B0D78&_nc_sid=1527a3"),
+        picURL: "assets/img/nutritionists/leites.jpeg"),
     Nutritionist(
         name: "Stefanie Heguy",
         address: "Centro (Montevideo)",
@@ -33,7 +30,7 @@ class NutritionistData {
         phoneNumber: "099408140",
         socialMedia: "IG: @nutriveg__uy",
         picURL: "assets/img/nutritionists/heguy.jpeg"),
-  Nutritionist(
+    Nutritionist(
         name: "Gabriela Ibarburu",
         address: "Cordón  (Montevideo)",
         email: "gabrielaibarburu@gmail.com",
